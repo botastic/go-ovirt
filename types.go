@@ -2612,7 +2612,7 @@ type Bonding struct {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -2689,7 +2689,7 @@ func (p *Bonding) SetActiveSlave(attr *HostNic) {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -2769,7 +2769,7 @@ func (p *Bonding) ActiveSlave() (*HostNic, bool) {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -3675,8 +3675,8 @@ func (p *Checkpoint) MustVm() *Vm {
 // CloudInit Deprecated type to specify _cloud-init_ configuration.
 //
 // This type has been deprecated and replaced by alternative attributes inside the
-// xref:types-initialization[Initialization] type. See the
-// xref:types-initialization-attributes-cloud_init[cloud_init] attribute documentation for details.
+// <<types/initialization, Initialization>> type. See the
+// <<types/initialization/attributes/cloud_init, cloud_init>> attribute documentation for details.
 type CloudInit struct {
 	Struct
 	authorizedKeys       *AuthorizedKeySlice
@@ -6226,16 +6226,16 @@ func (p *CpuProfile) MustPermissions() *PermissionSlice {
 
 // SetQos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *CpuProfile) SetQos(attr *Qos) {
 	p.qos = attr
@@ -6243,16 +6243,16 @@ func (p *CpuProfile) SetQos(attr *Qos) {
 
 // Qos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *CpuProfile) Qos() (*Qos, bool) {
 	if p.qos != nil {
@@ -6263,16 +6263,16 @@ func (p *CpuProfile) Qos() (*Qos, bool) {
 
 // MustQos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *CpuProfile) MustQos() *Qos {
 	if p.qos == nil {
@@ -6860,12 +6860,12 @@ func (p *DataCenter) MustStorageDomains() *StorageDomainSlice {
 	return p.storageDomains
 }
 
-// SetStorageFormat Type which represents a format of xref:types-storage_domain[storage domain].
+// SetStorageFormat Type which represents a format of <<types/storage_domain, storage domain>>.
 func (p *DataCenter) SetStorageFormat(attr StorageFormat) {
 	p.storageFormat = &attr
 }
 
-// StorageFormat Type which represents a format of xref:types-storage_domain[storage domain].
+// StorageFormat Type which represents a format of <<types/storage_domain, storage domain>>.
 func (p *DataCenter) StorageFormat() (StorageFormat, bool) {
 	if p.storageFormat != nil {
 		return *p.storageFormat, true
@@ -6874,7 +6874,7 @@ func (p *DataCenter) StorageFormat() (StorageFormat, bool) {
 	return zero, false
 }
 
-// MustStorageFormat Type which represents a format of xref:types-storage_domain[storage domain].
+// MustStorageFormat Type which represents a format of <<types/storage_domain, storage domain>>.
 func (p *DataCenter) MustStorageFormat() StorageFormat {
 	if p.storageFormat == nil {
 		panic("the storageFormat must not be nil, please use StorageFormat() function instead")
@@ -8775,16 +8775,16 @@ func (p *DiskProfile) MustPermissions() *PermissionSlice {
 
 // SetQos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *DiskProfile) SetQos(attr *Qos) {
 	p.qos = attr
@@ -8792,16 +8792,16 @@ func (p *DiskProfile) SetQos(attr *Qos) {
 
 // Qos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *DiskProfile) Qos() (*Qos, bool) {
 	if p.qos != nil {
@@ -8812,16 +8812,16 @@ func (p *DiskProfile) Qos() (*Qos, bool) {
 
 // MustQos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *DiskProfile) MustQos() *Qos {
 	if p.qos == nil {
@@ -11951,8 +11951,8 @@ func (p *ExternalComputeResource) MustDescription() string {
 // SetExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *ExternalComputeResource) SetExternalHostProvider(attr *ExternalHostProvider) {
 	p.externalHostProvider = attr
@@ -11961,8 +11961,8 @@ func (p *ExternalComputeResource) SetExternalHostProvider(attr *ExternalHostProv
 // ExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *ExternalComputeResource) ExternalHostProvider() (*ExternalHostProvider, bool) {
 	if p.externalHostProvider != nil {
@@ -11974,8 +11974,8 @@ func (p *ExternalComputeResource) ExternalHostProvider() (*ExternalHostProvider,
 // MustExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *ExternalComputeResource) MustExternalHostProvider() *ExternalHostProvider {
 	if p.externalHostProvider == nil {
@@ -12133,8 +12133,8 @@ func (p *ExternalDiscoveredHost) MustDescription() string {
 // SetExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *ExternalDiscoveredHost) SetExternalHostProvider(attr *ExternalHostProvider) {
 	p.externalHostProvider = attr
@@ -12143,8 +12143,8 @@ func (p *ExternalDiscoveredHost) SetExternalHostProvider(attr *ExternalHostProvi
 // ExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *ExternalDiscoveredHost) ExternalHostProvider() (*ExternalHostProvider, bool) {
 	if p.externalHostProvider != nil {
@@ -12156,8 +12156,8 @@ func (p *ExternalDiscoveredHost) ExternalHostProvider() (*ExternalHostProvider, 
 // MustExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *ExternalDiscoveredHost) MustExternalHostProvider() *ExternalHostProvider {
 	if p.externalHostProvider == nil {
@@ -12283,8 +12283,8 @@ func (p *ExternalDiscoveredHost) MustSubnetName() string {
 // ExternalHost Represents a host provisioned by a host
 // provider (such as Foreman/Satellite).
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 type ExternalHost struct {
 	Struct
@@ -12356,8 +12356,8 @@ func (p *ExternalHost) MustDescription() string {
 // SetExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *ExternalHost) SetExternalHostProvider(attr *ExternalHostProvider) {
 	p.externalHostProvider = attr
@@ -12366,8 +12366,8 @@ func (p *ExternalHost) SetExternalHostProvider(attr *ExternalHostProvider) {
 // ExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *ExternalHost) ExternalHostProvider() (*ExternalHostProvider, bool) {
 	if p.externalHostProvider != nil {
@@ -12379,8 +12379,8 @@ func (p *ExternalHost) ExternalHostProvider() (*ExternalHostProvider, bool) {
 // MustExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *ExternalHost) MustExternalHostProvider() *ExternalHostProvider {
 	if p.externalHostProvider == nil {
@@ -12519,8 +12519,8 @@ func (p *ExternalHostGroup) MustDomainName() string {
 // SetExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *ExternalHostGroup) SetExternalHostProvider(attr *ExternalHostProvider) {
 	p.externalHostProvider = attr
@@ -12529,8 +12529,8 @@ func (p *ExternalHostGroup) SetExternalHostProvider(attr *ExternalHostProvider) 
 // ExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *ExternalHostGroup) ExternalHostProvider() (*ExternalHostProvider, bool) {
 	if p.externalHostProvider != nil {
@@ -12542,8 +12542,8 @@ func (p *ExternalHostGroup) ExternalHostProvider() (*ExternalHostProvider, bool)
 // MustExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *ExternalHostGroup) MustExternalHostProvider() *ExternalHostProvider {
 	if p.externalHostProvider == nil {
@@ -12631,8 +12631,8 @@ func (p *ExternalHostGroup) MustSubnetName() string {
 // ExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 type ExternalHostProvider struct {
 	Struct
@@ -20188,8 +20188,8 @@ func (p *Host) MustDisplay() *Display {
 // SetExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *Host) SetExternalHostProvider(attr *ExternalHostProvider) {
 	p.externalHostProvider = attr
@@ -20198,8 +20198,8 @@ func (p *Host) SetExternalHostProvider(attr *ExternalHostProvider) {
 // ExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *Host) ExternalHostProvider() (*ExternalHostProvider, bool) {
 	if p.externalHostProvider != nil {
@@ -20211,8 +20211,8 @@ func (p *Host) ExternalHostProvider() (*ExternalHostProvider, bool) {
 // MustExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *Host) MustExternalHostProvider() *ExternalHostProvider {
 	if p.externalHostProvider == nil {
@@ -20240,16 +20240,16 @@ func (p *Host) MustExternalNetworkProviderConfigurations() *ExternalNetworkProvi
 }
 
 // SetExternalStatus Represents an external status.
-// This status is currently used for xref:types-host[hosts]
-// and xref:types-storage_domain[storage domains], and allows an external
+// This status is currently used for <<types/host, hosts>>
+// and <<types/storage_domain, storage domains>>, and allows an external
 // system to update status of objects it is aware of.
 func (p *Host) SetExternalStatus(attr ExternalStatus) {
 	p.externalStatus = &attr
 }
 
 // ExternalStatus Represents an external status.
-// This status is currently used for xref:types-host[hosts]
-// and xref:types-storage_domain[storage domains], and allows an external
+// This status is currently used for <<types/host, hosts>>
+// and <<types/storage_domain, storage domains>>, and allows an external
 // system to update status of objects it is aware of.
 func (p *Host) ExternalStatus() (ExternalStatus, bool) {
 	if p.externalStatus != nil {
@@ -20260,8 +20260,8 @@ func (p *Host) ExternalStatus() (ExternalStatus, bool) {
 }
 
 // MustExternalStatus Represents an external status.
-// This status is currently used for xref:types-host[hosts]
-// and xref:types-storage_domain[storage domains], and allows an external
+// This status is currently used for <<types/host, hosts>>
+// and <<types/storage_domain, storage domains>>, and allows an external
 // system to update status of objects it is aware of.
 func (p *Host) MustExternalStatus() ExternalStatus {
 	if p.externalStatus == nil {
@@ -21743,7 +21743,7 @@ func (p *HostDevicePassthrough) MustEnabled() bool {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -22413,7 +22413,7 @@ func (p *HostNic) MustOverrideConfiguration() bool {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -22490,7 +22490,7 @@ func (p *HostNic) SetPhysicalFunction(attr *HostNic) {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -22570,7 +22570,7 @@ func (p *HostNic) PhysicalFunction() (*HostNic, bool) {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -22638,16 +22638,16 @@ func (p *HostNic) MustProperties() *PropertySlice {
 
 // SetQos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *HostNic) SetQos(attr *Qos) {
 	p.qos = attr
@@ -22655,16 +22655,16 @@ func (p *HostNic) SetQos(attr *Qos) {
 
 // Qos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *HostNic) Qos() (*Qos, bool) {
 	if p.qos != nil {
@@ -22675,16 +22675,16 @@ func (p *HostNic) Qos() (*Qos, bool) {
 
 // MustQos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *HostNic) MustQos() *Qos {
 	if p.qos == nil {
@@ -23980,23 +23980,23 @@ func (p *ImageTransfer) MustDescription() string {
 	return *p.description
 }
 
-// SetDirection The xref:types-image_transfer[image transfer] direction for a transfer.
+// SetDirection The <<types/image_transfer, image transfer>> direction for a transfer.
 //
 // When adding a new transfer, the user can choose whether the transfer will be to an image, choosing `upload`,
 // or to transfer from an image- choosing `download` as an ImageTransferDirection.
 //
-// Please refer to xref:services-image_transfer[image transfer] for further
+// Please refer to <<services/image_transfer, image transfer>> for further
 // documentation.
 func (p *ImageTransfer) SetDirection(attr ImageTransferDirection) {
 	p.direction = &attr
 }
 
-// Direction The xref:types-image_transfer[image transfer] direction for a transfer.
+// Direction The <<types/image_transfer, image transfer>> direction for a transfer.
 //
 // When adding a new transfer, the user can choose whether the transfer will be to an image, choosing `upload`,
 // or to transfer from an image- choosing `download` as an ImageTransferDirection.
 //
-// Please refer to xref:services-image_transfer[image transfer] for further
+// Please refer to <<services/image_transfer, image transfer>> for further
 // documentation.
 func (p *ImageTransfer) Direction() (ImageTransferDirection, bool) {
 	if p.direction != nil {
@@ -24006,12 +24006,12 @@ func (p *ImageTransfer) Direction() (ImageTransferDirection, bool) {
 	return zero, false
 }
 
-// MustDirection The xref:types-image_transfer[image transfer] direction for a transfer.
+// MustDirection The <<types/image_transfer, image transfer>> direction for a transfer.
 //
 // When adding a new transfer, the user can choose whether the transfer will be to an image, choosing `upload`,
 // or to transfer from an image- choosing `download` as an ImageTransferDirection.
 //
-// Please refer to xref:services-image_transfer[image transfer] for further
+// Please refer to <<services/image_transfer, image transfer>> for further
 // documentation.
 func (p *ImageTransfer) MustDirection() ImageTransferDirection {
 	if p.direction == nil {
@@ -24162,19 +24162,19 @@ func (p *ImageTransfer) MustName() string {
 	return *p.name
 }
 
-// SetPhase A list of possible phases for an xref:types-image_transfer[image transfer] entity. Each of these values
+// SetPhase A list of possible phases for an <<types/image_transfer, image transfer>> entity. Each of these values
 // defines a specific point in a transfer flow.
 //
-// Please refer to xref:services-image_transfer[image transfer] for more
+// Please refer to <<services/image_transfer, image transfer>> for more
 // information.
 func (p *ImageTransfer) SetPhase(attr ImageTransferPhase) {
 	p.phase = &attr
 }
 
-// Phase A list of possible phases for an xref:types-image_transfer[image transfer] entity. Each of these values
+// Phase A list of possible phases for an <<types/image_transfer, image transfer>> entity. Each of these values
 // defines a specific point in a transfer flow.
 //
-// Please refer to xref:services-image_transfer[image transfer] for more
+// Please refer to <<services/image_transfer, image transfer>> for more
 // information.
 func (p *ImageTransfer) Phase() (ImageTransferPhase, bool) {
 	if p.phase != nil {
@@ -24184,10 +24184,10 @@ func (p *ImageTransfer) Phase() (ImageTransferPhase, bool) {
 	return zero, false
 }
 
-// MustPhase A list of possible phases for an xref:types-image_transfer[image transfer] entity. Each of these values
+// MustPhase A list of possible phases for an <<types/image_transfer, image transfer>> entity. Each of these values
 // defines a specific point in a transfer flow.
 //
-// Please refer to xref:services-image_transfer[image transfer] for more
+// Please refer to <<services/image_transfer, image transfer>> for more
 // information.
 func (p *ImageTransfer) MustPhase() ImageTransferPhase {
 	if p.phase == nil {
@@ -24252,23 +24252,23 @@ func (p *ImageTransfer) MustSnapshot() *DiskSnapshot {
 	return p.snapshot
 }
 
-// SetTimeoutPolicy The xref:types-image_transfer[image transfer] timeout policy.
+// SetTimeoutPolicy The <<types/image_transfer, image transfer>> timeout policy.
 //
 // Define how the system handles a transfer when the client is inactive
 // for inactivityTimeout seconds.
 //
-// Please refer to xref:services-image_transfer[image transfer] for further
+// Please refer to <<services/image_transfer, image transfer>> for further
 // documentation.
 func (p *ImageTransfer) SetTimeoutPolicy(attr ImageTransferTimeoutPolicy) {
 	p.timeoutPolicy = &attr
 }
 
-// TimeoutPolicy The xref:types-image_transfer[image transfer] timeout policy.
+// TimeoutPolicy The <<types/image_transfer, image transfer>> timeout policy.
 //
 // Define how the system handles a transfer when the client is inactive
 // for inactivityTimeout seconds.
 //
-// Please refer to xref:services-image_transfer[image transfer] for further
+// Please refer to <<services/image_transfer, image transfer>> for further
 // documentation.
 func (p *ImageTransfer) TimeoutPolicy() (ImageTransferTimeoutPolicy, bool) {
 	if p.timeoutPolicy != nil {
@@ -24278,12 +24278,12 @@ func (p *ImageTransfer) TimeoutPolicy() (ImageTransferTimeoutPolicy, bool) {
 	return zero, false
 }
 
-// MustTimeoutPolicy The xref:types-image_transfer[image transfer] timeout policy.
+// MustTimeoutPolicy The <<types/image_transfer, image transfer>> timeout policy.
 //
 // Define how the system handles a transfer when the client is inactive
 // for inactivityTimeout seconds.
 //
-// Please refer to xref:services-image_transfer[image transfer] for further
+// Please refer to <<services/image_transfer, image transfer>> for further
 // documentation.
 func (p *ImageTransfer) MustTimeoutPolicy() ImageTransferTimeoutPolicy {
 	if p.timeoutPolicy == nil {
@@ -24397,8 +24397,8 @@ func (p *Initialization) MustAuthorizedSshKeys() string {
 // SetCloudInit Deprecated type to specify _cloud-init_ configuration.
 //
 // This type has been deprecated and replaced by alternative attributes inside the
-// xref:types-initialization[Initialization] type. See the
-// xref:types-initialization-attributes-cloud_init[cloud_init] attribute documentation for details.
+// <<types/initialization, Initialization>> type. See the
+// <<types/initialization/attributes/cloud_init, cloud_init>> attribute documentation for details.
 func (p *Initialization) SetCloudInit(attr *CloudInit) {
 	p.cloudInit = attr
 }
@@ -24406,8 +24406,8 @@ func (p *Initialization) SetCloudInit(attr *CloudInit) {
 // CloudInit Deprecated type to specify _cloud-init_ configuration.
 //
 // This type has been deprecated and replaced by alternative attributes inside the
-// xref:types-initialization[Initialization] type. See the
-// xref:types-initialization-attributes-cloud_init[cloud_init] attribute documentation for details.
+// <<types/initialization, Initialization>> type. See the
+// <<types/initialization/attributes/cloud_init, cloud_init>> attribute documentation for details.
 func (p *Initialization) CloudInit() (*CloudInit, bool) {
 	if p.cloudInit != nil {
 		return p.cloudInit, true
@@ -24418,8 +24418,8 @@ func (p *Initialization) CloudInit() (*CloudInit, bool) {
 // MustCloudInit Deprecated type to specify _cloud-init_ configuration.
 //
 // This type has been deprecated and replaced by alternative attributes inside the
-// xref:types-initialization[Initialization] type. See the
-// xref:types-initialization-attributes-cloud_init[cloud_init] attribute documentation for details.
+// <<types/initialization, Initialization>> type. See the
+// <<types/initialization/attributes/cloud_init, cloud_init>> attribute documentation for details.
 func (p *Initialization) MustCloudInit() *CloudInit {
 	if p.cloudInit == nil {
 		panic("the cloudInit must not be nil, please use CloudInit() function instead")
@@ -28498,7 +28498,7 @@ func (p *LogicalUnit) MustVolumeGroupId() string {
 
 // MDevType Mediated device is a software device that allows to divide physical device's resources.
 //
-// See link:https://libvirt.org/drvnodedev.html#MDEV[Libvirt-MDEV] for further details.
+// See https://libvirt.org/drvnodedev.html#MDEV[Libvirt-MDEV] for further details.
 type MDevType struct {
 	Struct
 	availableInstances *int64
@@ -28996,13 +28996,11 @@ func (p *MigrationBandwidth) MustCustomValue() int64 {
 // MigrationOptions The type for migration options.
 type MigrationOptions struct {
 	Struct
-	autoConverge             *InheritableBoolean
-	bandwidth                *MigrationBandwidth
-	compressed               *InheritableBoolean
-	customParallelMigrations *int64
-	encrypted                *InheritableBoolean
-	parallelMigrationsPolicy *ParallelMigrationsPolicy
-	policy                   *MigrationPolicy
+	autoConverge *InheritableBoolean
+	bandwidth    *MigrationBandwidth
+	compressed   *InheritableBoolean
+	encrypted    *InheritableBoolean
+	policy       *MigrationPolicy
 }
 
 // SetAutoConverge Enum representing the boolean value that can be either set, or inherited from a higher level.
@@ -29076,25 +29074,6 @@ func (p *MigrationOptions) MustCompressed() InheritableBoolean {
 	return *p.compressed
 }
 
-func (p *MigrationOptions) SetCustomParallelMigrations(attr int64) {
-	p.customParallelMigrations = &attr
-}
-
-func (p *MigrationOptions) CustomParallelMigrations() (int64, bool) {
-	if p.customParallelMigrations != nil {
-		return *p.customParallelMigrations, true
-	}
-	var zero int64
-	return zero, false
-}
-
-func (p *MigrationOptions) MustCustomParallelMigrations() int64 {
-	if p.customParallelMigrations == nil {
-		panic("the customParallelMigrations must not be nil, please use CustomParallelMigrations() function instead")
-	}
-	return *p.customParallelMigrations
-}
-
 // SetEncrypted Enum representing the boolean value that can be either set, or inherited from a higher level.
 // The inheritance order is virtual machine -> cluster -> engine-config.
 func (p *MigrationOptions) SetEncrypted(attr InheritableBoolean) {
@@ -29118,28 +29097,6 @@ func (p *MigrationOptions) MustEncrypted() InheritableBoolean {
 		panic("the encrypted must not be nil, please use Encrypted() function instead")
 	}
 	return *p.encrypted
-}
-
-// SetParallelMigrationsPolicy Type representing parallel migration connections policy.
-func (p *MigrationOptions) SetParallelMigrationsPolicy(attr ParallelMigrationsPolicy) {
-	p.parallelMigrationsPolicy = &attr
-}
-
-// ParallelMigrationsPolicy Type representing parallel migration connections policy.
-func (p *MigrationOptions) ParallelMigrationsPolicy() (ParallelMigrationsPolicy, bool) {
-	if p.parallelMigrationsPolicy != nil {
-		return *p.parallelMigrationsPolicy, true
-	}
-	var zero ParallelMigrationsPolicy
-	return zero, false
-}
-
-// MustParallelMigrationsPolicy Type representing parallel migration connections policy.
-func (p *MigrationOptions) MustParallelMigrationsPolicy() ParallelMigrationsPolicy {
-	if p.parallelMigrationsPolicy == nil {
-		panic("the parallelMigrationsPolicy must not be nil, please use ParallelMigrationsPolicy() function instead")
-	}
-	return *p.parallelMigrationsPolicy
 }
 
 // SetPolicy A policy describing how the migration is treated, such as convergence or
@@ -30199,16 +30156,16 @@ func (p *Network) MustProfileRequired() bool {
 
 // SetQos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *Network) SetQos(attr *Qos) {
 	p.qos = attr
@@ -30216,16 +30173,16 @@ func (p *Network) SetQos(attr *Qos) {
 
 // Qos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *Network) Qos() (*Qos, bool) {
 	if p.qos != nil {
@@ -30236,16 +30193,16 @@ func (p *Network) Qos() (*Qos, bool) {
 
 // MustQos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *Network) MustQos() *Qos {
 	if p.qos == nil {
@@ -30654,7 +30611,7 @@ func (p *NetworkAttachment) MustHost() *Host {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -30731,7 +30688,7 @@ func (p *NetworkAttachment) SetHostNic(attr *HostNic) {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -30811,7 +30768,7 @@ func (p *NetworkAttachment) HostNic() (*HostNic, bool) {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -31143,16 +31100,16 @@ func (p *NetworkAttachment) MustProperties() *PropertySlice {
 
 // SetQos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *NetworkAttachment) SetQos(attr *Qos) {
 	p.qos = attr
@@ -31160,16 +31117,16 @@ func (p *NetworkAttachment) SetQos(attr *Qos) {
 
 // Qos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *NetworkAttachment) Qos() (*Qos, bool) {
 	if p.qos != nil {
@@ -31180,16 +31137,16 @@ func (p *NetworkAttachment) Qos() (*Qos, bool) {
 
 // MustQos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *NetworkAttachment) MustQos() *Qos {
 	if p.qos == nil {
@@ -31264,7 +31221,7 @@ func (p *NetworkConfiguration) MustNics() *NicSlice {
 // NetworkFilter Network filters filter packets sent to and from the virtual machine's NIC according to defined rules.
 //
 // There are several types of network filters supported based on libvirt.
-// For more details about the different network filters see link:https://libvirt.org/firewall.html[here].
+// For more details about the different network filters see https://libvirt.org/firewall.html[here].
 //
 // The default Network Filter is based on network type and configuration.
 // VM network's default filter is `vdsm-no-mac-spoof` if `EnableMACAntiSpoofingFilterRules` is True, otherwise
@@ -31397,9 +31354,9 @@ func (p *NetworkFilter) MustVersion() *Version {
 	return p.version
 }
 
-// NetworkFilterParameter Parameter for the xref:types-network_filter[network filter].
+// NetworkFilterParameter Parameter for the <<types/network_filter,network filter>>.
 //
-// See link:https://libvirt.org/formatnwfilter.html#nwfconceptsvars[Libvirt-Filters] for further details.
+// See https://libvirt.org/formatnwfilter.html#nwfconceptsvars[Libvirt-Filters] for further details.
 // This is a example of the XML representation:
 //
 // [source,xml]
@@ -31676,7 +31633,7 @@ func (p *NetworkLabel) MustDescription() string {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -31753,7 +31710,7 @@ func (p *NetworkLabel) SetHostNic(attr *HostNic) {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -31833,7 +31790,7 @@ func (p *NetworkLabel) HostNic() (*HostNic, bool) {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -32896,12 +32853,12 @@ func (p *Nic) MustVms() *VmSlice {
 	return p.vms
 }
 
-// SetVnicProfile A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// SetVnicProfile A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *Nic) SetVnicProfile(attr *VnicProfile) {
 	p.vnicProfile = attr
 }
 
-// VnicProfile A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// VnicProfile A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *Nic) VnicProfile() (*VnicProfile, bool) {
 	if p.vnicProfile != nil {
 		return p.vnicProfile, true
@@ -32909,7 +32866,7 @@ func (p *Nic) VnicProfile() (*VnicProfile, bool) {
 	return nil, false
 }
 
-// MustVnicProfile A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// MustVnicProfile A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *Nic) MustVnicProfile() *VnicProfile {
 	if p.vnicProfile == nil {
 		panic("the vnicProfile must not be nil, please use VnicProfile() function instead")
@@ -35590,7 +35547,6 @@ type OperatingSystemInfo struct {
 	largeIcon    *Icon
 	name         *string
 	smallIcon    *Icon
-	tpmSupport   *TpmSupport
 }
 
 func (p *OperatingSystemInfo) SetArchitecture(attr Architecture) {
@@ -35728,25 +35684,6 @@ func (p *OperatingSystemInfo) MustSmallIcon() *Icon {
 		panic("the smallIcon must not be nil, please use SmallIcon() function instead")
 	}
 	return p.smallIcon
-}
-
-func (p *OperatingSystemInfo) SetTpmSupport(attr TpmSupport) {
-	p.tpmSupport = &attr
-}
-
-func (p *OperatingSystemInfo) TpmSupport() (TpmSupport, bool) {
-	if p.tpmSupport != nil {
-		return *p.tpmSupport, true
-	}
-	var zero TpmSupport
-	return zero, false
-}
-
-func (p *OperatingSystemInfo) MustTpmSupport() TpmSupport {
-	if p.tpmSupport == nil {
-		panic("the tpmSupport must not be nil, please use TpmSupport() function instead")
-	}
-	return *p.tpmSupport
 }
 
 type Option struct {
@@ -37459,16 +37396,16 @@ func (p *ProxyTicket) MustValue() string {
 
 // Qos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 type Qos struct {
 	Struct
@@ -37894,12 +37831,12 @@ func (p *Qos) MustOutboundPeak() int64 {
 	return *p.outboundPeak
 }
 
-// SetType This type represents the kind of resource the xref:types-qos[Quality of service (QoS)] can be assigned to.
+// SetType This type represents the kind of resource the <<types/qos,Quality of service (QoS)>> can be assigned to.
 func (p *Qos) SetType(attr QosType) {
 	p.type_ = &attr
 }
 
-// Type This type represents the kind of resource the xref:types-qos[Quality of service (QoS)] can be assigned to.
+// Type This type represents the kind of resource the <<types/qos,Quality of service (QoS)>> can be assigned to.
 func (p *Qos) Type() (QosType, bool) {
 	if p.type_ != nil {
 		return *p.type_, true
@@ -37908,7 +37845,7 @@ func (p *Qos) Type() (QosType, bool) {
 	return zero, false
 }
 
-// MustType This type represents the kind of resource the xref:types-qos[Quality of service (QoS)] can be assigned to.
+// MustType This type represents the kind of resource the <<types/qos,Quality of service (QoS)>> can be assigned to.
 func (p *Qos) MustType() QosType {
 	if p.type_ == nil {
 		panic("the type_ must not be nil, please use Type() function instead")
@@ -40812,7 +40749,7 @@ func (p *RegistrationRoleMapping) MustTo() *Role {
 //
 // |===
 //
-// Then the following snippet should be added to xref:types-registration_configuration[RegistrationConfiguration]
+// Then the following snippet should be added to <<types/registration_configuration, RegistrationConfiguration>>
 //
 // [source,xml]
 // ----
@@ -40881,12 +40818,12 @@ type RegistrationVnicProfileMapping struct {
 	to   *VnicProfile
 }
 
-// SetFrom A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// SetFrom A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *RegistrationVnicProfileMapping) SetFrom(attr *VnicProfile) {
 	p.from = attr
 }
 
-// From A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// From A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *RegistrationVnicProfileMapping) From() (*VnicProfile, bool) {
 	if p.from != nil {
 		return p.from, true
@@ -40894,7 +40831,7 @@ func (p *RegistrationVnicProfileMapping) From() (*VnicProfile, bool) {
 	return nil, false
 }
 
-// MustFrom A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// MustFrom A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *RegistrationVnicProfileMapping) MustFrom() *VnicProfile {
 	if p.from == nil {
 		panic("the from must not be nil, please use From() function instead")
@@ -40902,12 +40839,12 @@ func (p *RegistrationVnicProfileMapping) MustFrom() *VnicProfile {
 	return p.from
 }
 
-// SetTo A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// SetTo A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *RegistrationVnicProfileMapping) SetTo(attr *VnicProfile) {
 	p.to = attr
 }
 
-// To A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// To A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *RegistrationVnicProfileMapping) To() (*VnicProfile, bool) {
 	if p.to != nil {
 		return p.to, true
@@ -40915,7 +40852,7 @@ func (p *RegistrationVnicProfileMapping) To() (*VnicProfile, bool) {
 	return nil, false
 }
 
-// MustTo A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// MustTo A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *RegistrationVnicProfileMapping) MustTo() *VnicProfile {
 	if p.to == nil {
 		panic("the to must not be nil, please use To() function instead")
@@ -41005,6 +40942,172 @@ func (p *ReportedConfiguration) MustName() string {
 		panic("the name must not be nil, please use Name() function instead")
 	}
 	return *p.name
+}
+
+// Role Represents a system role.
+type Role struct {
+	Struct
+	administrative *bool
+	comment        *string
+	description    *string
+	id             *string
+	mutable        *bool
+	name           *string
+	permits        *PermitSlice
+	user           *User
+}
+
+func (p *Role) SetAdministrative(attr bool) {
+	p.administrative = &attr
+}
+
+func (p *Role) Administrative() (bool, bool) {
+	if p.administrative != nil {
+		return *p.administrative, true
+	}
+	var zero bool
+	return zero, false
+}
+
+func (p *Role) MustAdministrative() bool {
+	if p.administrative == nil {
+		panic("the administrative must not be nil, please use Administrative() function instead")
+	}
+	return *p.administrative
+}
+
+func (p *Role) SetComment(attr string) {
+	p.comment = &attr
+}
+
+func (p *Role) Comment() (string, bool) {
+	if p.comment != nil {
+		return *p.comment, true
+	}
+	var zero string
+	return zero, false
+}
+
+func (p *Role) MustComment() string {
+	if p.comment == nil {
+		panic("the comment must not be nil, please use Comment() function instead")
+	}
+	return *p.comment
+}
+
+func (p *Role) SetDescription(attr string) {
+	p.description = &attr
+}
+
+func (p *Role) Description() (string, bool) {
+	if p.description != nil {
+		return *p.description, true
+	}
+	var zero string
+	return zero, false
+}
+
+func (p *Role) MustDescription() string {
+	if p.description == nil {
+		panic("the description must not be nil, please use Description() function instead")
+	}
+	return *p.description
+}
+
+func (p *Role) SetId(attr string) {
+	p.id = &attr
+}
+
+func (p *Role) Id() (string, bool) {
+	if p.id != nil {
+		return *p.id, true
+	}
+	var zero string
+	return zero, false
+}
+
+func (p *Role) MustId() string {
+	if p.id == nil {
+		panic("the id must not be nil, please use Id() function instead")
+	}
+	return *p.id
+}
+
+func (p *Role) SetMutable(attr bool) {
+	p.mutable = &attr
+}
+
+func (p *Role) Mutable() (bool, bool) {
+	if p.mutable != nil {
+		return *p.mutable, true
+	}
+	var zero bool
+	return zero, false
+}
+
+func (p *Role) MustMutable() bool {
+	if p.mutable == nil {
+		panic("the mutable must not be nil, please use Mutable() function instead")
+	}
+	return *p.mutable
+}
+
+func (p *Role) SetName(attr string) {
+	p.name = &attr
+}
+
+func (p *Role) Name() (string, bool) {
+	if p.name != nil {
+		return *p.name, true
+	}
+	var zero string
+	return zero, false
+}
+
+func (p *Role) MustName() string {
+	if p.name == nil {
+		panic("the name must not be nil, please use Name() function instead")
+	}
+	return *p.name
+}
+
+func (p *Role) SetPermits(attr *PermitSlice) {
+	p.permits = attr
+}
+
+func (p *Role) Permits() (*PermitSlice, bool) {
+	if p.permits != nil {
+		return p.permits, true
+	}
+	return nil, false
+}
+
+func (p *Role) MustPermits() *PermitSlice {
+	if p.permits == nil {
+		panic("the permits must not be nil, please use Permits() function instead")
+	}
+	return p.permits
+}
+
+// SetUser Represents a user in the system.
+func (p *Role) SetUser(attr *User) {
+	p.user = attr
+}
+
+// User Represents a user in the system.
+func (p *Role) User() (*User, bool) {
+	if p.user != nil {
+		return p.user, true
+	}
+	return nil, false
+}
+
+// MustUser Represents a user in the system.
+func (p *Role) MustUser() *User {
+	if p.user == nil {
+		panic("the user must not be nil, please use User() function instead")
+	}
+	return p.user
 }
 
 type ReportedDevice struct {
@@ -41222,172 +41325,6 @@ func (p *RngDevice) MustSource() RngSource {
 		panic("the source must not be nil, please use Source() function instead")
 	}
 	return *p.source
-}
-
-// Role Represents a system role.
-type Role struct {
-	Struct
-	administrative *bool
-	comment        *string
-	description    *string
-	id             *string
-	mutable        *bool
-	name           *string
-	permits        *PermitSlice
-	user           *User
-}
-
-func (p *Role) SetAdministrative(attr bool) {
-	p.administrative = &attr
-}
-
-func (p *Role) Administrative() (bool, bool) {
-	if p.administrative != nil {
-		return *p.administrative, true
-	}
-	var zero bool
-	return zero, false
-}
-
-func (p *Role) MustAdministrative() bool {
-	if p.administrative == nil {
-		panic("the administrative must not be nil, please use Administrative() function instead")
-	}
-	return *p.administrative
-}
-
-func (p *Role) SetComment(attr string) {
-	p.comment = &attr
-}
-
-func (p *Role) Comment() (string, bool) {
-	if p.comment != nil {
-		return *p.comment, true
-	}
-	var zero string
-	return zero, false
-}
-
-func (p *Role) MustComment() string {
-	if p.comment == nil {
-		panic("the comment must not be nil, please use Comment() function instead")
-	}
-	return *p.comment
-}
-
-func (p *Role) SetDescription(attr string) {
-	p.description = &attr
-}
-
-func (p *Role) Description() (string, bool) {
-	if p.description != nil {
-		return *p.description, true
-	}
-	var zero string
-	return zero, false
-}
-
-func (p *Role) MustDescription() string {
-	if p.description == nil {
-		panic("the description must not be nil, please use Description() function instead")
-	}
-	return *p.description
-}
-
-func (p *Role) SetId(attr string) {
-	p.id = &attr
-}
-
-func (p *Role) Id() (string, bool) {
-	if p.id != nil {
-		return *p.id, true
-	}
-	var zero string
-	return zero, false
-}
-
-func (p *Role) MustId() string {
-	if p.id == nil {
-		panic("the id must not be nil, please use Id() function instead")
-	}
-	return *p.id
-}
-
-func (p *Role) SetMutable(attr bool) {
-	p.mutable = &attr
-}
-
-func (p *Role) Mutable() (bool, bool) {
-	if p.mutable != nil {
-		return *p.mutable, true
-	}
-	var zero bool
-	return zero, false
-}
-
-func (p *Role) MustMutable() bool {
-	if p.mutable == nil {
-		panic("the mutable must not be nil, please use Mutable() function instead")
-	}
-	return *p.mutable
-}
-
-func (p *Role) SetName(attr string) {
-	p.name = &attr
-}
-
-func (p *Role) Name() (string, bool) {
-	if p.name != nil {
-		return *p.name, true
-	}
-	var zero string
-	return zero, false
-}
-
-func (p *Role) MustName() string {
-	if p.name == nil {
-		panic("the name must not be nil, please use Name() function instead")
-	}
-	return *p.name
-}
-
-func (p *Role) SetPermits(attr *PermitSlice) {
-	p.permits = attr
-}
-
-func (p *Role) Permits() (*PermitSlice, bool) {
-	if p.permits != nil {
-		return p.permits, true
-	}
-	return nil, false
-}
-
-func (p *Role) MustPermits() *PermitSlice {
-	if p.permits == nil {
-		panic("the permits must not be nil, please use Permits() function instead")
-	}
-	return p.permits
-}
-
-// SetUser Represents a user in the system.
-func (p *Role) SetUser(attr *User) {
-	p.user = attr
-}
-
-// User Represents a user in the system.
-func (p *Role) User() (*User, bool) {
-	if p.user != nil {
-		return p.user, true
-	}
-	return nil, false
-}
-
-// MustUser Represents a user in the system.
-func (p *Role) MustUser() *User {
-	if p.user == nil {
-		panic("the user must not be nil, please use User() function instead")
-	}
-	return p.user
 }
 
 type SchedulingPolicy struct {
@@ -43088,8 +43025,8 @@ func (p *Snapshot) MustDynamicCpu() *DynamicCpu {
 // SetExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *Snapshot) SetExternalHostProvider(attr *ExternalHostProvider) {
 	p.externalHostProvider = attr
@@ -43098,8 +43035,8 @@ func (p *Snapshot) SetExternalHostProvider(attr *ExternalHostProvider) {
 // ExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *Snapshot) ExternalHostProvider() (*ExternalHostProvider, bool) {
 	if p.externalHostProvider != nil {
@@ -43111,8 +43048,8 @@ func (p *Snapshot) ExternalHostProvider() (*ExternalHostProvider, bool) {
 // MustExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *Snapshot) MustExternalHostProvider() *ExternalHostProvider {
 	if p.externalHostProvider == nil {
@@ -45493,7 +45430,7 @@ func (p *Statistic) MustHost() *Host {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -45570,7 +45507,7 @@ func (p *Statistic) SetHostNic(attr *HostNic) {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -45650,7 +45587,7 @@ func (p *Statistic) HostNic() (*HostNic, bool) {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -47255,16 +47192,16 @@ func (p *StorageDomain) MustDisks() *DiskSlice {
 }
 
 // SetExternalStatus Represents an external status.
-// This status is currently used for xref:types-host[hosts]
-// and xref:types-storage_domain[storage domains], and allows an external
+// This status is currently used for <<types/host, hosts>>
+// and <<types/storage_domain, storage domains>>, and allows an external
 // system to update status of objects it is aware of.
 func (p *StorageDomain) SetExternalStatus(attr ExternalStatus) {
 	p.externalStatus = &attr
 }
 
 // ExternalStatus Represents an external status.
-// This status is currently used for xref:types-host[hosts]
-// and xref:types-storage_domain[storage domains], and allows an external
+// This status is currently used for <<types/host, hosts>>
+// and <<types/storage_domain, storage domains>>, and allows an external
 // system to update status of objects it is aware of.
 func (p *StorageDomain) ExternalStatus() (ExternalStatus, bool) {
 	if p.externalStatus != nil {
@@ -47275,8 +47212,8 @@ func (p *StorageDomain) ExternalStatus() (ExternalStatus, bool) {
 }
 
 // MustExternalStatus Represents an external status.
-// This status is currently used for xref:types-host[hosts]
-// and xref:types-storage_domain[storage domains], and allows an external
+// This status is currently used for <<types/host, hosts>>
+// and <<types/storage_domain, storage domains>>, and allows an external
 // system to update status of objects it is aware of.
 func (p *StorageDomain) MustExternalStatus() ExternalStatus {
 	if p.externalStatus == nil {
@@ -47491,12 +47428,12 @@ func (p *StorageDomain) MustStorageConnections() *StorageConnectionSlice {
 	return p.storageConnections
 }
 
-// SetStorageFormat Type which represents a format of xref:types-storage_domain[storage domain].
+// SetStorageFormat Type which represents a format of <<types/storage_domain, storage domain>>.
 func (p *StorageDomain) SetStorageFormat(attr StorageFormat) {
 	p.storageFormat = &attr
 }
 
-// StorageFormat Type which represents a format of xref:types-storage_domain[storage domain].
+// StorageFormat Type which represents a format of <<types/storage_domain, storage domain>>.
 func (p *StorageDomain) StorageFormat() (StorageFormat, bool) {
 	if p.storageFormat != nil {
 		return *p.storageFormat, true
@@ -47505,7 +47442,7 @@ func (p *StorageDomain) StorageFormat() (StorageFormat, bool) {
 	return zero, false
 }
 
-// MustStorageFormat Type which represents a format of xref:types-storage_domain[storage domain].
+// MustStorageFormat Type which represents a format of <<types/storage_domain, storage domain>>.
 func (p *StorageDomain) MustStorageFormat() StorageFormat {
 	if p.storageFormat == nil {
 		panic("the storageFormat must not be nil, please use StorageFormat() function instead")
@@ -47569,12 +47506,12 @@ func (p *StorageDomain) MustTemplates() *TemplateSlice {
 	return p.templates
 }
 
-// SetType Indicates the kind of data managed by a xref:types-storage_domain[storage domain].
+// SetType Indicates the kind of data managed by a <<types/storage_domain, storage domain>>.
 func (p *StorageDomain) SetType(attr StorageDomainType) {
 	p.type_ = &attr
 }
 
-// Type Indicates the kind of data managed by a xref:types-storage_domain[storage domain].
+// Type Indicates the kind of data managed by a <<types/storage_domain, storage domain>>.
 func (p *StorageDomain) Type() (StorageDomainType, bool) {
 	if p.type_ != nil {
 		return *p.type_, true
@@ -47583,7 +47520,7 @@ func (p *StorageDomain) Type() (StorageDomainType, bool) {
 	return zero, false
 }
 
-// MustType Indicates the kind of data managed by a xref:types-storage_domain[storage domain].
+// MustType Indicates the kind of data managed by a <<types/storage_domain, storage domain>>.
 func (p *StorageDomain) MustType() StorageDomainType {
 	if p.type_ == nil {
 		panic("the type_ must not be nil, please use Type() function instead")
@@ -50286,7 +50223,7 @@ func (p *UnmanagedNetwork) MustHost() *Host {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -50363,7 +50300,7 @@ func (p *UnmanagedNetwork) SetHostNic(attr *HostNic) {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -50443,7 +50380,7 @@ func (p *UnmanagedNetwork) HostNic() (*HostNic, bool) {
 // </host_nic>
 // ----
 //
-// A bonded interface is represented as a xref:types-host_nic[HostNic] object
+// A bonded interface is represented as a <<types/host_nic, HostNic>> object
 // containing the `bonding` and `slaves` attributes.
 //
 // For example, the XML representation of a bonded host NIC looks like this:
@@ -52759,8 +52696,8 @@ func (p *Vm) MustDynamicCpu() *DynamicCpu {
 // SetExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *Vm) SetExternalHostProvider(attr *ExternalHostProvider) {
 	p.externalHostProvider = attr
@@ -52769,8 +52706,8 @@ func (p *Vm) SetExternalHostProvider(attr *ExternalHostProvider) {
 // ExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *Vm) ExternalHostProvider() (*ExternalHostProvider, bool) {
 	if p.externalHostProvider != nil {
@@ -52782,8 +52719,8 @@ func (p *Vm) ExternalHostProvider() (*ExternalHostProvider, bool) {
 // MustExternalHostProvider Represents an external host provider,
 // such as Foreman or Satellite.
 //
-// See link:https://www.theforeman.org/[Foreman documentation] for more details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation]
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite
 // for more details on Red Hat Satellite.
 func (p *Vm) MustExternalHostProvider() *ExternalHostProvider {
 	if p.externalHostProvider == nil {
@@ -57361,7 +57298,7 @@ func (p *VnicPassThrough) MustMode() VnicPassThroughMode {
 	return *p.mode
 }
 
-// VnicProfile A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// VnicProfile A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 type VnicProfile struct {
 	Struct
 	comment          *string
@@ -57435,12 +57372,12 @@ func (p *VnicProfile) MustDescription() string {
 	return *p.description
 }
 
-// SetFailover A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// SetFailover A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *VnicProfile) SetFailover(attr *VnicProfile) {
 	p.failover = attr
 }
 
-// Failover A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// Failover A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *VnicProfile) Failover() (*VnicProfile, bool) {
 	if p.failover != nil {
 		return p.failover, true
@@ -57448,7 +57385,7 @@ func (p *VnicProfile) Failover() (*VnicProfile, bool) {
 	return nil, false
 }
 
-// MustFailover A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// MustFailover A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *VnicProfile) MustFailover() *VnicProfile {
 	if p.failover == nil {
 		panic("the failover must not be nil, please use Failover() function instead")
@@ -57705,7 +57642,7 @@ func (p *VnicProfile) MustNetwork() *Network {
 // SetNetworkFilter Network filters filter packets sent to and from the virtual machine's NIC according to defined rules.
 //
 // There are several types of network filters supported based on libvirt.
-// For more details about the different network filters see link:https://libvirt.org/firewall.html[here].
+// For more details about the different network filters see https://libvirt.org/firewall.html[here].
 //
 // The default Network Filter is based on network type and configuration.
 // VM network's default filter is `vdsm-no-mac-spoof` if `EnableMACAntiSpoofingFilterRules` is True, otherwise
@@ -57742,7 +57679,7 @@ func (p *VnicProfile) SetNetworkFilter(attr *NetworkFilter) {
 // NetworkFilter Network filters filter packets sent to and from the virtual machine's NIC according to defined rules.
 //
 // There are several types of network filters supported based on libvirt.
-// For more details about the different network filters see link:https://libvirt.org/firewall.html[here].
+// For more details about the different network filters see https://libvirt.org/firewall.html[here].
 //
 // The default Network Filter is based on network type and configuration.
 // VM network's default filter is `vdsm-no-mac-spoof` if `EnableMACAntiSpoofingFilterRules` is True, otherwise
@@ -57782,7 +57719,7 @@ func (p *VnicProfile) NetworkFilter() (*NetworkFilter, bool) {
 // MustNetworkFilter Network filters filter packets sent to and from the virtual machine's NIC according to defined rules.
 //
 // There are several types of network filters supported based on libvirt.
-// For more details about the different network filters see link:https://libvirt.org/firewall.html[here].
+// For more details about the different network filters see https://libvirt.org/firewall.html[here].
 //
 // The default Network Filter is based on network type and configuration.
 // VM network's default filter is `vdsm-no-mac-spoof` if `EnableMACAntiSpoofingFilterRules` is True, otherwise
@@ -57876,16 +57813,16 @@ func (p *VnicProfile) MustPortMirroring() bool {
 
 // SetQos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *VnicProfile) SetQos(attr *Qos) {
 	p.qos = attr
@@ -57893,16 +57830,16 @@ func (p *VnicProfile) SetQos(attr *Qos) {
 
 // Qos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *VnicProfile) Qos() (*Qos, bool) {
 	if p.qos != nil {
@@ -57913,16 +57850,16 @@ func (p *VnicProfile) Qos() (*Qos, bool) {
 
 // MustQos This type represents the attributes to define Quality of service (QoS).
 //
-// For storage the `type` is xref:types-qos_type[storage], the attributes `max_throughput`, `max_read_throughput`,
+// For storage the `type` is <<types/qos_type, storage>>, the attributes `max_throughput`, `max_read_throughput`,
 // `max_write_throughput`, `max_iops`, `max_read_iops` and `max_write_iops` are relevant.
 //
-// For resources with computing capabilities the `type` is xref:types-qos_type[cpu], the attribute `cpu_limit` is
+// For resources with computing capabilities the `type` is <<types/qos_type, cpu>>, the attribute `cpu_limit` is
 // relevant.
 //
-// For virtual machines networks the `type` is xref:types-qos_type[network], the attributes `inbound_average`,
+// For virtual machines networks the `type` is <<types/qos_type, network>>, the attributes `inbound_average`,
 // `inbound_peak`, `inbound_burst`, `outbound_average`, `outbound_peak` and `outbound_burst` are relevant.
 //
-// For host networks the `type` is xref:types-qos_type[hostnetwork], the attributes `outbound_average_linkshare`,
+// For host networks the `type` is <<types/qos_type, hostnetwork>>, the attributes `outbound_average_linkshare`,
 // `outbound_average_upperlimit` and `outbound_average_realtime` are relevant.
 func (p *VnicProfile) MustQos() *Qos {
 	if p.qos == nil {
@@ -58013,12 +57950,12 @@ func (p *VnicProfileMapping) MustSourceNetworkProfileName() string {
 	return *p.sourceNetworkProfileName
 }
 
-// SetTargetVnicProfile A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// SetTargetVnicProfile A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *VnicProfileMapping) SetTargetVnicProfile(attr *VnicProfile) {
 	p.targetVnicProfile = attr
 }
 
-// TargetVnicProfile A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// TargetVnicProfile A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *VnicProfileMapping) TargetVnicProfile() (*VnicProfile, bool) {
 	if p.targetVnicProfile != nil {
 		return p.targetVnicProfile, true
@@ -58026,7 +57963,7 @@ func (p *VnicProfileMapping) TargetVnicProfile() (*VnicProfile, bool) {
 	return nil, false
 }
 
-// MustTargetVnicProfile A vNIC profile is a collection of settings that can be applied to individual xref:types-nic[NIC].
+// MustTargetVnicProfile A vNIC profile is a collection of settings that can be applied to individual <<types/nic,NIC>>.
 func (p *VnicProfileMapping) MustTargetVnicProfile() *VnicProfile {
 	if p.targetVnicProfile == nil {
 		panic("the targetVnicProfile must not be nil, please use TargetVnicProfile() function instead")
@@ -65544,6 +65481,30 @@ func (op *ReportedConfigurationSlice) SetSlice(slice []*ReportedConfiguration) {
 	op.slice = slice
 }
 
+type RoleSlice struct {
+	href  *string
+	slice []*Role
+}
+
+func (op *RoleSlice) Href() (string, bool) {
+	if op.href == nil {
+		return "", false
+	}
+	return *op.href, true
+}
+
+func (op *RoleSlice) SetHref(href string) {
+	op.href = &href
+}
+
+func (op *RoleSlice) Slice() []*Role {
+	return op.slice
+}
+
+func (op *RoleSlice) SetSlice(slice []*Role) {
+	op.slice = slice
+}
+
 type ReportedDeviceSlice struct {
 	href  *string
 	slice []*ReportedDevice
@@ -65589,30 +65550,6 @@ func (op *RngDeviceSlice) Slice() []*RngDevice {
 }
 
 func (op *RngDeviceSlice) SetSlice(slice []*RngDevice) {
-	op.slice = slice
-}
-
-type RoleSlice struct {
-	href  *string
-	slice []*Role
-}
-
-func (op *RoleSlice) Href() (string, bool) {
-	if op.href == nil {
-		return "", false
-	}
-	return *op.href, true
-}
-
-func (op *RoleSlice) SetHref(href string) {
-	op.href = &href
-}
-
-func (op *RoleSlice) Slice() []*Role {
-	return op.slice
-}
-
-func (op *RoleSlice) SetSlice(slice []*Role) {
 	op.slice = slice
 }
 
@@ -87629,30 +87566,12 @@ func (builder *MigrationOptionsBuilder) Compressed(attr InheritableBoolean) *Mig
 	return builder
 }
 
-func (builder *MigrationOptionsBuilder) CustomParallelMigrations(attr int64) *MigrationOptionsBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	builder.migrationOptions.SetCustomParallelMigrations(attr)
-	return builder
-}
-
 func (builder *MigrationOptionsBuilder) Encrypted(attr InheritableBoolean) *MigrationOptionsBuilder {
 	if builder.err != nil {
 		return builder
 	}
 
 	builder.migrationOptions.SetEncrypted(attr)
-	return builder
-}
-
-func (builder *MigrationOptionsBuilder) ParallelMigrationsPolicy(attr ParallelMigrationsPolicy) *MigrationOptionsBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	builder.migrationOptions.SetParallelMigrationsPolicy(attr)
 	return builder
 }
 
@@ -92029,15 +91948,6 @@ func (builder *OperatingSystemInfoBuilder) SmallIconBuilder(attrBuilder *IconBui
 	return builder.SmallIcon(attr)
 }
 
-func (builder *OperatingSystemInfoBuilder) TpmSupport(attr TpmSupport) *OperatingSystemInfoBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	builder.operatingSystemInfo.SetTpmSupport(attr)
-	return builder
-}
-
 func (builder *OperatingSystemInfoBuilder) Href(href string) *OperatingSystemInfoBuilder {
 	if builder.err != nil {
 		return builder
@@ -95418,6 +95328,159 @@ func (builder *ReportedConfigurationBuilder) MustBuild() *ReportedConfiguration 
 	return builder.reportedConfiguration
 }
 
+type RoleBuilder struct {
+	role *Role
+	err  error
+}
+
+func NewRoleBuilder() *RoleBuilder {
+	return &RoleBuilder{role: &Role{}, err: nil}
+}
+
+func (builder *RoleBuilder) Administrative(attr bool) *RoleBuilder {
+	if builder.err != nil {
+		return builder
+	}
+
+	builder.role.SetAdministrative(attr)
+	return builder
+}
+
+func (builder *RoleBuilder) Comment(attr string) *RoleBuilder {
+	if builder.err != nil {
+		return builder
+	}
+
+	builder.role.SetComment(attr)
+	return builder
+}
+
+func (builder *RoleBuilder) Description(attr string) *RoleBuilder {
+	if builder.err != nil {
+		return builder
+	}
+
+	builder.role.SetDescription(attr)
+	return builder
+}
+
+func (builder *RoleBuilder) Id(attr string) *RoleBuilder {
+	if builder.err != nil {
+		return builder
+	}
+
+	builder.role.SetId(attr)
+	return builder
+}
+
+func (builder *RoleBuilder) Mutable(attr bool) *RoleBuilder {
+	if builder.err != nil {
+		return builder
+	}
+
+	builder.role.SetMutable(attr)
+	return builder
+}
+
+func (builder *RoleBuilder) Name(attr string) *RoleBuilder {
+	if builder.err != nil {
+		return builder
+	}
+
+	builder.role.SetName(attr)
+	return builder
+}
+
+func (builder *RoleBuilder) Permits(attr *PermitSlice) *RoleBuilder {
+	if builder.err != nil {
+		return builder
+	}
+
+	builder.role.SetPermits(attr)
+	return builder
+}
+
+func (builder *RoleBuilder) PermitsOfAny(anys ...*Permit) *RoleBuilder {
+	if builder.err != nil {
+		return builder
+	}
+
+	if builder.role.permits == nil {
+		builder.role.permits = new(PermitSlice)
+	}
+	builder.role.permits.slice = append(builder.role.permits.slice, anys...)
+	return builder
+}
+
+func (builder *RoleBuilder) PermitsBuilderOfAny(anyBuilders ...PermitBuilder) *RoleBuilder {
+	if builder.err != nil || len(anyBuilders) == 0 {
+		return builder
+	}
+
+	for _, b := range anyBuilders {
+		if b.err != nil {
+			builder.err = b.err
+			return builder
+		}
+		attr, err := b.Build()
+		if err != nil {
+			builder.err = b.err
+			return builder
+		}
+		builder.PermitsOfAny(attr)
+	}
+	return builder
+}
+
+func (builder *RoleBuilder) User(attr *User) *RoleBuilder {
+	if builder.err != nil {
+		return builder
+	}
+
+	builder.role.SetUser(attr)
+	return builder
+}
+
+func (builder *RoleBuilder) UserBuilder(attrBuilder *UserBuilder) *RoleBuilder {
+	if builder.err != nil {
+		return builder
+	}
+
+	if attrBuilder.err != nil {
+		builder.err = attrBuilder.err
+		return builder
+	}
+	attr, err := attrBuilder.Build()
+	if err != nil {
+		builder.err = err
+		return builder
+	}
+	return builder.User(attr)
+}
+
+func (builder *RoleBuilder) Href(href string) *RoleBuilder {
+	if builder.err != nil {
+		return builder
+	}
+
+	builder.role.SetHref(href)
+	return builder
+}
+
+func (builder *RoleBuilder) Build() (*Role, error) {
+	if builder.err != nil {
+		return nil, builder.err
+	}
+	return builder.role, nil
+}
+
+func (builder *RoleBuilder) MustBuild() *Role {
+	if builder.err != nil {
+		panic(fmt.Sprintf("Failed to build Role instance, reason: %v", builder.err))
+	}
+	return builder.role
+}
+
 type ReportedDeviceBuilder struct {
 	reportedDevice *ReportedDevice
 	err            error
@@ -95653,159 +95716,6 @@ func (builder *RngDeviceBuilder) MustBuild() *RngDevice {
 		panic(fmt.Sprintf("Failed to build RngDevice instance, reason: %v", builder.err))
 	}
 	return builder.rngDevice
-}
-
-type RoleBuilder struct {
-	role *Role
-	err  error
-}
-
-func NewRoleBuilder() *RoleBuilder {
-	return &RoleBuilder{role: &Role{}, err: nil}
-}
-
-func (builder *RoleBuilder) Administrative(attr bool) *RoleBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	builder.role.SetAdministrative(attr)
-	return builder
-}
-
-func (builder *RoleBuilder) Comment(attr string) *RoleBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	builder.role.SetComment(attr)
-	return builder
-}
-
-func (builder *RoleBuilder) Description(attr string) *RoleBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	builder.role.SetDescription(attr)
-	return builder
-}
-
-func (builder *RoleBuilder) Id(attr string) *RoleBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	builder.role.SetId(attr)
-	return builder
-}
-
-func (builder *RoleBuilder) Mutable(attr bool) *RoleBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	builder.role.SetMutable(attr)
-	return builder
-}
-
-func (builder *RoleBuilder) Name(attr string) *RoleBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	builder.role.SetName(attr)
-	return builder
-}
-
-func (builder *RoleBuilder) Permits(attr *PermitSlice) *RoleBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	builder.role.SetPermits(attr)
-	return builder
-}
-
-func (builder *RoleBuilder) PermitsOfAny(anys ...*Permit) *RoleBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	if builder.role.permits == nil {
-		builder.role.permits = new(PermitSlice)
-	}
-	builder.role.permits.slice = append(builder.role.permits.slice, anys...)
-	return builder
-}
-
-func (builder *RoleBuilder) PermitsBuilderOfAny(anyBuilders ...PermitBuilder) *RoleBuilder {
-	if builder.err != nil || len(anyBuilders) == 0 {
-		return builder
-	}
-
-	for _, b := range anyBuilders {
-		if b.err != nil {
-			builder.err = b.err
-			return builder
-		}
-		attr, err := b.Build()
-		if err != nil {
-			builder.err = b.err
-			return builder
-		}
-		builder.PermitsOfAny(attr)
-	}
-	return builder
-}
-
-func (builder *RoleBuilder) User(attr *User) *RoleBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	builder.role.SetUser(attr)
-	return builder
-}
-
-func (builder *RoleBuilder) UserBuilder(attrBuilder *UserBuilder) *RoleBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	if attrBuilder.err != nil {
-		builder.err = attrBuilder.err
-		return builder
-	}
-	attr, err := attrBuilder.Build()
-	if err != nil {
-		builder.err = err
-		return builder
-	}
-	return builder.User(attr)
-}
-
-func (builder *RoleBuilder) Href(href string) *RoleBuilder {
-	if builder.err != nil {
-		return builder
-	}
-
-	builder.role.SetHref(href)
-	return builder
-}
-
-func (builder *RoleBuilder) Build() (*Role, error) {
-	if builder.err != nil {
-		return nil, builder.err
-	}
-	return builder.role, nil
-}
-
-func (builder *RoleBuilder) MustBuild() *Role {
-	if builder.err != nil {
-		panic(fmt.Sprintf("Failed to build Role instance, reason: %v", builder.err))
-	}
-	return builder.role
 }
 
 type SchedulingPolicyBuilder struct {
@@ -110808,12 +110718,11 @@ const (
 type Architecture string
 
 const (
-	ARCHITECTURE_AARCH64     Architecture = "aarch64"
-	ARCHITECTURE_LOONGARCH64 Architecture = "loongarch64"
-	ARCHITECTURE_PPC64       Architecture = "ppc64"
-	ARCHITECTURE_S390X       Architecture = "s390x"
-	ARCHITECTURE_UNDEFINED   Architecture = "undefined"
-	ARCHITECTURE_X86_64      Architecture = "x86_64"
+	ARCHITECTURE_AARCH64   Architecture = "aarch64"
+	ARCHITECTURE_PPC64     Architecture = "ppc64"
+	ARCHITECTURE_S390X     Architecture = "s390x"
+	ARCHITECTURE_UNDEFINED Architecture = "undefined"
+	ARCHITECTURE_X86_64    Architecture = "x86_64"
 )
 
 type AutoNumaStatus string
@@ -110912,7 +110821,6 @@ type CpuPinningPolicy string
 
 const (
 	CPUPINNINGPOLICY_DEDICATED           CpuPinningPolicy = "dedicated"
-	CPUPINNINGPOLICY_ISOLATE_THREADS     CpuPinningPolicy = "isolate_threads"
 	CPUPINNINGPOLICY_MANUAL              CpuPinningPolicy = "manual"
 	CPUPINNINGPOLICY_NONE                CpuPinningPolicy = "none"
 	CPUPINNINGPOLICY_RESIZE_AND_PIN_NUMA CpuPinningPolicy = "resize_and_pin_numa"
@@ -111557,16 +111465,6 @@ const (
 	OSTYPE_WINDOWS_XP        OsType = "windows_xp"
 )
 
-type ParallelMigrationsPolicy string
-
-const (
-	PARALLELMIGRATIONSPOLICY_AUTO          ParallelMigrationsPolicy = "auto"
-	PARALLELMIGRATIONSPOLICY_AUTO_PARALLEL ParallelMigrationsPolicy = "auto_parallel"
-	PARALLELMIGRATIONSPOLICY_CUSTOM        ParallelMigrationsPolicy = "custom"
-	PARALLELMIGRATIONSPOLICY_DISABLED      ParallelMigrationsPolicy = "disabled"
-	PARALLELMIGRATIONSPOLICY_INHERIT       ParallelMigrationsPolicy = "inherit"
-)
-
 type PayloadEncoding string
 
 const (
@@ -111816,14 +111714,6 @@ const (
 	TEMPLATESTATUS_ILLEGAL TemplateStatus = "illegal"
 	TEMPLATESTATUS_LOCKED  TemplateStatus = "locked"
 	TEMPLATESTATUS_OK      TemplateStatus = "ok"
-)
-
-type TpmSupport string
-
-const (
-	TPMSUPPORT_REQUIRED    TpmSupport = "required"
-	TPMSUPPORT_SUPPORTED   TpmSupport = "supported"
-	TPMSUPPORT_UNSUPPORTED TpmSupport = "unsupported"
 )
 
 type TransportType string

@@ -19322,12 +19322,6 @@ func XMLMigrationOptionsReadOne(reader *XMLReader, start *xml.StartElement, expe
 					return nil, err
 				}
 				builder.Compressed(v)
-			case "custom_parallel_migrations":
-				v, err := reader.ReadInt64(&t)
-				if err != nil {
-					return nil, err
-				}
-				builder.CustomParallelMigrations(v)
 			case "encrypted":
 				vp, err := XMLInheritableBooleanReadOne(reader, &t)
 				v := *vp
@@ -19335,13 +19329,6 @@ func XMLMigrationOptionsReadOne(reader *XMLReader, start *xml.StartElement, expe
 					return nil, err
 				}
 				builder.Encrypted(v)
-			case "parallel_migrations_policy":
-				vp, err := XMLParallelMigrationsPolicyReadOne(reader, &t)
-				v := *vp
-				if err != nil {
-					return nil, err
-				}
-				builder.ParallelMigrationsPolicy(v)
 			case "policy":
 				v, err := XMLMigrationPolicyReadOne(reader, &t, "policy")
 				if err != nil {
@@ -23379,13 +23366,6 @@ func XMLOperatingSystemInfoReadOne(reader *XMLReader, start *xml.StartElement, e
 					return nil, err
 				}
 				builder.SmallIcon(v)
-			case "tpm_support":
-				vp, err := XMLTpmSupportReadOne(reader, &t)
-				v := *vp
-				if err != nil {
-					return nil, err
-				}
-				builder.TpmSupport(v)
 			case "link":
 				var rel, href string
 				for _, attr := range t.Attr {
@@ -27402,6 +27382,174 @@ func XMLReportedConfigurationReadMany(reader *XMLReader, start *xml.StartElement
 	return &result, nil
 }
 
+func XMLRoleReadOne(reader *XMLReader, start *xml.StartElement, expectedTag string) (*Role, error) {
+	builder := NewRoleBuilder()
+	if start == nil {
+		st, err := reader.FindStartElement()
+		if err != nil {
+			if err == io.EOF {
+				return nil, nil
+			}
+			return nil, err
+		}
+		start = st
+	}
+	if expectedTag == "" {
+		expectedTag = "role"
+	}
+	if start.Name.Local != expectedTag {
+		return nil, XMLTagNotMatchError{start.Name.Local, expectedTag}
+	}
+	// Process the attributes
+	for _, attr := range start.Attr {
+		name := attr.Name.Local
+		value := attr.Value
+		switch name {
+		case "id":
+			builder.Id(value)
+		case "href":
+			builder.Href(value)
+		}
+	}
+	var links []Link
+	depth := 1
+	for depth > 0 {
+		t, err := reader.Next()
+		if err != nil {
+			if err == io.EOF {
+				break
+			}
+			return nil, err
+		}
+		t = xml.CopyToken(t)
+		switch t := t.(type) {
+		case xml.StartElement:
+			switch t.Name.Local {
+			case "administrative":
+				v, err := reader.ReadBool(&t)
+				if err != nil {
+					return nil, err
+				}
+				builder.Administrative(v)
+			case "comment":
+				v, err := reader.ReadString(&t)
+				if err != nil {
+					return nil, err
+				}
+				builder.Comment(v)
+			case "description":
+				v, err := reader.ReadString(&t)
+				if err != nil {
+					return nil, err
+				}
+				builder.Description(v)
+			case "mutable":
+				v, err := reader.ReadBool(&t)
+				if err != nil {
+					return nil, err
+				}
+				builder.Mutable(v)
+			case "name":
+				v, err := reader.ReadString(&t)
+				if err != nil {
+					return nil, err
+				}
+				builder.Name(v)
+			case "permits":
+				v, err := XMLPermitReadMany(reader, &t)
+				if err != nil {
+					return nil, err
+				}
+				builder.Permits(v)
+			case "user":
+				v, err := XMLUserReadOne(reader, &t, "user")
+				if err != nil {
+					return nil, err
+				}
+				builder.User(v)
+			case "link":
+				var rel, href string
+				for _, attr := range t.Attr {
+					name := attr.Name.Local
+					value := attr.Value
+					switch name {
+					case "href":
+						href = value
+					case "rel":
+						rel = value
+					}
+				}
+				if rel != "" && href != "" {
+					links = append(links, Link{&href, &rel})
+				}
+				// <link> just has attributes, so must skip manually
+				reader.Skip()
+			default:
+				reader.Skip()
+			}
+		case xml.EndElement:
+			depth--
+		}
+	}
+	one, err := builder.Build()
+	if err != nil {
+		return nil, err
+	}
+	for _, link := range links {
+		switch *link.rel {
+		case "permits":
+			if one.permits == nil {
+				one.permits = new(PermitSlice)
+			}
+			one.permits.href = link.href
+		} // end of switch
+	} // end of for-links
+	return one, nil
+}
+
+func XMLRoleReadMany(reader *XMLReader, start *xml.StartElement) (*RoleSlice, error) {
+	if start == nil {
+		st, err := reader.FindStartElement()
+		if err != nil {
+			if err == io.EOF {
+				return nil, nil
+			}
+			return nil, err
+		}
+		start = st
+	}
+	var result RoleSlice
+	depth := 1
+	for depth > 0 {
+		t, err := reader.Next()
+		if err != nil {
+			if err == io.EOF {
+				break
+			}
+			return nil, err
+		}
+		t = xml.CopyToken(t)
+		switch t := t.(type) {
+		case xml.StartElement:
+			switch t.Name.Local {
+			case "role":
+				one, err := XMLRoleReadOne(reader, &t, "role")
+				if err != nil {
+					return nil, err
+				}
+				if one != nil {
+					result.slice = append(result.slice, one)
+				}
+			default:
+				reader.Skip()
+			}
+		case xml.EndElement:
+			depth--
+		}
+	}
+	return &result, nil
+}
+
 func XMLReportedDeviceReadOne(reader *XMLReader, start *xml.StartElement, expectedTag string) (*ReportedDevice, error) {
 	builder := NewReportedDeviceBuilder()
 	if start == nil {
@@ -27673,174 +27821,6 @@ func XMLRngDeviceReadMany(reader *XMLReader, start *xml.StartElement) (*RngDevic
 			switch t.Name.Local {
 			case "rng_device":
 				one, err := XMLRngDeviceReadOne(reader, &t, "rng_device")
-				if err != nil {
-					return nil, err
-				}
-				if one != nil {
-					result.slice = append(result.slice, one)
-				}
-			default:
-				reader.Skip()
-			}
-		case xml.EndElement:
-			depth--
-		}
-	}
-	return &result, nil
-}
-
-func XMLRoleReadOne(reader *XMLReader, start *xml.StartElement, expectedTag string) (*Role, error) {
-	builder := NewRoleBuilder()
-	if start == nil {
-		st, err := reader.FindStartElement()
-		if err != nil {
-			if err == io.EOF {
-				return nil, nil
-			}
-			return nil, err
-		}
-		start = st
-	}
-	if expectedTag == "" {
-		expectedTag = "role"
-	}
-	if start.Name.Local != expectedTag {
-		return nil, XMLTagNotMatchError{start.Name.Local, expectedTag}
-	}
-	// Process the attributes
-	for _, attr := range start.Attr {
-		name := attr.Name.Local
-		value := attr.Value
-		switch name {
-		case "id":
-			builder.Id(value)
-		case "href":
-			builder.Href(value)
-		}
-	}
-	var links []Link
-	depth := 1
-	for depth > 0 {
-		t, err := reader.Next()
-		if err != nil {
-			if err == io.EOF {
-				break
-			}
-			return nil, err
-		}
-		t = xml.CopyToken(t)
-		switch t := t.(type) {
-		case xml.StartElement:
-			switch t.Name.Local {
-			case "administrative":
-				v, err := reader.ReadBool(&t)
-				if err != nil {
-					return nil, err
-				}
-				builder.Administrative(v)
-			case "comment":
-				v, err := reader.ReadString(&t)
-				if err != nil {
-					return nil, err
-				}
-				builder.Comment(v)
-			case "description":
-				v, err := reader.ReadString(&t)
-				if err != nil {
-					return nil, err
-				}
-				builder.Description(v)
-			case "mutable":
-				v, err := reader.ReadBool(&t)
-				if err != nil {
-					return nil, err
-				}
-				builder.Mutable(v)
-			case "name":
-				v, err := reader.ReadString(&t)
-				if err != nil {
-					return nil, err
-				}
-				builder.Name(v)
-			case "permits":
-				v, err := XMLPermitReadMany(reader, &t)
-				if err != nil {
-					return nil, err
-				}
-				builder.Permits(v)
-			case "user":
-				v, err := XMLUserReadOne(reader, &t, "user")
-				if err != nil {
-					return nil, err
-				}
-				builder.User(v)
-			case "link":
-				var rel, href string
-				for _, attr := range t.Attr {
-					name := attr.Name.Local
-					value := attr.Value
-					switch name {
-					case "href":
-						href = value
-					case "rel":
-						rel = value
-					}
-				}
-				if rel != "" && href != "" {
-					links = append(links, Link{&href, &rel})
-				}
-				// <link> just has attributes, so must skip manually
-				reader.Skip()
-			default:
-				reader.Skip()
-			}
-		case xml.EndElement:
-			depth--
-		}
-	}
-	one, err := builder.Build()
-	if err != nil {
-		return nil, err
-	}
-	for _, link := range links {
-		switch *link.rel {
-		case "permits":
-			if one.permits == nil {
-				one.permits = new(PermitSlice)
-			}
-			one.permits.href = link.href
-		} // end of switch
-	} // end of for-links
-	return one, nil
-}
-
-func XMLRoleReadMany(reader *XMLReader, start *xml.StartElement) (*RoleSlice, error) {
-	if start == nil {
-		st, err := reader.FindStartElement()
-		if err != nil {
-			if err == io.EOF {
-				return nil, nil
-			}
-			return nil, err
-		}
-		start = st
-	}
-	var result RoleSlice
-	depth := 1
-	for depth > 0 {
-		t, err := reader.Next()
-		if err != nil {
-			if err == io.EOF {
-				break
-			}
-			return nil, err
-		}
-		t = xml.CopyToken(t)
-		switch t := t.(type) {
-		case xml.StartElement:
-			switch t.Name.Local {
-			case "role":
-				one, err := XMLRoleReadOne(reader, &t, "role")
 				if err != nil {
 					return nil, err
 				}
@@ -42389,62 +42369,6 @@ func XMLOsTypeReadMany(reader *XMLReader, start *xml.StartElement) ([]OsType, er
 	return results, nil
 }
 
-func XMLParallelMigrationsPolicyReadOne(reader *XMLReader, start *xml.StartElement) (*ParallelMigrationsPolicy, error) {
-	if start == nil {
-		st, err := reader.FindStartElement()
-		if err != nil {
-			if err == io.EOF {
-				return nil, nil
-			}
-			return nil, err
-		}
-		start = st
-	}
-	s, err := reader.ReadString(start)
-	if err != nil {
-		return nil, err
-	}
-	result := new(ParallelMigrationsPolicy)
-	*result = ParallelMigrationsPolicy(s)
-	return result, nil
-}
-
-func XMLParallelMigrationsPolicyReadMany(reader *XMLReader, start *xml.StartElement) ([]ParallelMigrationsPolicy, error) {
-	if start == nil {
-		st, err := reader.FindStartElement()
-		if err != nil {
-			if err == io.EOF {
-				return nil, nil
-			}
-			return nil, err
-		}
-		start = st
-	}
-	var results []ParallelMigrationsPolicy
-	depth := 1
-	for depth > 0 {
-		t, err := reader.Next()
-		if err != nil {
-			if err == io.EOF {
-				break
-			}
-			return nil, err
-		}
-		t = xml.CopyToken(t)
-		switch t := t.(type) {
-		case xml.StartElement:
-			one, err := reader.ReadString(&t)
-			if err != nil {
-				return nil, err
-			}
-			results = append(results, ParallelMigrationsPolicy(one))
-		case xml.EndElement:
-			depth--
-		}
-	}
-	return results, nil
-}
-
 func XMLPayloadEncodingReadOne(reader *XMLReader, start *xml.StartElement) (*PayloadEncoding, error) {
 	if start == nil {
 		st, err := reader.FindStartElement()
@@ -44062,62 +43986,6 @@ func XMLTemplateStatusReadMany(reader *XMLReader, start *xml.StartElement) ([]Te
 				return nil, err
 			}
 			results = append(results, TemplateStatus(one))
-		case xml.EndElement:
-			depth--
-		}
-	}
-	return results, nil
-}
-
-func XMLTpmSupportReadOne(reader *XMLReader, start *xml.StartElement) (*TpmSupport, error) {
-	if start == nil {
-		st, err := reader.FindStartElement()
-		if err != nil {
-			if err == io.EOF {
-				return nil, nil
-			}
-			return nil, err
-		}
-		start = st
-	}
-	s, err := reader.ReadString(start)
-	if err != nil {
-		return nil, err
-	}
-	result := new(TpmSupport)
-	*result = TpmSupport(s)
-	return result, nil
-}
-
-func XMLTpmSupportReadMany(reader *XMLReader, start *xml.StartElement) ([]TpmSupport, error) {
-	if start == nil {
-		st, err := reader.FindStartElement()
-		if err != nil {
-			if err == io.EOF {
-				return nil, nil
-			}
-			return nil, err
-		}
-		start = st
-	}
-	var results []TpmSupport
-	depth := 1
-	for depth > 0 {
-		t, err := reader.Next()
-		if err != nil {
-			if err == io.EOF {
-				break
-			}
-			return nil, err
-		}
-		t = xml.CopyToken(t)
-		switch t := t.(type) {
-		case xml.StartElement:
-			one, err := reader.ReadString(&t)
-			if err != nil {
-				return nil, err
-			}
-			results = append(results, TpmSupport(one))
 		case xml.EndElement:
 			depth--
 		}

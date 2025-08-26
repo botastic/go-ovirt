@@ -6405,14 +6405,8 @@ func XMLMigrationOptionsWriteOne(writer *XMLWriter, object *MigrationOptions, ta
 	if r, ok := object.Compressed(); ok {
 		XMLInheritableBooleanWriteOne(writer, r, "compressed")
 	}
-	if r, ok := object.CustomParallelMigrations(); ok {
-		writer.WriteInt64("custom_parallel_migrations", r)
-	}
 	if r, ok := object.Encrypted(); ok {
 		XMLInheritableBooleanWriteOne(writer, r, "encrypted")
-	}
-	if r, ok := object.ParallelMigrationsPolicy(); ok {
-		XMLParallelMigrationsPolicyWriteOne(writer, r, "parallel_migrations_policy")
 	}
 	if r, ok := object.Policy(); ok {
 		XMLMigrationPolicyWriteOne(writer, r, "policy")
@@ -7761,9 +7755,6 @@ func XMLOperatingSystemInfoWriteOne(writer *XMLWriter, object *OperatingSystemIn
 	if r, ok := object.SmallIcon(); ok {
 		XMLIconWriteOne(writer, r, "small_icon")
 	}
-	if r, ok := object.TpmSupport(); ok {
-		XMLTpmSupportWriteOne(writer, r, "tpm_support")
-	}
 	writer.WriteEnd(tag)
 	return nil
 }
@@ -8987,6 +8978,61 @@ func XMLReportedConfigurationWriteMany(writer *XMLWriter, structSlice *ReportedC
 	return nil
 }
 
+func XMLRoleWriteOne(writer *XMLWriter, object *Role, tag string) error {
+	if object == nil {
+		return fmt.Errorf("input object pointer is nil")
+	}
+	if tag == "" {
+		tag = "role"
+	}
+	var attrs map[string]string
+	if r, ok := object.Id(); ok {
+		if attrs == nil {
+			attrs = make(map[string]string)
+		}
+		attrs["id"] = r
+	}
+	writer.WriteStart("", tag, attrs)
+	if r, ok := object.Administrative(); ok {
+		writer.WriteBool("administrative", r)
+	}
+	if r, ok := object.Comment(); ok {
+		writer.WriteCharacter("comment", r)
+	}
+	if r, ok := object.Description(); ok {
+		writer.WriteCharacter("description", r)
+	}
+	if r, ok := object.Mutable(); ok {
+		writer.WriteBool("mutable", r)
+	}
+	if r, ok := object.Name(); ok {
+		writer.WriteCharacter("name", r)
+	}
+	if r, ok := object.Permits(); ok {
+		XMLPermitWriteMany(writer, r, "permits", "permit")
+	}
+	if r, ok := object.User(); ok {
+		XMLUserWriteOne(writer, r, "user")
+	}
+	writer.WriteEnd(tag)
+	return nil
+}
+
+func XMLRoleWriteMany(writer *XMLWriter, structSlice *RoleSlice, plural, singular string) error {
+	if plural == "" {
+		plural = "roles"
+	}
+	if singular == "" {
+		singular = "role"
+	}
+	writer.WriteStart("", plural, nil)
+	for _, o := range structSlice.Slice() {
+		XMLRoleWriteOne(writer, o, singular)
+	}
+	writer.WriteEnd(plural)
+	return nil
+}
+
 func XMLReportedDeviceWriteOne(writer *XMLWriter, object *ReportedDevice, tag string) error {
 	if object == nil {
 		return fmt.Errorf("input object pointer is nil")
@@ -9070,61 +9116,6 @@ func XMLRngDeviceWriteMany(writer *XMLWriter, structSlice *RngDeviceSlice, plura
 	writer.WriteStart("", plural, nil)
 	for _, o := range structSlice.Slice() {
 		XMLRngDeviceWriteOne(writer, o, singular)
-	}
-	writer.WriteEnd(plural)
-	return nil
-}
-
-func XMLRoleWriteOne(writer *XMLWriter, object *Role, tag string) error {
-	if object == nil {
-		return fmt.Errorf("input object pointer is nil")
-	}
-	if tag == "" {
-		tag = "role"
-	}
-	var attrs map[string]string
-	if r, ok := object.Id(); ok {
-		if attrs == nil {
-			attrs = make(map[string]string)
-		}
-		attrs["id"] = r
-	}
-	writer.WriteStart("", tag, attrs)
-	if r, ok := object.Administrative(); ok {
-		writer.WriteBool("administrative", r)
-	}
-	if r, ok := object.Comment(); ok {
-		writer.WriteCharacter("comment", r)
-	}
-	if r, ok := object.Description(); ok {
-		writer.WriteCharacter("description", r)
-	}
-	if r, ok := object.Mutable(); ok {
-		writer.WriteBool("mutable", r)
-	}
-	if r, ok := object.Name(); ok {
-		writer.WriteCharacter("name", r)
-	}
-	if r, ok := object.Permits(); ok {
-		XMLPermitWriteMany(writer, r, "permits", "permit")
-	}
-	if r, ok := object.User(); ok {
-		XMLUserWriteOne(writer, r, "user")
-	}
-	writer.WriteEnd(tag)
-	return nil
-}
-
-func XMLRoleWriteMany(writer *XMLWriter, structSlice *RoleSlice, plural, singular string) error {
-	if plural == "" {
-		plural = "roles"
-	}
-	if singular == "" {
-		singular = "role"
-	}
-	writer.WriteStart("", plural, nil)
-	for _, o := range structSlice.Slice() {
-		XMLRoleWriteOne(writer, o, singular)
 	}
 	writer.WriteEnd(plural)
 	return nil
@@ -14351,28 +14342,6 @@ func XMLOsTypeWriteMany(writer *XMLWriter, enums []OsType, plural, singular stri
 	return nil
 }
 
-func XMLParallelMigrationsPolicyWriteOne(writer *XMLWriter, enum ParallelMigrationsPolicy, tag string) {
-	if tag == "" {
-		tag = "parallel_migrations_policy"
-	}
-	writer.WriteCharacter(tag, string(enum))
-}
-
-func XMLParallelMigrationsPolicyWriteMany(writer *XMLWriter, enums []ParallelMigrationsPolicy, plural, singular string) error {
-	if plural == "" {
-		plural = "parallel_migrations_policies"
-	}
-	if singular == "" {
-		singular = "parallel_migrations_policy"
-	}
-	writer.WriteStart("", plural, nil)
-	for _, e := range enums {
-		writer.WriteCharacter(singular, string(e))
-	}
-	writer.WriteEnd(plural)
-	return nil
-}
-
 func XMLPayloadEncodingWriteOne(writer *XMLWriter, enum PayloadEncoding, tag string) {
 	if tag == "" {
 		tag = "payload_encoding"
@@ -15002,28 +14971,6 @@ func XMLTemplateStatusWriteMany(writer *XMLWriter, enums []TemplateStatus, plura
 	}
 	if singular == "" {
 		singular = "template_status"
-	}
-	writer.WriteStart("", plural, nil)
-	for _, e := range enums {
-		writer.WriteCharacter(singular, string(e))
-	}
-	writer.WriteEnd(plural)
-	return nil
-}
-
-func XMLTpmSupportWriteOne(writer *XMLWriter, enum TpmSupport, tag string) {
-	if tag == "" {
-		tag = "tpm_support"
-	}
-	writer.WriteCharacter(tag, string(enum))
-}
-
-func XMLTpmSupportWriteMany(writer *XMLWriter, enums []TpmSupport, plural, singular string) error {
-	if plural == "" {
-		plural = "tpm_supports"
-	}
-	if singular == "" {
-		singular = "tpm_support"
 	}
 	writer.WriteStart("", plural, nil)
 	for _, e := range enums {

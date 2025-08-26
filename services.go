@@ -9744,8 +9744,8 @@ func (op *AssignedVnicProfilesService) String() string {
 // Manages a single disk available in a storage domain attached to a data center.
 // IMPORTANT: Since version 4.2 of the engine this service is intended only to list disks available in the storage
 // domain, and to register unregistered disks. All the other operations, like copying a disk, moving a disk, etc, have
-// been deprecated and will be removed in the future. To perform those operations use the xref:services-disks[service that manages all the disks of the system]
-// or the xref:services-disk[service that manages a specific disk].
+// been deprecated and will be removed in the future. To perform those operations use the <<services/disks, service
+// that manages all the disks of the system>>, or the <<services/disk, service that manages an specific disk>>.
 type AttachedStorageDomainDiskService struct {
 	BaseService
 }
@@ -9759,7 +9759,7 @@ func NewAttachedStorageDomainDiskService(connection *Connection, path string) *A
 
 // Copies a disk to the specified storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To copy a disk use the xref:services-disk-methods-copy[copy]
+// compatibility. It will be removed in the future. To copy a disk use the <<services/disk/methods/copy, copy>>
 // operation of the service that manages that disk.
 type AttachedStorageDomainDiskServiceCopyRequest struct {
 	AttachedStorageDomainDiskService *AttachedStorageDomainDiskService
@@ -9880,14 +9880,14 @@ func (p *AttachedStorageDomainDiskServiceCopyRequest) MustSend() *AttachedStorag
 
 // Copies a disk to the specified storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To copy a disk use the xref:services-disk-methods-copy[copy]
+// compatibility. It will be removed in the future. To copy a disk use the <<services/disk/methods/copy, copy>>
 // operation of the service that manages that disk.
 type AttachedStorageDomainDiskServiceCopyResponse struct {
 }
 
 // Copies a disk to the specified storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To copy a disk use the xref:services-disk-methods-copy[copy]
+// compatibility. It will be removed in the future. To copy a disk use the <<services/disk/methods/copy, copy>>
 // operation of the service that manages that disk.
 func (p *AttachedStorageDomainDiskService) Copy() *AttachedStorageDomainDiskServiceCopyRequest {
 	return &AttachedStorageDomainDiskServiceCopyRequest{AttachedStorageDomainDiskService: p}
@@ -9895,7 +9895,7 @@ func (p *AttachedStorageDomainDiskService) Copy() *AttachedStorageDomainDiskServ
 
 // Exports a disk to an export storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To export a disk use the xref:services-disk-methods-export[export]
+// compatibility. It will be removed in the future. To export a disk use the <<services/disk/methods/export, export>>
 // operation of the service that manages that disk.
 type AttachedStorageDomainDiskServiceExportRequest struct {
 	AttachedStorageDomainDiskService *AttachedStorageDomainDiskService
@@ -10009,14 +10009,14 @@ func (p *AttachedStorageDomainDiskServiceExportRequest) MustSend() *AttachedStor
 
 // Exports a disk to an export storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To export a disk use the xref:services-disk-methods-export[export]
+// compatibility. It will be removed in the future. To export a disk use the <<services/disk/methods/export, export>>
 // operation of the service that manages that disk.
 type AttachedStorageDomainDiskServiceExportResponse struct {
 }
 
 // Exports a disk to an export storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To export a disk use the xref:services-disk-methods-export[export]
+// compatibility. It will be removed in the future. To export a disk use the <<services/disk/methods/export, export>>
 // operation of the service that manages that disk.
 func (p *AttachedStorageDomainDiskService) Export() *AttachedStorageDomainDiskServiceExportRequest {
 	return &AttachedStorageDomainDiskServiceExportRequest{AttachedStorageDomainDiskService: p}
@@ -10157,7 +10157,7 @@ func (p *AttachedStorageDomainDiskService) Get() *AttachedStorageDomainDiskServi
 
 // Moves a disk to another storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To move a disk use the xref:services-disk-methods-move[move]
+// compatibility. It will be removed in the future. To move a disk use the <<services/disk/methods/move, move>>
 // operation of the service that manages that disk.
 type AttachedStorageDomainDiskServiceMoveRequest struct {
 	AttachedStorageDomainDiskService *AttachedStorageDomainDiskService
@@ -10289,14 +10289,14 @@ func (p *AttachedStorageDomainDiskServiceMoveRequest) MustSend() *AttachedStorag
 
 // Moves a disk to another storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To move a disk use the xref:services-disk-methods-move[move]
+// compatibility. It will be removed in the future. To move a disk use the <<services/disk/methods/move, move>>
 // operation of the service that manages that disk.
 type AttachedStorageDomainDiskServiceMoveResponse struct {
 }
 
 // Moves a disk to another storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To move a disk use the xref:services-disk-methods-move[move]
+// compatibility. It will be removed in the future. To move a disk use the <<services/disk/methods/move, move>>
 // operation of the service that manages that disk.
 func (p *AttachedStorageDomainDiskService) Move() *AttachedStorageDomainDiskServiceMoveRequest {
 	return &AttachedStorageDomainDiskServiceMoveRequest{AttachedStorageDomainDiskService: p}
@@ -10417,7 +10417,7 @@ func (p *AttachedStorageDomainDiskService) Register() *AttachedStorageDomainDisk
 
 // Removes a disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To remove a disk use the xref:services-disk-methods-remove[remove]
+// compatibility. It will be removed in the future. To remove a disk use the <<services/disk/methods/remove, remove>>
 // operation of the service that manages that disk.
 type AttachedStorageDomainDiskServiceRemoveRequest struct {
 	AttachedStorageDomainDiskService *AttachedStorageDomainDiskService
@@ -10514,14 +10514,14 @@ func (p *AttachedStorageDomainDiskServiceRemoveRequest) MustSend() *AttachedStor
 
 // Removes a disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To remove a disk use the xref:services-disk-methods-remove[remove]
+// compatibility. It will be removed in the future. To remove a disk use the <<services/disk/methods/remove, remove>>
 // operation of the service that manages that disk.
 type AttachedStorageDomainDiskServiceRemoveResponse struct {
 }
 
 // Removes a disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To remove a disk use the xref:services-disk-methods-remove[remove]
+// compatibility. It will be removed in the future. To remove a disk use the <<services/disk/methods/remove, remove>>
 // operation of the service that manages that disk.
 func (p *AttachedStorageDomainDiskService) Remove() *AttachedStorageDomainDiskServiceRemoveRequest {
 	return &AttachedStorageDomainDiskServiceRemoveRequest{AttachedStorageDomainDiskService: p}
@@ -10529,7 +10529,7 @@ func (p *AttachedStorageDomainDiskService) Remove() *AttachedStorageDomainDiskSe
 
 // Sparsify the disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To remove a disk use the xref:services-disk-methods-remove[remove]
+// compatibility. It will be removed in the future. To remove a disk use the <<services/disk/methods/remove, remove>>
 // operation of the service that manages that disk.
 type AttachedStorageDomainDiskServiceSparsifyRequest struct {
 	AttachedStorageDomainDiskService *AttachedStorageDomainDiskService
@@ -10636,14 +10636,14 @@ func (p *AttachedStorageDomainDiskServiceSparsifyRequest) MustSend() *AttachedSt
 
 // Sparsify the disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To remove a disk use the xref:services-disk-methods-remove[remove]
+// compatibility. It will be removed in the future. To remove a disk use the <<services/disk/methods/remove, remove>>
 // operation of the service that manages that disk.
 type AttachedStorageDomainDiskServiceSparsifyResponse struct {
 }
 
 // Sparsify the disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To remove a disk use the xref:services-disk-methods-remove[remove]
+// compatibility. It will be removed in the future. To remove a disk use the <<services/disk/methods/remove, remove>>
 // operation of the service that manages that disk.
 func (p *AttachedStorageDomainDiskService) Sparsify() *AttachedStorageDomainDiskServiceSparsifyRequest {
 	return &AttachedStorageDomainDiskServiceSparsifyRequest{AttachedStorageDomainDiskService: p}
@@ -10652,7 +10652,7 @@ func (p *AttachedStorageDomainDiskService) Sparsify() *AttachedStorageDomainDisk
 // Updates the disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
 // compatibility. It will be removed in the future. To update a disk use the
-// xref:services-disk-methods-update[update] operation of the service that manages that disk.
+// <<services/disk/methods/update, update>> operation of the service that manages that disk.
 type AttachedStorageDomainDiskServiceUpdateRequest struct {
 	AttachedStorageDomainDiskService *AttachedStorageDomainDiskService
 	header                           map[string]string
@@ -10767,7 +10767,7 @@ func (p *AttachedStorageDomainDiskServiceUpdateRequest) MustSend() *AttachedStor
 // Updates the disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
 // compatibility. It will be removed in the future. To update a disk use the
-// xref:services-disk-methods-update[update] operation of the service that manages that disk.
+// <<services/disk/methods/update, update>> operation of the service that manages that disk.
 type AttachedStorageDomainDiskServiceUpdateResponse struct {
 	disk *Disk
 }
@@ -10789,7 +10789,7 @@ func (p *AttachedStorageDomainDiskServiceUpdateResponse) MustDisk() *Disk {
 // Updates the disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
 // compatibility. It will be removed in the future. To update a disk use the
-// xref:services-disk-methods-update[update] operation of the service that manages that disk.
+// <<services/disk/methods/update, update>> operation of the service that manages that disk.
 func (p *AttachedStorageDomainDiskService) Update() *AttachedStorageDomainDiskServiceUpdateRequest {
 	return &AttachedStorageDomainDiskServiceUpdateRequest{AttachedStorageDomainDiskService: p}
 }
@@ -10841,9 +10841,9 @@ func NewAttachedStorageDomainDisksService(connection *Connection, path string) *
 
 // Adds or registers a disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To add a new disk use the xref:services-disks-methods-add[add]
+// compatibility. It will be removed in the future. To add a new disk use the <<services/disks/methods/add, add>>
 // operation of the service that manages the disks of the system. To register an unregistered disk use the
-// xref:services-attached_storage_domain_disk-methods-register[register] operation of the service that manages
+// <<services/attached_storage_domain_disk/methods/register, register>> operation of the service that manages
 // that disk.
 type AttachedStorageDomainDisksServiceAddRequest struct {
 	AttachedStorageDomainDisksService *AttachedStorageDomainDisksService
@@ -10968,9 +10968,9 @@ func (p *AttachedStorageDomainDisksServiceAddRequest) MustSend() *AttachedStorag
 
 // Adds or registers a disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To add a new disk use the xref:services-disks-methods-add[add]
+// compatibility. It will be removed in the future. To add a new disk use the <<services/disks/methods/add, add>>
 // operation of the service that manages the disks of the system. To register an unregistered disk use the
-// xref:services-attached_storage_domain_disk-methods-register[register] operation of the service that manages
+// <<services/attached_storage_domain_disk/methods/register, register>> operation of the service that manages
 // that disk.
 type AttachedStorageDomainDisksServiceAddResponse struct {
 	disk *Disk
@@ -10992,9 +10992,9 @@ func (p *AttachedStorageDomainDisksServiceAddResponse) MustDisk() *Disk {
 
 // Adds or registers a disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To add a new disk use the xref:services-disks-methods-add[add]
+// compatibility. It will be removed in the future. To add a new disk use the <<services/disks/methods/add, add>>
 // operation of the service that manages the disks of the system. To register an unregistered disk use the
-// xref:services-attached_storage_domain_disk-methods-register[register] operation of the service that manages
+// <<services/attached_storage_domain_disk/methods/register, register>> operation of the service that manages
 // that disk.
 func (p *AttachedStorageDomainDisksService) Add() *AttachedStorageDomainDisksServiceAddRequest {
 	return &AttachedStorageDomainDisksServiceAddRequest{AttachedStorageDomainDisksService: p}
@@ -13628,7 +13628,7 @@ func NewClusterEnabledFeatureService(connection *Connection, path string) *Clust
 // ----
 // GET /ovirt-engine/api/clusters/123/enabledfeatures/456
 // ----
-// That will return a xref:types-cluster_feature[ClusterFeature] object containing the name:
+// That will return a <<types/cluster_feature, ClusterFeature>> object containing the name:
 // [source,xml]
 // ----
 // <cluster_feature id="456">
@@ -13751,7 +13751,7 @@ func (p *ClusterEnabledFeatureServiceGetRequest) MustSend() *ClusterEnabledFeatu
 // ----
 // GET /ovirt-engine/api/clusters/123/enabledfeatures/456
 // ----
-// That will return a xref:types-cluster_feature[ClusterFeature] object containing the name:
+// That will return a <<types/cluster_feature, ClusterFeature>> object containing the name:
 // [source,xml]
 // ----
 // <cluster_feature id="456">
@@ -13784,7 +13784,7 @@ func (p *ClusterEnabledFeatureServiceGetResponse) MustFeature() *ClusterFeature 
 // ----
 // GET /ovirt-engine/api/clusters/123/enabledfeatures/456
 // ----
-// That will return a xref:types-cluster_feature[ClusterFeature] object containing the name:
+// That will return a <<types/cluster_feature, ClusterFeature>> object containing the name:
 // [source,xml]
 // ----
 // <cluster_feature id="456">
@@ -14490,7 +14490,7 @@ func NewClusterFeatureService(connection *Connection, path string) *ClusterFeatu
 // ----
 // GET /ovirt-engine/api/clusterlevels/4.1/clusterfeatures/456
 // ----
-// That will return a xref:types-cluster_feature[ClusterFeature] object containing the name:
+// That will return a <<types/cluster_feature, ClusterFeature>> object containing the name:
 // [source,xml]
 // ----
 // <cluster_feature id="456">
@@ -14613,7 +14613,7 @@ func (p *ClusterFeatureServiceGetRequest) MustSend() *ClusterFeatureServiceGetRe
 // ----
 // GET /ovirt-engine/api/clusterlevels/4.1/clusterfeatures/456
 // ----
-// That will return a xref:types-cluster_feature[ClusterFeature] object containing the name:
+// That will return a <<types/cluster_feature, ClusterFeature>> object containing the name:
 // [source,xml]
 // ----
 // <cluster_feature id="456">
@@ -14646,7 +14646,7 @@ func (p *ClusterFeatureServiceGetResponse) MustFeature() *ClusterFeature {
 // ----
 // GET /ovirt-engine/api/clusterlevels/4.1/clusterfeatures/456
 // ----
-// That will return a xref:types-cluster_feature[ClusterFeature] object containing the name:
+// That will return a <<types/cluster_feature, ClusterFeature>> object containing the name:
 // [source,xml]
 // ----
 // <cluster_feature id="456">
@@ -14885,7 +14885,7 @@ func (op *ClusterFeaturesService) String() string {
 	return fmt.Sprintf("ClusterFeaturesService:%s", op.path)
 }
 
-// Provides information about a specific cluster level. See the xref:services-cluster_levels[ClusterLevels] service for
+// Provides information about a specific cluster level. See the <<services/cluster_levels,ClusterLevels>> service for
 // more information.
 type ClusterLevelService struct {
 	BaseService
@@ -14904,7 +14904,7 @@ func NewClusterLevelService(connection *Connection, path string) *ClusterLevelSe
 // ----
 // GET /ovirt-engine/api/clusterlevels/3.6
 // ----
-// That will return a xref:types-cluster_level[ClusterLevel] object containing the supported CPU types, and other
+// That will return a <<types/cluster_level, ClusterLevel>> object containing the supported CPU types, and other
 // information which describes the cluster level:
 // [source,xml]
 // ----
@@ -15042,7 +15042,7 @@ func (p *ClusterLevelServiceGetRequest) MustSend() *ClusterLevelServiceGetRespon
 // ----
 // GET /ovirt-engine/api/clusterlevels/3.6
 // ----
-// That will return a xref:types-cluster_level[ClusterLevel] object containing the supported CPU types, and other
+// That will return a <<types/cluster_level, ClusterLevel>> object containing the supported CPU types, and other
 // information which describes the cluster level:
 // [source,xml]
 // ----
@@ -15090,7 +15090,7 @@ func (p *ClusterLevelServiceGetResponse) MustLevel() *ClusterLevel {
 // ----
 // GET /ovirt-engine/api/clusterlevels/3.6
 // ----
-// That will return a xref:types-cluster_level[ClusterLevel] object containing the supported CPU types, and other
+// That will return a <<types/cluster_level, ClusterLevel>> object containing the supported CPU types, and other
 // information which describes the cluster level:
 // [source,xml]
 // ----
@@ -21778,7 +21778,7 @@ func (op *DiskAttachmentService) String() string {
 }
 
 // This service manages the set of disks attached to a virtual machine. Each attached disk is represented by a
-// xref:types-disk_attachment[DiskAttachment], containing the bootable flag, the disk interface and the reference to
+// <<types/disk_attachment,DiskAttachment>>, containing the bootable flag, the disk interface and the reference to
 // the disk.
 type DiskAttachmentsService struct {
 	BaseService
@@ -21828,7 +21828,7 @@ func NewDiskAttachmentsService(connection *Connection, path string) *DiskAttachm
 // ----
 // POST /ovirt-engine/api/vms/345/diskattachments
 // ----
-// IMPORTANT: The server accepts requests that do not contain the `active` attribute, but the effect is
+// IMPORTANT: The server accepts requests that don't contain the `active` attribute, but the effect is
 // undefined. In some cases the disk will be automatically activated and in other cases it won't. To
 // avoid issues it is strongly recommended to always include the `active` attribute with the desired
 // value.
@@ -21980,7 +21980,7 @@ func (p *DiskAttachmentsServiceAddRequest) MustSend() *DiskAttachmentsServiceAdd
 // ----
 // POST /ovirt-engine/api/vms/345/diskattachments
 // ----
-// IMPORTANT: The server accepts requests that do not contain the `active` attribute, but the effect is
+// IMPORTANT: The server accepts requests that don't contain the `active` attribute, but the effect is
 // undefined. In some cases the disk will be automatically activated and in other cases it won't. To
 // avoid issues it is strongly recommended to always include the `active` attribute with the desired
 // value.
@@ -22039,7 +22039,7 @@ func (p *DiskAttachmentsServiceAddResponse) MustAttachment() *DiskAttachment {
 // ----
 // POST /ovirt-engine/api/vms/345/diskattachments
 // ----
-// IMPORTANT: The server accepts requests that do not contain the `active` attribute, but the effect is
+// IMPORTANT: The server accepts requests that don't contain the `active` attribute, but the effect is
 // undefined. In some cases the disk will be automatically activated and in other cases it won't. To
 // avoid issues it is strongly recommended to always include the `active` attribute with the desired
 // value.
@@ -23233,9 +23233,6 @@ func NewDiskService(connection *Connection, path string) *DiskService {
 //	</action>
 //
 // ----
-// Note: In order to sparsify a disk, two conversions might be needed if the disk is on a Block Storage Domain.
-// For example: If a disk is RAW, converting it to QCOW will result in a larger disk. In order to reduce the size,
-// it is possible to convert the disk again to QCOW and keep the same allocation policy.
 type DiskServiceConvertRequest struct {
 	DiskService *DiskService
 	header      map[string]string
@@ -23374,9 +23371,6 @@ func (p *DiskServiceConvertRequest) MustSend() *DiskServiceConvertResponse {
 //	</action>
 //
 // ----
-// Note: In order to sparsify a disk, two conversions might be needed if the disk is on a Block Storage Domain.
-// For example: If a disk is RAW, converting it to QCOW will result in a larger disk. In order to reduce the size,
-// it is possible to convert the disk again to QCOW and keep the same allocation policy.
 type DiskServiceConvertResponse struct {
 }
 
@@ -23399,9 +23393,6 @@ type DiskServiceConvertResponse struct {
 //	</action>
 //
 // ----
-// Note: In order to sparsify a disk, two conversions might be needed if the disk is on a Block Storage Domain.
-// For example: If a disk is RAW, converting it to QCOW will result in a larger disk. In order to reduce the size,
-// it is possible to convert the disk again to QCOW and keep the same allocation policy.
 func (p *DiskService) Convert() *DiskServiceConvertRequest {
 	return &DiskServiceConvertRequest{DiskService: p}
 }
@@ -24318,7 +24309,7 @@ func (p *DiskService) Reduce() *DiskServiceReduceRequest {
 // Refreshes a direct LUN disk with up-to-date information from the storage.
 // Refreshing a direct LUN disk is useful when:
 //   - The LUN was added using the API without the host parameter, and therefore does not contain
-//     any information from the storage (see xref:services-disks-methods-add[DisksService::add]).
+//     any information from the storage (see <<services/disks/methods/add, DisksService::add>>).
 //   - New information about the LUN is available on the storage and you want to update the LUN with it.
 //
 // To refresh direct LUN disk `123` using host `456`, send the following request:
@@ -24448,7 +24439,7 @@ func (p *DiskServiceRefreshLunRequest) MustSend() *DiskServiceRefreshLunResponse
 // Refreshes a direct LUN disk with up-to-date information from the storage.
 // Refreshing a direct LUN disk is useful when:
 //   - The LUN was added using the API without the host parameter, and therefore does not contain
-//     any information from the storage (see xref:services-disks-methods-add[DisksService::add]).
+//     any information from the storage (see <<services/disks/methods/add, DisksService::add>>).
 //   - New information about the LUN is available on the storage and you want to update the LUN with it.
 //
 // To refresh direct LUN disk `123` using host `456`, send the following request:
@@ -24471,7 +24462,7 @@ type DiskServiceRefreshLunResponse struct {
 // Refreshes a direct LUN disk with up-to-date information from the storage.
 // Refreshing a direct LUN disk is useful when:
 //   - The LUN was added using the API without the host parameter, and therefore does not contain
-//     any information from the storage (see xref:services-disks-methods-add[DisksService::add]).
+//     any information from the storage (see <<services/disks/methods/add, DisksService::add>>).
 //   - New information about the LUN is available on the storage and you want to update the LUN with it.
 //
 // To refresh direct LUN disk `123` using host `456`, send the following request:
@@ -25465,12 +25456,12 @@ func NewDisksService(connection *Connection, path string) *DisksService {
 
 // Adds a new floating disk.
 // There are three types of disks that can be added - disk image, direct LUN and Managed Block disk.
-// link:https://wiki.openstack.org/wiki/Cinder[Cinder] integration has been replaced by Managed Block Storage.
+// https://wiki.openstack.org/wiki/Cinder[Cinder] integration has been replaced by Managed Block Storage.
 // *Adding a new image disk:*
-// When creating a new floating image xref:types-disk[Disk], the API requires the `storage_domain`, `provisioned_size`
+// When creating a new floating image <<types/disk,Disk>>, the API requires the `storage_domain`, `provisioned_size`
 // and `format` attributes.
-// Note that block storage domains (i.e. storage domains with the xref:types-storage_type[storage type] of iSCSI or
-// FCP) do not support the combination of the raw `format` with `sparse=true`, so `sparse=false` must be stated
+// Note that block storage domains (i.e., storage domains with the <<types/storage_type, storage type>> of iSCSI or
+// FCP) don't support the combination of the raw `format` with `sparse=true`, so `sparse=false` must be stated
 // explicitly.
 // To create a new floating image disk with specified `provisioned_size`, `format` and `name` on a storage domain
 // with an id `123` and enabled for incremental backup, send a request as follows:
@@ -25685,12 +25676,12 @@ func (p *DisksServiceAddRequest) MustSend() *DisksServiceAddResponse {
 
 // Adds a new floating disk.
 // There are three types of disks that can be added - disk image, direct LUN and Managed Block disk.
-// link:https://wiki.openstack.org/wiki/Cinder[Cinder] integration has been replaced by Managed Block Storage.
+// https://wiki.openstack.org/wiki/Cinder[Cinder] integration has been replaced by Managed Block Storage.
 // *Adding a new image disk:*
-// When creating a new floating image xref:types-disk[Disk], the API requires the `storage_domain`, `provisioned_size`
+// When creating a new floating image <<types/disk,Disk>>, the API requires the `storage_domain`, `provisioned_size`
 // and `format` attributes.
-// Note that block storage domains (i.e. storage domains with the xref:types-storage_type[storage type] of iSCSI or
-// FCP) do not support the combination of the raw `format` with `sparse=true`, so `sparse=false` must be stated
+// Note that block storage domains (i.e., storage domains with the <<types/storage_type, storage type>> of iSCSI or
+// FCP) don't support the combination of the raw `format` with `sparse=true`, so `sparse=false` must be stated
 // explicitly.
 // To create a new floating image disk with specified `provisioned_size`, `format` and `name` on a storage domain
 // with an id `123` and enabled for incremental backup, send a request as follows:
@@ -25812,12 +25803,12 @@ func (p *DisksServiceAddResponse) MustDisk() *Disk {
 
 // Adds a new floating disk.
 // There are three types of disks that can be added - disk image, direct LUN and Managed Block disk.
-// link:https://wiki.openstack.org/wiki/Cinder[Cinder] integration has been replaced by Managed Block Storage.
+// https://wiki.openstack.org/wiki/Cinder[Cinder] integration has been replaced by Managed Block Storage.
 // *Adding a new image disk:*
-// When creating a new floating image xref:types-disk[Disk], the API requires the `storage_domain`, `provisioned_size`
+// When creating a new floating image <<types/disk,Disk>>, the API requires the `storage_domain`, `provisioned_size`
 // and `format` attributes.
-// Note that block storage domains (i.e. storage domains with the xref:types-storage_type[storage type] of iSCSI or
-// FCP) do not support the combination of the raw `format` with `sparse=true`, so `sparse=false` must be stated
+// Note that block storage domains (i.e., storage domains with the <<types/storage_type, storage type>> of iSCSI or
+// FCP) don't support the combination of the raw `format` with `sparse=true`, so `sparse=false` must be stated
 // explicitly.
 // To create a new floating image disk with specified `provisioned_size`, `format` and `name` on a storage domain
 // with an id `123` and enabled for incremental backup, send a request as follows:
@@ -29365,7 +29356,7 @@ func NewExternalTemplateImportsService(connection *Connection, path string) *Ext
 // ----
 // POST /externaltemplateimports
 // ----
-// With request body of type xref:types-external_template_import[ExternalTemplateImport], for example:
+// With request body of type <<types/external_template_import,ExternalTemplateImport>>, for example:
 // [source,xml]
 // ----
 // <external_template_import>
@@ -29497,7 +29488,7 @@ func (p *ExternalTemplateImportsServiceAddRequest) MustSend() *ExternalTemplateI
 // ----
 // POST /externaltemplateimports
 // ----
-// With request body of type xref:types-external_template_import[ExternalTemplateImport], for example:
+// With request body of type <<types/external_template_import,ExternalTemplateImport>>, for example:
 // [source,xml]
 // ----
 // <external_template_import>
@@ -29536,7 +29527,7 @@ func (p *ExternalTemplateImportsServiceAddResponse) MustImport() *ExternalTempla
 // ----
 // POST /externaltemplateimports
 // ----
-// With request body of type xref:types-external_template_import[ExternalTemplateImport], for example:
+// With request body of type <<types/external_template_import,ExternalTemplateImport>>, for example:
 // [source,xml]
 // ----
 // <external_template_import>
@@ -29585,7 +29576,7 @@ func NewExternalVmImportsService(connection *Connection, path string) *ExternalV
 // ----
 // POST /externalvmimports
 // ----
-// With request body of type xref:types-external_vm_import[ExternalVmImport], for example:
+// With request body of type <<types/external_vm_import,ExternalVmImport>>, for example:
 // [source,xml]
 // ----
 // <external_vm_import>
@@ -29722,7 +29713,7 @@ func (p *ExternalVmImportsServiceAddRequest) MustSend() *ExternalVmImportsServic
 // ----
 // POST /externalvmimports
 // ----
-// With request body of type xref:types-external_vm_import[ExternalVmImport], for example:
+// With request body of type <<types/external_vm_import,ExternalVmImport>>, for example:
 // [source,xml]
 // ----
 // <external_vm_import>
@@ -29766,7 +29757,7 @@ func (p *ExternalVmImportsServiceAddResponse) MustImport() *ExternalVmImport {
 // ----
 // POST /externalvmimports
 // ----
-// With request body of type xref:types-external_vm_import[ExternalVmImport], for example:
+// With request body of type <<types/external_vm_import,ExternalVmImport>>, for example:
 // [source,xml]
 // ----
 // <external_vm_import>
@@ -33928,10 +33919,10 @@ func (p *HostService) Approve() *HostServiceApproveRequest {
 // <action/>
 // ----
 // IMPORTANT: Since {engine-name} 4.3, it is possible to also specify `commit_on_success` in
-// the xref:services-host-methods-setup_networks[setupnetworks] request, in which case the new
+// the <<services/host/methods/setup_networks, setupnetworks>> request, in which case the new
 // configuration is automatically saved in the {hypervisor-name} upon completing the setup and
 // re-establishing connectivity between the {hypervisor-name} and {engine-name}, and without
-// waiting for a separate xref:services-host-methods-commit_net_config[commitnetconfig] request.
+// waiting for a separate <<services/host/methods/commit_net_config, commitnetconfig>> request.
 type HostServiceCommitNetConfigRequest struct {
 	HostService *HostService
 	header      map[string]string
@@ -34061,10 +34052,10 @@ func (p *HostServiceCommitNetConfigRequest) MustSend() *HostServiceCommitNetConf
 // <action/>
 // ----
 // IMPORTANT: Since {engine-name} 4.3, it is possible to also specify `commit_on_success` in
-// the xref:services-host-methods-setup_networks[setupnetworks] request, in which case the new
+// the <<services/host/methods/setup_networks, setupnetworks>> request, in which case the new
 // configuration is automatically saved in the {hypervisor-name} upon completing the setup and
 // re-establishing connectivity between the {hypervisor-name} and {engine-name}, and without
-// waiting for a separate xref:services-host-methods-commit_net_config[commitnetconfig] request.
+// waiting for a separate <<services/host/methods/commit_net_config, commitnetconfig>> request.
 type HostServiceCommitNetConfigResponse struct {
 }
 
@@ -34085,10 +34076,10 @@ type HostServiceCommitNetConfigResponse struct {
 // <action/>
 // ----
 // IMPORTANT: Since {engine-name} 4.3, it is possible to also specify `commit_on_success` in
-// the xref:services-host-methods-setup_networks[setupnetworks] request, in which case the new
+// the <<services/host/methods/setup_networks, setupnetworks>> request, in which case the new
 // configuration is automatically saved in the {hypervisor-name} upon completing the setup and
 // re-establishing connectivity between the {hypervisor-name} and {engine-name}, and without
-// waiting for a separate xref:services-host-methods-commit_net_config[commitnetconfig] request.
+// waiting for a separate <<services/host/methods/commit_net_config, commitnetconfig>> request.
 func (p *HostService) CommitNetConfig() *HostServiceCommitNetConfigRequest {
 	return &HostServiceCommitNetConfigRequest{HostService: p}
 }
@@ -36439,12 +36430,12 @@ func (p *HostService) Remove() *HostServiceRemoveRequest {
 // host_service.commit_net_config()
 // ----
 // IMPORTANT: To make sure that the network configuration has been saved in the host, and that it will be applied
-// when the host is rebooted, remember to call xref:services-host-methods-commit_net_config[commitnetconfig].
+// when the host is rebooted, remember to call <<services/host/methods/commit_net_config, commitnetconfig>>.
 // IMPORTANT: Since {engine-name} 4.3, it is possible to also specify `commit_on_success` in
-// the xref:services-host-methods-setup_networks[setupnetworks] request, in which case the new
+// the <<services/host/methods/setup_networks, setupnetworks>> request, in which case the new
 // configuration is automatically saved in the {hypervisor-name} upon completing the setup and
 // re-establishing connectivity between the {hypervisor-name} and {engine-name}, and without
-// waiting for a separate xref:services-host-methods-commit_net_config[commitnetconfig] request.
+// waiting for a separate <<services/host/methods/commit_net_config, commitnetconfig>> request.
 type HostServiceSetupNetworksRequest struct {
 	HostService                    *HostService
 	header                         map[string]string
@@ -36843,12 +36834,12 @@ func (p *HostServiceSetupNetworksRequest) MustSend() *HostServiceSetupNetworksRe
 // host_service.commit_net_config()
 // ----
 // IMPORTANT: To make sure that the network configuration has been saved in the host, and that it will be applied
-// when the host is rebooted, remember to call xref:services-host-methods-commit_net_config[commitnetconfig].
+// when the host is rebooted, remember to call <<services/host/methods/commit_net_config, commitnetconfig>>.
 // IMPORTANT: Since {engine-name} 4.3, it is possible to also specify `commit_on_success` in
-// the xref:services-host-methods-setup_networks[setupnetworks] request, in which case the new
+// the <<services/host/methods/setup_networks, setupnetworks>> request, in which case the new
 // configuration is automatically saved in the {hypervisor-name} upon completing the setup and
 // re-establishing connectivity between the {hypervisor-name} and {engine-name}, and without
-// waiting for a separate xref:services-host-methods-commit_net_config[commitnetconfig] request.
+// waiting for a separate <<services/host/methods/commit_net_config, commitnetconfig>> request.
 type HostServiceSetupNetworksResponse struct {
 }
 
@@ -37006,12 +36997,12 @@ type HostServiceSetupNetworksResponse struct {
 // host_service.commit_net_config()
 // ----
 // IMPORTANT: To make sure that the network configuration has been saved in the host, and that it will be applied
-// when the host is rebooted, remember to call xref:services-host-methods-commit_net_config[commitnetconfig].
+// when the host is rebooted, remember to call <<services/host/methods/commit_net_config, commitnetconfig>>.
 // IMPORTANT: Since {engine-name} 4.3, it is possible to also specify `commit_on_success` in
-// the xref:services-host-methods-setup_networks[setupnetworks] request, in which case the new
+// the <<services/host/methods/setup_networks, setupnetworks>> request, in which case the new
 // configuration is automatically saved in the {hypervisor-name} upon completing the setup and
 // re-establishing connectivity between the {hypervisor-name} and {engine-name}, and without
-// waiting for a separate xref:services-host-methods-commit_net_config[commitnetconfig] request.
+// waiting for a separate <<services/host/methods/commit_net_config, commitnetconfig>> request.
 func (p *HostService) SetupNetworks() *HostServiceSetupNetworksRequest {
 	return &HostServiceSetupNetworksRequest{HostService: p}
 }
@@ -37659,7 +37650,7 @@ func (p *HostService) Upgrade() *HostServiceUpgradeRequest {
 // Check if there are upgrades available for the host. If there are upgrades available an icon will be displayed
 // next to host status icon in the Administration Portal. Audit log messages are also added to indicate the
 // availability of upgrades. The upgrade can be started from the webadmin or by using the
-// xref:services-host-methods-upgrade[upgrade] host action.
+// <<services/host/methods/upgrade, upgrade>> host action.
 type HostServiceUpgradeCheckRequest struct {
 	HostService *HostService
 	header      map[string]string
@@ -37766,14 +37757,14 @@ func (p *HostServiceUpgradeCheckRequest) MustSend() *HostServiceUpgradeCheckResp
 // Check if there are upgrades available for the host. If there are upgrades available an icon will be displayed
 // next to host status icon in the Administration Portal. Audit log messages are also added to indicate the
 // availability of upgrades. The upgrade can be started from the webadmin or by using the
-// xref:services-host-methods-upgrade[upgrade] host action.
+// <<services/host/methods/upgrade, upgrade>> host action.
 type HostServiceUpgradeCheckResponse struct {
 }
 
 // Check if there are upgrades available for the host. If there are upgrades available an icon will be displayed
 // next to host status icon in the Administration Portal. Audit log messages are also added to indicate the
 // availability of upgrades. The upgrade can be started from the webadmin or by using the
-// xref:services-host-methods-upgrade[upgrade] host action.
+// <<services/host/methods/upgrade, upgrade>> host action.
 func (p *HostService) UpgradeCheck() *HostServiceUpgradeCheckRequest {
 	return &HostServiceUpgradeCheckRequest{HostService: p}
 }
@@ -40932,8 +40923,8 @@ func (op *ImageService) String() string {
 }
 
 // This service provides a mechanism to control an image transfer. The client will have
-// to create a transfer by using xref:services-image_transfers-methods-add[add]
-// of the xref:services-image_transfers[image transfers] service, stating the image to transfer
+// to create a transfer by using <<services/image_transfers/methods/add, add>>
+// of the <<services/image_transfers>> service, stating the image to transfer
 // data to/from.
 // After doing that, the transfer is managed by this service.
 // *Using oVirt's Python's SDK:*
@@ -40969,7 +40960,7 @@ func (op *ImageService) String() string {
 // )
 // ----
 // If the user wishes to download a disk rather than upload, he/she should specify
-// `download` as the xref:types-image_transfer_direction[direction] attribute of the transfer.
+// `download` as the <<types/image_transfer_direction, direction>> attribute of the transfer.
 // This will grant a read permission from the image, instead of a write permission.
 // E.g:
 // [source,python]
@@ -40989,10 +40980,10 @@ func (op *ImageService) String() string {
 // Transfers have phases, which govern the flow of the upload/download.
 // A client implementing such a flow should poll/check the transfer's phase and
 // act accordingly. All the possible phases can be found in
-// xref:types-image_transfer_phase[ImageTransferPhase].
-// After adding a new transfer, its phase will be xref:types-image_transfer_phase[initializing].
+// <<types/image_transfer_phase, ImageTransferPhase>>.
+// After adding a new transfer, its phase will be <<types/image_transfer_phase, initializing>>.
 // The client will have to poll on the transfer's phase until it changes.
-// When the phase becomes xref:types-image_transfer_phase[transferring],
+// When the phase becomes <<types/image_transfer_phase, transferring>>,
 // the session is ready to start the transfer.
 // For example:
 // [source,python]
@@ -41004,8 +40995,124 @@ func (op *ImageService) String() string {
 //	transfer = transfer_service.get()
 //
 // ----
-// At that stage, if the phase of the transfer is xref:types-image_transfer_phase[paused_system], the session was
-// not successfully established. This can happen if ovirt-imageio is not running in the selected host.
+// At that stage, if the transfer's phase is <<types/image_transfer_phase, paused_system>>, then the session was
+// not successfully established. One possible reason for that is that the ovirt-imageio-daemon is not running
+// in the host that was selected for transfer.
+// The transfer can be resumed by calling <<services/image_transfer/methods/resume, resume>>
+// of the service that manages it.
+// If the session was successfully established - the returned transfer entity will
+// contain the <<types/image_transfer, transfer_url>> and <<types/image_transfer, proxy_url>> attributes,
+// which the client needs to use in order to transfer the required data. The client can choose whatever
+// technique and tool for sending the HTTPS request with the image's data.
+//   - `transfer_url` is the address of an imageio server running on one of the hypervisors.
+//   - `proxy_url` is the address of an imageio proxy server that can be used if
+//     you cannot access transfer_url.
+//
+// To transfer the image, it is recommended to use the imageio client python library.
+// [source,python]
+// ----
+// from ovirt_imageio import client
+// # Upload qcow2 image to virtual disk:
+// client.upload("disk.qcow2", transfer.transfer_url)
+// # Download virtual disk to qcow2 image:
+// client.download(transfer.transfer_url, "disk.qcow2")
+// ----
+// You can also upload and download using imageio REST API. For more info
+// on this, see imageio API documentation:
+//
+//	http://ovirt.github.io/ovirt-imageio/images.html
+//
+// When finishing the transfer, the user should call
+// <<services/image_transfer/methods/finalize, finalize>>. This will make the
+// final adjustments and verifications for finishing the transfer process.
+// For example:
+// [source,python]
+// ----
+// transfer_service.finalize()
+// ----
+// In case of an error, the transfer's phase will be changed to
+// <<types/image_transfer_phase, finished_failure>>, and
+// the disk's status will be changed to `Illegal`. Otherwise it will be changed to
+// <<types/image_transfer_phase, finished_success>>, and the disk will be ready
+// to be used. In both cases, the transfer entity will be removed shortly after.
+// *Using HTTP and cURL calls:*
+// - For upload, create a new disk first:
+// * Specify 'initial_size' and 'provisioned_size' in bytes.
+// * 'initial_size' must be bigger or the same as the size of the uploaded data.
+// [source]
+// ----
+// POST /ovirt-engine/api/disks
+// ----
+// With a request body as follows:
+// [source,xml]
+// ----
+// <disk>
+//
+//	<storage_domains>
+//	  <storage_domain id="123"/>
+//	</storage_domains>
+//	<alias>mydisk</alias>
+//	<initial_size>1073741824</initial_size>
+//	<provisioned_size>1073741824</provisioned_size>
+//	<format>raw</format>
+//
+// </disk>
+// ----
+// - Create a new image transfer for downloading/uploading a `disk` with id `456`:
+// [source]
+// ----
+// POST /ovirt-engine/api/imagetransfers
+// ----
+// With a request body as follows:
+// [source,xml]
+// ----
+// <image_transfer>
+//
+//	<disk id="456"/>
+//	<direction>upload|download</direction>
+//
+// </image_transfer>
+// ----
+// Will respond:
+// [source,xml]
+// ----
+// <image_transfer id="123">
+//
+//	<direction>download|upload</direction>
+//	<phase>initializing|transferring</phase>
+//	<proxy_url>https://proxy_fqdn:54323/images/41c732d4-2210-4e7b-9e5c-4e2805baadbb</proxy_url>
+//	<transfer_url>https://daemon_fqdn:54322/images/41c732d4-2210-4e7b-9e5c-4e2805baadbb</transfer_url>
+//	...
+//
+// </image_transfer>
+// ----
+// Note: If the phase is 'initializing', poll the `image_transfer` till its phase changes to 'transferring'.
+//   - Use the 'transfer_url' or 'proxy_url' to invoke a curl command:
+//   - use 'transfer_url' for transferring directly from/to ovirt-imageio-daemon,
+//     or, use 'proxy_url' for transferring from/to ovirt-imageio-proxy.
+//     Note: using the proxy would mitigate scenarios where there's no direct connectivity
+//     to the daemon machine, e.g. vdsm machines are on a different network than the engine.
+//
+// -- Download:
+// [source,shell]
+// ----
+// $ curl --cacert /etc/pki/ovirt-engine/ca.pem https://daemon_fqdn:54322/images/41c732d4-2210-4e7b-9e5c-4e2805baadbb -o <output_file>
+// ----
+// -- Upload:
+// [source,shell]
+// ----
+// $ curl --cacert /etc/pki/ovirt-engine/ca.pem --upload-file <file_to_upload> -X PUT https://daemon_fqdn:54322/images/41c732d4-2210-4e7b-9e5c-4e2805baadbb
+// ----
+// - Finalize the image transfer by invoking the action:
+// [source]
+// ----
+// POST /ovirt-engine/api/imagetransfers/123/finalize
+// ----
+// With a request body as follows:
+// [source,xml]
+// ----
+// <action />
+// ----
 type ImageTransferService struct {
 	BaseService
 }
@@ -41776,7 +41883,7 @@ func (op *ImageTransferService) String() string {
 }
 
 // This service manages image transfers, for performing Image I/O API in {product-name}.
-// Please refer to xref:services-image_transfer[image transfer] for further
+// Please refer to <<services/image_transfer, image transfer>> for further
 // documentation.
 type ImageTransfersService struct {
 	BaseService
@@ -50078,7 +50185,7 @@ func (op *NetworkFilterService) String() string {
 
 // Represents a readonly network filters sub-collection.
 // The network filter enables to filter packets send to/from the VM's nic according to defined rules.
-// For more information please refer to xref:services-network_filter[NetworkFilter] service documentation
+// For more information please refer to <<services/network_filter,NetworkFilter>> service documentation
 // Network filters are supported in different versions, starting from version 3.0.
 // A network filter is defined for each vnic profile.
 // A vnic profile is defined for a specific network.
@@ -51159,9 +51266,9 @@ func (p *NetworkService) Get() *NetworkServiceGetRequest {
 // DELETE /ovirt-engine/api/datacenters/123/networks/456
 // ----
 // NOTE: To remove an external logical network, the network has to be removed directly from its provider by
-// link:https://developer.openstack.org/api-ref/network[OpenStack Networking API].
+// https://developer.openstack.org/api-ref/network[OpenStack Networking API].
 // The entity representing the external network inside {product-name} is removed automatically,
-// if xref:types-open_stack_network_provider-attributes-auto_sync[`auto_sync`] is enabled for the provider,
+// if <<types/open_stack_network_provider/attributes/auto_sync,`auto_sync`>> is enabled for the provider,
 // otherwise the entity has to be removed using this method.
 type NetworkServiceRemoveRequest struct {
 	NetworkService *NetworkService
@@ -51281,9 +51388,9 @@ func (p *NetworkServiceRemoveRequest) MustSend() *NetworkServiceRemoveResponse {
 // DELETE /ovirt-engine/api/datacenters/123/networks/456
 // ----
 // NOTE: To remove an external logical network, the network has to be removed directly from its provider by
-// link:https://developer.openstack.org/api-ref/network[OpenStack Networking API].
+// https://developer.openstack.org/api-ref/network[OpenStack Networking API].
 // The entity representing the external network inside {product-name} is removed automatically,
-// if xref:types-open_stack_network_provider-attributes-auto_sync[`auto_sync`] is enabled for the provider,
+// if <<types/open_stack_network_provider/attributes/auto_sync,`auto_sync`>> is enabled for the provider,
 // otherwise the entity has to be removed using this method.
 type NetworkServiceRemoveResponse struct {
 }
@@ -51303,9 +51410,9 @@ type NetworkServiceRemoveResponse struct {
 // DELETE /ovirt-engine/api/datacenters/123/networks/456
 // ----
 // NOTE: To remove an external logical network, the network has to be removed directly from its provider by
-// link:https://developer.openstack.org/api-ref/network[OpenStack Networking API].
+// https://developer.openstack.org/api-ref/network[OpenStack Networking API].
 // The entity representing the external network inside {product-name} is removed automatically,
-// if xref:types-open_stack_network_provider-attributes-auto_sync[`auto_sync`] is enabled for the provider,
+// if <<types/open_stack_network_provider/attributes/auto_sync,`auto_sync`>> is enabled for the provider,
 // otherwise the entity has to be removed using this method.
 func (p *NetworkService) Remove() *NetworkServiceRemoveRequest {
 	return &NetworkServiceRemoveRequest{NetworkService: p}
@@ -53906,7 +54013,7 @@ func NewPermitsService(connection *Connection, path string) *PermitsService {
 	return &result
 }
 
-// Adds a permit to the role. The permit name can be retrieved from the xref:services-cluster_levels[cluster_levels] service.
+// Adds a permit to the role. The permit name can be retrieved from the <<services/cluster_levels>> service.
 // For example to assign a permit `create_vm` to the role with id `123` send a request like this:
 // ....
 // POST /ovirt-engine/api/roles/123/permits
@@ -54031,7 +54138,7 @@ func (p *PermitsServiceAddRequest) MustSend() *PermitsServiceAddResponse {
 	}
 }
 
-// Adds a permit to the role. The permit name can be retrieved from the xref:services-cluster_levels[cluster_levels] service.
+// Adds a permit to the role. The permit name can be retrieved from the <<services/cluster_levels>> service.
 // For example to assign a permit `create_vm` to the role with id `123` send a request like this:
 // ....
 // POST /ovirt-engine/api/roles/123/permits
@@ -54063,7 +54170,7 @@ func (p *PermitsServiceAddResponse) MustPermit() *Permit {
 	return p.permit
 }
 
-// Adds a permit to the role. The permit name can be retrieved from the xref:services-cluster_levels[cluster_levels] service.
+// Adds a permit to the role. The permit name can be retrieved from the <<services/cluster_levels>> service.
 // For example to assign a permit `create_vm` to the role with id `123` send a request like this:
 // ....
 // POST /ovirt-engine/api/roles/123/permits
@@ -57771,7 +57878,7 @@ func (p *RoleService) Remove() *RoleServiceRemoveRequest {
 
 // Updates a role. You are allowed to update `name`, `description` and `administrative` attributes after role is
 // created. Within this endpoint you can't add or remove roles permits you need to use
-// xref:services-permits[service] that manages permits of role.
+// <<services/permits, service>> that manages permits of role.
 // For example to update role's `name`, `description` and `administrative` attributes send a request like this:
 // [source]
 // ----
@@ -57911,7 +58018,7 @@ func (p *RoleServiceUpdateRequest) MustSend() *RoleServiceUpdateResponse {
 
 // Updates a role. You are allowed to update `name`, `description` and `administrative` attributes after role is
 // created. Within this endpoint you can't add or remove roles permits you need to use
-// xref:services-permits[service] that manages permits of role.
+// <<services/permits, service>> that manages permits of role.
 // For example to update role's `name`, `description` and `administrative` attributes send a request like this:
 // [source]
 // ----
@@ -57948,7 +58055,7 @@ func (p *RoleServiceUpdateResponse) MustRole() *Role {
 
 // Updates a role. You are allowed to update `name`, `description` and `administrative` attributes after role is
 // created. Within this endpoint you can't add or remove roles permits you need to use
-// xref:services-permits[service] that manages permits of role.
+// <<services/permits, service>> that manages permits of role.
 // For example to update role's `name`, `description` and `administrative` attributes send a request like this:
 // [source]
 // ----
@@ -61195,8 +61302,8 @@ func NewSnapshotsService(connection *Connection, path string) *SnapshotsService 
 // ----
 // [IMPORTANT]
 // ====
-// When a snapshot is created, the default value for the
-// xref:types-snapshot-attributes-persist_memorystate[persist_memorystate] attribute is `true`. That means that the content of the memory of the virtual
+// When a snapshot is created the default value for the <<types/snapshot/attributes/persist_memorystate,
+// persist_memorystate>> attribute is `true`. That means that the content of the memory of the virtual
 // machine will be included in the snapshot, and it also means that the virtual machine will be paused
 // for a longer time. That can negatively affect applications that are very sensitive to timing (NTP
 // servers, for example). In those cases make sure that you set the attribute to `false`:
@@ -61362,8 +61469,8 @@ func (p *SnapshotsServiceAddRequest) MustSend() *SnapshotsServiceAddResponse {
 // ----
 // [IMPORTANT]
 // ====
-// When a snapshot is created, the default value for the
-// xref:types-snapshot-attributes-persist_memorystate[persist_memorystate] attribute is `true`. That means that the content of the memory of the virtual
+// When a snapshot is created the default value for the <<types/snapshot/attributes/persist_memorystate,
+// persist_memorystate>> attribute is `true`. That means that the content of the memory of the virtual
 // machine will be included in the snapshot, and it also means that the virtual machine will be paused
 // for a longer time. That can negatively affect applications that are very sensitive to timing (NTP
 // servers, for example). In those cases make sure that you set the attribute to `false`:
@@ -61436,8 +61543,8 @@ func (p *SnapshotsServiceAddResponse) MustSnapshot() *Snapshot {
 // ----
 // [IMPORTANT]
 // ====
-// When a snapshot is created, the default value for the
-// xref:types-snapshot-attributes-persist_memorystate[persist_memorystate] attribute is `true`. That means that the content of the memory of the virtual
+// When a snapshot is created the default value for the <<types/snapshot/attributes/persist_memorystate,
+// persist_memorystate>> attribute is `true`. That means that the content of the memory of the virtual
 // machine will be included in the snapshot, and it also means that the virtual machine will be paused
 // for a longer time. That can negatively affect applications that are very sensitive to timing (NTP
 // servers, for example). In those cases make sure that you set the attribute to `false`:
@@ -63412,9 +63519,8 @@ func (op *StorageDomainContentDisksService) String() string {
 // Manages a single disk available in a storage domain.
 // IMPORTANT: Since version 4.2 of the engine this service is intended only to list disks available in the storage
 // domain, and to register unregistered disks. All the other operations, like copying a disk, moving a disk, etc, have
-// been deprecated and will be removed in the future. To perform those operations
-// use the xref:services-disks[service that manages all the disks of the system]
-// or the xref:services-disk[service that manages a specific disk].
+// been deprecated and will be removed in the future. To perform those operations use the <<services/disks, service
+// that manages all the disks of the system>>, or the <<services/disk, service that manages an specific disk>>.
 type StorageDomainDiskService struct {
 	BaseService
 }
@@ -63428,7 +63534,7 @@ func NewStorageDomainDiskService(connection *Connection, path string) *StorageDo
 
 // Copies a disk to the specified storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To copy a disk use the xref:services-disk-methods-copy[copy]
+// compatibility. It will be removed in the future. To copy a disk use the <<services/disk/methods/copy, copy>>
 // operation of the service that manages that disk.
 type StorageDomainDiskServiceCopyRequest struct {
 	StorageDomainDiskService *StorageDomainDiskService
@@ -63549,14 +63655,14 @@ func (p *StorageDomainDiskServiceCopyRequest) MustSend() *StorageDomainDiskServi
 
 // Copies a disk to the specified storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To copy a disk use the xref:services-disk-methods-copy[copy]
+// compatibility. It will be removed in the future. To copy a disk use the <<services/disk/methods/copy, copy>>
 // operation of the service that manages that disk.
 type StorageDomainDiskServiceCopyResponse struct {
 }
 
 // Copies a disk to the specified storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To copy a disk use the xref:services-disk-methods-copy[copy]
+// compatibility. It will be removed in the future. To copy a disk use the <<services/disk/methods/copy, copy>>
 // operation of the service that manages that disk.
 func (p *StorageDomainDiskService) Copy() *StorageDomainDiskServiceCopyRequest {
 	return &StorageDomainDiskServiceCopyRequest{StorageDomainDiskService: p}
@@ -63564,7 +63670,7 @@ func (p *StorageDomainDiskService) Copy() *StorageDomainDiskServiceCopyRequest {
 
 // Exports a disk to an export storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To export a disk use the xref:services-disk-methods-export[export]
+// compatibility. It will be removed in the future. To export a disk use the <<services/disk/methods/export, export>>
 // operation of the service that manages that disk.
 type StorageDomainDiskServiceExportRequest struct {
 	StorageDomainDiskService *StorageDomainDiskService
@@ -63678,14 +63784,14 @@ func (p *StorageDomainDiskServiceExportRequest) MustSend() *StorageDomainDiskSer
 
 // Exports a disk to an export storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To export a disk use the xref:services-disk-methods-export[export]
+// compatibility. It will be removed in the future. To export a disk use the <<services/disk/methods/export, export>>
 // operation of the service that manages that disk.
 type StorageDomainDiskServiceExportResponse struct {
 }
 
 // Exports a disk to an export storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To export a disk use the xref:services-disk-methods-export[export]
+// compatibility. It will be removed in the future. To export a disk use the <<services/disk/methods/export, export>>
 // operation of the service that manages that disk.
 func (p *StorageDomainDiskService) Export() *StorageDomainDiskServiceExportRequest {
 	return &StorageDomainDiskServiceExportRequest{StorageDomainDiskService: p}
@@ -63826,7 +63932,7 @@ func (p *StorageDomainDiskService) Get() *StorageDomainDiskServiceGetRequest {
 
 // Moves a disk to another storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To move a disk use the xref:services-disk-methods-move[move]
+// compatibility. It will be removed in the future. To move a disk use the <<services/disk/methods/move, move>>
 // operation of the service that manages that disk.
 type StorageDomainDiskServiceMoveRequest struct {
 	StorageDomainDiskService *StorageDomainDiskService
@@ -63958,14 +64064,14 @@ func (p *StorageDomainDiskServiceMoveRequest) MustSend() *StorageDomainDiskServi
 
 // Moves a disk to another storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To move a disk use the xref:services-disk-methods-move[move]
+// compatibility. It will be removed in the future. To move a disk use the <<services/disk/methods/move, move>>
 // operation of the service that manages that disk.
 type StorageDomainDiskServiceMoveResponse struct {
 }
 
 // Moves a disk to another storage domain.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To move a disk use the xref:services-disk-methods-move[move]
+// compatibility. It will be removed in the future. To move a disk use the <<services/disk/methods/move, move>>
 // operation of the service that manages that disk.
 func (p *StorageDomainDiskService) Move() *StorageDomainDiskServiceMoveRequest {
 	return &StorageDomainDiskServiceMoveRequest{StorageDomainDiskService: p}
@@ -64104,7 +64210,7 @@ func (p *StorageDomainDiskService) Reduce() *StorageDomainDiskServiceReduceReque
 
 // Removes a disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To remove a disk use the xref:services-disk-methods-remove[remove]
+// compatibility. It will be removed in the future. To remove a disk use the <<services/disk/methods/remove, remove>>
 // operation of the service that manages that disk.
 type StorageDomainDiskServiceRemoveRequest struct {
 	StorageDomainDiskService *StorageDomainDiskService
@@ -64201,14 +64307,14 @@ func (p *StorageDomainDiskServiceRemoveRequest) MustSend() *StorageDomainDiskSer
 
 // Removes a disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To remove a disk use the xref:services-disk-methods-remove[remove]
+// compatibility. It will be removed in the future. To remove a disk use the <<services/disk/methods/remove, remove>>
 // operation of the service that manages that disk.
 type StorageDomainDiskServiceRemoveResponse struct {
 }
 
 // Removes a disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To remove a disk use the xref:services-disk-methods-remove[remove]
+// compatibility. It will be removed in the future. To remove a disk use the <<services/disk/methods/remove, remove>>
 // operation of the service that manages that disk.
 func (p *StorageDomainDiskService) Remove() *StorageDomainDiskServiceRemoveRequest {
 	return &StorageDomainDiskServiceRemoveRequest{StorageDomainDiskService: p}
@@ -64216,7 +64322,7 @@ func (p *StorageDomainDiskService) Remove() *StorageDomainDiskServiceRemoveReque
 
 // Sparsify the disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To remove a disk use the xref:services-disk-methods-remove[remove]
+// compatibility. It will be removed in the future. To remove a disk use the <<services/disk/methods/remove, remove>>
 // operation of the service that manages that disk.
 type StorageDomainDiskServiceSparsifyRequest struct {
 	StorageDomainDiskService *StorageDomainDiskService
@@ -64323,14 +64429,14 @@ func (p *StorageDomainDiskServiceSparsifyRequest) MustSend() *StorageDomainDiskS
 
 // Sparsify the disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To remove a disk use the xref:services-disk-methods-remove[remove]
+// compatibility. It will be removed in the future. To remove a disk use the <<services/disk/methods/remove, remove>>
 // operation of the service that manages that disk.
 type StorageDomainDiskServiceSparsifyResponse struct {
 }
 
 // Sparsify the disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To remove a disk use the xref:services-disk-methods-remove[remove]
+// compatibility. It will be removed in the future. To remove a disk use the <<services/disk/methods/remove, remove>>
 // operation of the service that manages that disk.
 func (p *StorageDomainDiskService) Sparsify() *StorageDomainDiskServiceSparsifyRequest {
 	return &StorageDomainDiskServiceSparsifyRequest{StorageDomainDiskService: p}
@@ -64339,7 +64445,7 @@ func (p *StorageDomainDiskService) Sparsify() *StorageDomainDiskServiceSparsifyR
 // Updates the disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
 // compatibility. It will be removed in the future. To update a disk use the
-// xref:services-disk-methods-update[update] operation of the service that manages that disk.
+// <<services/disk/methods/update, update>> operation of the service that manages that disk.
 type StorageDomainDiskServiceUpdateRequest struct {
 	StorageDomainDiskService *StorageDomainDiskService
 	header                   map[string]string
@@ -64454,7 +64560,7 @@ func (p *StorageDomainDiskServiceUpdateRequest) MustSend() *StorageDomainDiskSer
 // Updates the disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
 // compatibility. It will be removed in the future. To update a disk use the
-// xref:services-disk-methods-update[update] operation of the service that manages that disk.
+// <<services/disk/methods/update, update>> operation of the service that manages that disk.
 type StorageDomainDiskServiceUpdateResponse struct {
 	disk *Disk
 }
@@ -64476,7 +64582,7 @@ func (p *StorageDomainDiskServiceUpdateResponse) MustDisk() *Disk {
 // Updates the disk.
 // IMPORTANT: Since version 4.2 of the engine this operation is deprecated, and preserved only for backwards
 // compatibility. It will be removed in the future. To update a disk use the
-// xref:services-disk-methods-update[update] operation of the service that manages that disk.
+// <<services/disk/methods/update, update>> operation of the service that manages that disk.
 func (p *StorageDomainDiskService) Update() *StorageDomainDiskServiceUpdateRequest {
 	return &StorageDomainDiskServiceUpdateRequest{StorageDomainDiskService: p}
 }
@@ -64528,9 +64634,9 @@ func NewStorageDomainDisksService(connection *Connection, path string) *StorageD
 
 // Adds or registers a disk.
 // IMPORTANT: Since version 4.2 of the {engine-name} this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To add a new disk use the xref:services-disks-methods-add[add]
+// compatibility. It will be removed in the future. To add a new disk use the <<services/disks/methods/add, add>>
 // operation of the service that manages the disks of the system. To register an unregistered disk use the
-// xref:services-attached_storage_domain_disk-methods-register[register] operation of the service that manages
+// <<services/attached_storage_domain_disk/methods/register, register>> operation of the service that manages
 // that disk.
 type StorageDomainDisksServiceAddRequest struct {
 	StorageDomainDisksService *StorageDomainDisksService
@@ -64655,9 +64761,9 @@ func (p *StorageDomainDisksServiceAddRequest) MustSend() *StorageDomainDisksServ
 
 // Adds or registers a disk.
 // IMPORTANT: Since version 4.2 of the {engine-name} this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To add a new disk use the xref:services-disks-methods-add[add]
+// compatibility. It will be removed in the future. To add a new disk use the <<services/disks/methods/add, add>>
 // operation of the service that manages the disks of the system. To register an unregistered disk use the
-// xref:services-attached_storage_domain_disk-methods-register[register] operation of the service that manages
+// <<services/attached_storage_domain_disk/methods/register, register>> operation of the service that manages
 // that disk.
 type StorageDomainDisksServiceAddResponse struct {
 	disk *Disk
@@ -64679,9 +64785,9 @@ func (p *StorageDomainDisksServiceAddResponse) MustDisk() *Disk {
 
 // Adds or registers a disk.
 // IMPORTANT: Since version 4.2 of the {engine-name} this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. To add a new disk use the xref:services-disks-methods-add[add]
+// compatibility. It will be removed in the future. To add a new disk use the <<services/disks/methods/add, add>>
 // operation of the service that manages the disks of the system. To register an unregistered disk use the
-// xref:services-attached_storage_domain_disk-methods-register[register] operation of the service that manages
+// <<services/attached_storage_domain_disk/methods/register, register>> operation of the service that manages
 // that disk.
 func (p *StorageDomainDisksService) Add() *StorageDomainDisksServiceAddRequest {
 	return &StorageDomainDisksServiceAddRequest{StorageDomainDisksService: p}
@@ -65769,7 +65875,7 @@ func (p *StorageDomainService) IsAttached() *StorageDomainServiceIsAttachedReque
 // ----
 //
 //	Note that this operation is only applicable to block storage domains (i.e., storage domains with the
-//	xref:types-storage_type[storage type] of iSCSI or FCP).
+//	<<types/storage_type, storage type> of iSCSI or FCP).
 type StorageDomainServiceReduceLunsRequest struct {
 	StorageDomainService *StorageDomainService
 	header               map[string]string
@@ -65910,7 +66016,7 @@ func (p *StorageDomainServiceReduceLunsRequest) MustSend() *StorageDomainService
 // ----
 //
 //	Note that this operation is only applicable to block storage domains (i.e., storage domains with the
-//	xref:types-storage_type[storage type] of iSCSI or FCP).
+//	<<types/storage_type, storage type> of iSCSI or FCP).
 type StorageDomainServiceReduceLunsResponse struct {
 }
 
@@ -65936,7 +66042,7 @@ type StorageDomainServiceReduceLunsResponse struct {
 // ----
 //
 //	Note that this operation is only applicable to block storage domains (i.e., storage domains with the
-//	xref:types-storage_type[storage type] of iSCSI or FCP).
+//	<<types/storage_type, storage type> of iSCSI or FCP).
 func (p *StorageDomainService) ReduceLuns() *StorageDomainServiceReduceLunsRequest {
 	return &StorageDomainServiceReduceLunsRequest{StorageDomainService: p}
 }
@@ -66306,7 +66412,7 @@ func (p *StorageDomainService) Remove() *StorageDomainServiceRemoveRequest {
 }
 
 // Updates a storage domain.
-// Not all of the xref:types-storage_domain[StorageDomain]'s attributes are updatable after creation. Those that can be
+// Not all of the <<types/storage_domain,StorageDomain>>'s attributes are updatable after creation. Those that can be
 // updated are: `name`, `description`, `comment`, `warning_low_space_indicator`, `critical_space_action_blocker` and
 // `wipe_after_delete.` (Note that changing the `wipe_after_delete` attribute will not change the wipe after delete
 // property of disks that already exist).
@@ -66448,7 +66554,7 @@ func (p *StorageDomainServiceUpdateRequest) MustSend() *StorageDomainServiceUpda
 }
 
 // Updates a storage domain.
-// Not all of the xref:types-storage_domain[StorageDomain]'s attributes are updatable after creation. Those that can be
+// Not all of the <<types/storage_domain,StorageDomain>>'s attributes are updatable after creation. Those that can be
 // updated are: `name`, `description`, `comment`, `warning_low_space_indicator`, `critical_space_action_blocker` and
 // `wipe_after_delete.` (Note that changing the `wipe_after_delete` attribute will not change the wipe after delete
 // property of disks that already exist).
@@ -66487,7 +66593,7 @@ func (p *StorageDomainServiceUpdateResponse) MustStorageDomain() *StorageDomain 
 }
 
 // Updates a storage domain.
-// Not all of the xref:types-storage_domain[StorageDomain]'s attributes are updatable after creation. Those that can be
+// Not all of the <<types/storage_domain,StorageDomain>>'s attributes are updatable after creation. Those that can be
 // updated are: `name`, `description`, `comment`, `warning_low_space_indicator`, `critical_space_action_blocker` and
 // `wipe_after_delete.` (Note that changing the `wipe_after_delete` attribute will not change the wipe after delete
 // property of disks that already exist).
@@ -68838,8 +68944,8 @@ func (op *StorageDomainVmService) String() string {
 // </vms>
 // ----
 // Virtual machines and templates in these collections have a similar representation to their counterparts in the
-// top-level xref:types-vm[Vm] and xref:types-template[Template] collections, except they also contain a
-// xref:types-storage_domain[StorageDomain] reference and an xref:services-storage_domain_vm-methods-import[import]
+// top-level <<types/vm, Vm>> and <<types/template, Template>> collections, except they also contain a
+// <<types/storage_domain, StorageDomain>> reference and an <<services/storage_domain_vm/methods/import, import>>
 // action.
 type StorageDomainVmsService struct {
 	BaseService
@@ -69041,7 +69147,7 @@ func NewStorageDomainsService(connection *Connection, path string) *StorageDomai
 }
 
 // Adds a new storage domain.
-// Creation of a new xref:types-storage_domain[StorageDomain] requires the `name`, `type`, `host`, and `storage`
+// Creation of a new <<types/storage_domain,StorageDomain>> requires the `name`, `type`, `host`, and `storage`
 // attributes. Identify the `host` attribute with the `id` or `name` attributes. In {product-name} 3.6 and
 // later you can enable the wipe after delete option by default on the storage domain. To configure this, specify
 // `wipe_after_delete` in the POST request. This option can be edited after the domain is created, but doing so will
@@ -69220,7 +69326,7 @@ func (p *StorageDomainsServiceAddRequest) MustSend() *StorageDomainsServiceAddRe
 }
 
 // Adds a new storage domain.
-// Creation of a new xref:types-storage_domain[StorageDomain] requires the `name`, `type`, `host`, and `storage`
+// Creation of a new <<types/storage_domain,StorageDomain>> requires the `name`, `type`, `host`, and `storage`
 // attributes. Identify the `host` attribute with the `id` or `name` attributes. In {product-name} 3.6 and
 // later you can enable the wipe after delete option by default on the storage domain. To configure this, specify
 // `wipe_after_delete` in the POST request. This option can be edited after the domain is created, but doing so will
@@ -69306,7 +69412,7 @@ func (p *StorageDomainsServiceAddResponse) MustStorageDomain() *StorageDomain {
 }
 
 // Adds a new storage domain.
-// Creation of a new xref:types-storage_domain[StorageDomain] requires the `name`, `type`, `host`, and `storage`
+// Creation of a new <<types/storage_domain,StorageDomain>> requires the `name`, `type`, `host`, and `storage`
 // attributes. Identify the `host` attribute with the `id` or `name` attributes. In {product-name} 3.6 and
 // later you can enable the wipe after delete option by default on the storage domain. To configure this, specify
 // `wipe_after_delete` in the POST request. This option can be edited after the domain is created, but doing so will
@@ -73604,43 +73710,34 @@ func NewSystemOptionService(connection *Connection, path string) *SystemOptionSe
 }
 
 // Get the values of specific configuration option.
-// For example to retrieve the values of configuration option `MigrationPolicies` send a request like this:
+// For example to retrieve the values of configuration option `MigrationPoliciesSupported` send a request like this:
 // [source]
 // ----
-// GET /ovirt-engine/api/options/MigrationPolicies
+// GET /ovirt-engine/api/options/MigrationPoliciesSupported
 // ----
 // The response to that request will be the following:
 // [source,xml]
 // ----
-// <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-// <system_option href="/ovirt-engine/api/options/MigrationPolicies" id="MigrationPolicies">
+// <system_option href="/ovirt-engine/api/options/MigrationPoliciesSupported" id="MigrationPoliciesSupported">
 //
-//	<name>MigrationPolicies</name>
+//	<name>MigrationPoliciesSupported</name>
 //	<values>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.2</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.3</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.4</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.5</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.6</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.7</version>
-//	    </system_option_value>
+//	  <system_option_value>
+//	    <value>true</value>
+//	    <version>4.0</version>
+//	  </system_option_value>
+//	  <system_option_value>
+//	    <value>true</value>
+//	    <version>4.1</version>
+//	  </system_option_value>
+//	  <system_option_value>
+//	    <value>true</value>
+//	    <version>4.2</version>
+//	  </system_option_value>
+//	  <system_option_value>
+//	    <value>false</value>
+//	    <version>3.6</version>
+//	  </system_option_value>
 //	</values>
 //
 // </system_option>
@@ -73764,43 +73861,34 @@ func (p *SystemOptionServiceGetRequest) MustSend() *SystemOptionServiceGetRespon
 }
 
 // Get the values of specific configuration option.
-// For example to retrieve the values of configuration option `MigrationPolicies` send a request like this:
+// For example to retrieve the values of configuration option `MigrationPoliciesSupported` send a request like this:
 // [source]
 // ----
-// GET /ovirt-engine/api/options/MigrationPolicies
+// GET /ovirt-engine/api/options/MigrationPoliciesSupported
 // ----
 // The response to that request will be the following:
 // [source,xml]
 // ----
-// <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-// <system_option href="/ovirt-engine/api/options/MigrationPolicies" id="MigrationPolicies">
+// <system_option href="/ovirt-engine/api/options/MigrationPoliciesSupported" id="MigrationPoliciesSupported">
 //
-//	<name>MigrationPolicies</name>
+//	<name>MigrationPoliciesSupported</name>
 //	<values>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.2</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.3</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.4</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.5</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.6</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.7</version>
-//	    </system_option_value>
+//	  <system_option_value>
+//	    <value>true</value>
+//	    <version>4.0</version>
+//	  </system_option_value>
+//	  <system_option_value>
+//	    <value>true</value>
+//	    <version>4.1</version>
+//	  </system_option_value>
+//	  <system_option_value>
+//	    <value>true</value>
+//	    <version>4.2</version>
+//	  </system_option_value>
+//	  <system_option_value>
+//	    <value>false</value>
+//	    <version>3.6</version>
+//	  </system_option_value>
 //	</values>
 //
 // </system_option>
@@ -73834,43 +73922,34 @@ func (p *SystemOptionServiceGetResponse) MustOption() *SystemOption {
 }
 
 // Get the values of specific configuration option.
-// For example to retrieve the values of configuration option `MigrationPolicies` send a request like this:
+// For example to retrieve the values of configuration option `MigrationPoliciesSupported` send a request like this:
 // [source]
 // ----
-// GET /ovirt-engine/api/options/MigrationPolicies
+// GET /ovirt-engine/api/options/MigrationPoliciesSupported
 // ----
 // The response to that request will be the following:
 // [source,xml]
 // ----
-// <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-// <system_option href="/ovirt-engine/api/options/MigrationPolicies" id="MigrationPolicies">
+// <system_option href="/ovirt-engine/api/options/MigrationPoliciesSupported" id="MigrationPoliciesSupported">
 //
-//	<name>MigrationPolicies</name>
+//	<name>MigrationPoliciesSupported</name>
 //	<values>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.2</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.3</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.4</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.5</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.6</version>
-//	    </system_option_value>
-//	    <system_option_value>
-//	        <value>[{"id":{"uuid":"80554327-0569-496b-bdeb-fcbbf52b827b"},...}]</value>
-//	        <version>4.7</version>
-//	    </system_option_value>
+//	  <system_option_value>
+//	    <value>true</value>
+//	    <version>4.0</version>
+//	  </system_option_value>
+//	  <system_option_value>
+//	    <value>true</value>
+//	    <version>4.1</version>
+//	  </system_option_value>
+//	  <system_option_value>
+//	    <value>true</value>
+//	    <version>4.2</version>
+//	  </system_option_value>
+//	  <system_option_value>
+//	    <value>false</value>
+//	    <version>3.6</version>
+//	  </system_option_value>
 //	</values>
 //
 // </system_option>
@@ -78278,7 +78357,7 @@ func (op *TemplateDiskAttachmentService) String() string {
 }
 
 // This service manages the set of disks attached to a template. Each attached disk is represented by a
-// xref:types-disk_attachment[DiskAttachment].
+// <<types/disk_attachment,DiskAttachment>>.
 type TemplateDiskAttachmentsService struct {
 	BaseService
 }
@@ -80975,6 +81054,4997 @@ func (op *TemplateNicService) String() string {
 	return fmt.Sprintf("TemplateNicService:%s", op.path)
 }
 
+type DomainGroupService struct {
+	BaseService
+}
+
+func NewDomainGroupService(connection *Connection, path string) *DomainGroupService {
+	var result DomainGroupService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+type DomainGroupServiceGetRequest struct {
+	DomainGroupService *DomainGroupService
+	header             map[string]string
+	query              map[string]string
+	follow             *string
+}
+
+func (p *DomainGroupServiceGetRequest) Header(key, value string) *DomainGroupServiceGetRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *DomainGroupServiceGetRequest) Query(key, value string) *DomainGroupServiceGetRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *DomainGroupServiceGetRequest) Follow(follow string) *DomainGroupServiceGetRequest {
+	p.follow = &follow
+	return p
+}
+
+func (p *DomainGroupServiceGetRequest) Send() (*DomainGroupServiceGetResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.DomainGroupService.connection.URL(), p.DomainGroupService.path)
+	values := make(url.Values)
+	if p.follow != nil {
+		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.DomainGroupService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.DomainGroupService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.DomainGroupService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.DomainGroupService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.DomainGroupService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLGroupReadOne(reader, nil, "")
+	if err != nil {
+		return nil, err
+	}
+	return &DomainGroupServiceGetResponse{get: result}, nil
+}
+
+func (p *DomainGroupServiceGetRequest) MustSend() *DomainGroupServiceGetResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+type DomainGroupServiceGetResponse struct {
+	get *Group
+}
+
+func (p *DomainGroupServiceGetResponse) Get() (*Group, bool) {
+	if p.get != nil {
+		return p.get, true
+	}
+	return nil, false
+}
+
+func (p *DomainGroupServiceGetResponse) MustGet() *Group {
+	if p.get == nil {
+		panic("get in response does not exist")
+	}
+	return p.get
+}
+
+func (p *DomainGroupService) Get() *DomainGroupServiceGetRequest {
+	return &DomainGroupServiceGetRequest{DomainGroupService: p}
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *DomainGroupService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
+}
+
+func (op *DomainGroupService) String() string {
+	return fmt.Sprintf("DomainGroupService:%s", op.path)
+}
+
+type DomainGroupsService struct {
+	BaseService
+}
+
+func NewDomainGroupsService(connection *Connection, path string) *DomainGroupsService {
+	var result DomainGroupsService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+// Returns the list of groups.
+// The order of the returned list of groups isn't guaranteed.
+type DomainGroupsServiceListRequest struct {
+	DomainGroupsService *DomainGroupsService
+	header              map[string]string
+	query               map[string]string
+	caseSensitive       *bool
+	follow              *string
+	max                 *int64
+	search              *string
+}
+
+func (p *DomainGroupsServiceListRequest) Header(key, value string) *DomainGroupsServiceListRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *DomainGroupsServiceListRequest) Query(key, value string) *DomainGroupsServiceListRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *DomainGroupsServiceListRequest) CaseSensitive(caseSensitive bool) *DomainGroupsServiceListRequest {
+	p.caseSensitive = &caseSensitive
+	return p
+}
+
+func (p *DomainGroupsServiceListRequest) Follow(follow string) *DomainGroupsServiceListRequest {
+	p.follow = &follow
+	return p
+}
+
+func (p *DomainGroupsServiceListRequest) Max(max int64) *DomainGroupsServiceListRequest {
+	p.max = &max
+	return p
+}
+
+func (p *DomainGroupsServiceListRequest) Search(search string) *DomainGroupsServiceListRequest {
+	p.search = &search
+	return p
+}
+
+func (p *DomainGroupsServiceListRequest) Send() (*DomainGroupsServiceListResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.DomainGroupsService.connection.URL(), p.DomainGroupsService.path)
+	values := make(url.Values)
+	if p.caseSensitive != nil {
+		values["case_sensitive"] = []string{fmt.Sprintf("%v", *p.caseSensitive)}
+	}
+
+	if p.follow != nil {
+		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
+	}
+
+	if p.max != nil {
+		values["max"] = []string{fmt.Sprintf("%v", *p.max)}
+	}
+
+	if p.search != nil {
+		values["search"] = []string{fmt.Sprintf("%v", *p.search)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.DomainGroupsService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.DomainGroupsService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.DomainGroupsService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.DomainGroupsService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.DomainGroupsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLGroupReadMany(reader, nil)
+	if err != nil {
+		return nil, err
+	}
+	return &DomainGroupsServiceListResponse{groups: result}, nil
+}
+
+func (p *DomainGroupsServiceListRequest) MustSend() *DomainGroupsServiceListResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Returns the list of groups.
+// The order of the returned list of groups isn't guaranteed.
+type DomainGroupsServiceListResponse struct {
+	groups *GroupSlice
+}
+
+func (p *DomainGroupsServiceListResponse) Groups() (*GroupSlice, bool) {
+	if p.groups != nil {
+		return p.groups, true
+	}
+	return nil, false
+}
+
+func (p *DomainGroupsServiceListResponse) MustGroups() *GroupSlice {
+	if p.groups == nil {
+		panic("groups in response does not exist")
+	}
+	return p.groups
+}
+
+// Returns the list of groups.
+// The order of the returned list of groups isn't guaranteed.
+func (p *DomainGroupsService) List() *DomainGroupsServiceListRequest {
+	return &DomainGroupsServiceListRequest{DomainGroupsService: p}
+}
+
+func (op *DomainGroupsService) GroupService(id string) *DomainGroupService {
+	return NewDomainGroupService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *DomainGroupsService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	index := strings.Index(path, "/")
+	if index == -1 {
+		return op.GroupService(path), nil
+	}
+	return op.GroupService(path[:index]).Service(path[index+1:])
+}
+
+func (op *DomainGroupsService) String() string {
+	return fmt.Sprintf("DomainGroupsService:%s", op.path)
+}
+
+// A service to view details of an authentication domain in the system.
+type DomainService struct {
+	BaseService
+}
+
+func NewDomainService(connection *Connection, path string) *DomainService {
+	var result DomainService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+// Gets the authentication domain information.
+// Usage:
+// ....
+// GET /ovirt-engine/api/domains/5678
+// ....
+// Will return the domain information:
+// [source,xml]
+// ----
+// <domain href="/ovirt-engine/api/domains/5678" id="5678">
+//
+//	<name>internal-authz</name>
+//	<link href="/ovirt-engine/api/domains/5678/users" rel="users"/>
+//	<link href="/ovirt-engine/api/domains/5678/groups" rel="groups"/>
+//	<link href="/ovirt-engine/api/domains/5678/users?search={query}" rel="users/search"/>
+//	<link href="/ovirt-engine/api/domains/5678/groups?search={query}" rel="groups/search"/>
+//
+// </domain>
+// ----
+type DomainServiceGetRequest struct {
+	DomainService *DomainService
+	header        map[string]string
+	query         map[string]string
+	follow        *string
+}
+
+func (p *DomainServiceGetRequest) Header(key, value string) *DomainServiceGetRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *DomainServiceGetRequest) Query(key, value string) *DomainServiceGetRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *DomainServiceGetRequest) Follow(follow string) *DomainServiceGetRequest {
+	p.follow = &follow
+	return p
+}
+
+func (p *DomainServiceGetRequest) Send() (*DomainServiceGetResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.DomainService.connection.URL(), p.DomainService.path)
+	values := make(url.Values)
+	if p.follow != nil {
+		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.DomainService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.DomainService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.DomainService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.DomainService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.DomainService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLDomainReadOne(reader, nil, "")
+	if err != nil {
+		return nil, err
+	}
+	return &DomainServiceGetResponse{domain: result}, nil
+}
+
+func (p *DomainServiceGetRequest) MustSend() *DomainServiceGetResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Gets the authentication domain information.
+// Usage:
+// ....
+// GET /ovirt-engine/api/domains/5678
+// ....
+// Will return the domain information:
+// [source,xml]
+// ----
+// <domain href="/ovirt-engine/api/domains/5678" id="5678">
+//
+//	<name>internal-authz</name>
+//	<link href="/ovirt-engine/api/domains/5678/users" rel="users"/>
+//	<link href="/ovirt-engine/api/domains/5678/groups" rel="groups"/>
+//	<link href="/ovirt-engine/api/domains/5678/users?search={query}" rel="users/search"/>
+//	<link href="/ovirt-engine/api/domains/5678/groups?search={query}" rel="groups/search"/>
+//
+// </domain>
+// ----
+type DomainServiceGetResponse struct {
+	domain *Domain
+}
+
+func (p *DomainServiceGetResponse) Domain() (*Domain, bool) {
+	if p.domain != nil {
+		return p.domain, true
+	}
+	return nil, false
+}
+
+func (p *DomainServiceGetResponse) MustDomain() *Domain {
+	if p.domain == nil {
+		panic("domain in response does not exist")
+	}
+	return p.domain
+}
+
+// Gets the authentication domain information.
+// Usage:
+// ....
+// GET /ovirt-engine/api/domains/5678
+// ....
+// Will return the domain information:
+// [source,xml]
+// ----
+// <domain href="/ovirt-engine/api/domains/5678" id="5678">
+//
+//	<name>internal-authz</name>
+//	<link href="/ovirt-engine/api/domains/5678/users" rel="users"/>
+//	<link href="/ovirt-engine/api/domains/5678/groups" rel="groups"/>
+//	<link href="/ovirt-engine/api/domains/5678/users?search={query}" rel="users/search"/>
+//	<link href="/ovirt-engine/api/domains/5678/groups?search={query}" rel="groups/search"/>
+//
+// </domain>
+// ----
+func (p *DomainService) Get() *DomainServiceGetRequest {
+	return &DomainServiceGetRequest{DomainService: p}
+}
+
+// Reference to a service to manage domain groups.
+func (op *DomainService) GroupsService() *DomainGroupsService {
+	return NewDomainGroupsService(op.connection, fmt.Sprintf("%s/groups", op.path))
+}
+
+// Reference to a service to manage domain users.
+func (op *DomainService) UsersService() *DomainUsersService {
+	return NewDomainUsersService(op.connection, fmt.Sprintf("%s/users", op.path))
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *DomainService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	if path == "groups" {
+		return op.GroupsService(), nil
+	}
+	if strings.HasPrefix(path, "groups/") {
+		return op.GroupsService().Service(path[7:])
+	}
+	if path == "users" {
+		return op.UsersService(), nil
+	}
+	if strings.HasPrefix(path, "users/") {
+		return op.UsersService().Service(path[6:])
+	}
+	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
+}
+
+func (op *DomainService) String() string {
+	return fmt.Sprintf("DomainService:%s", op.path)
+}
+
+// A service that shows a user's group membership in the AAA extension.
+type DomainUserGroupsService struct {
+	BaseService
+}
+
+func NewDomainUserGroupsService(connection *Connection, path string) *DomainUserGroupsService {
+	var result DomainUserGroupsService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+// Returns the list of groups that the user is a member of.
+type DomainUserGroupsServiceListRequest struct {
+	DomainUserGroupsService *DomainUserGroupsService
+	header                  map[string]string
+	query                   map[string]string
+	follow                  *string
+}
+
+func (p *DomainUserGroupsServiceListRequest) Header(key, value string) *DomainUserGroupsServiceListRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *DomainUserGroupsServiceListRequest) Query(key, value string) *DomainUserGroupsServiceListRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *DomainUserGroupsServiceListRequest) Follow(follow string) *DomainUserGroupsServiceListRequest {
+	p.follow = &follow
+	return p
+}
+
+func (p *DomainUserGroupsServiceListRequest) Send() (*DomainUserGroupsServiceListResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.DomainUserGroupsService.connection.URL(), p.DomainUserGroupsService.path)
+	values := make(url.Values)
+	if p.follow != nil {
+		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.DomainUserGroupsService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.DomainUserGroupsService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.DomainUserGroupsService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.DomainUserGroupsService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.DomainUserGroupsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLGroupReadMany(reader, nil)
+	if err != nil {
+		return nil, err
+	}
+	return &DomainUserGroupsServiceListResponse{groups: result}, nil
+}
+
+func (p *DomainUserGroupsServiceListRequest) MustSend() *DomainUserGroupsServiceListResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Returns the list of groups that the user is a member of.
+type DomainUserGroupsServiceListResponse struct {
+	groups *GroupSlice
+}
+
+func (p *DomainUserGroupsServiceListResponse) Groups() (*GroupSlice, bool) {
+	if p.groups != nil {
+		return p.groups, true
+	}
+	return nil, false
+}
+
+func (p *DomainUserGroupsServiceListResponse) MustGroups() *GroupSlice {
+	if p.groups == nil {
+		panic("groups in response does not exist")
+	}
+	return p.groups
+}
+
+// Returns the list of groups that the user is a member of.
+func (p *DomainUserGroupsService) List() *DomainUserGroupsServiceListRequest {
+	return &DomainUserGroupsServiceListRequest{DomainUserGroupsService: p}
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *DomainUserGroupsService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
+}
+
+func (op *DomainUserGroupsService) String() string {
+	return fmt.Sprintf("DomainUserGroupsService:%s", op.path)
+}
+
+// A service to view a domain user in the system.
+type DomainUserService struct {
+	BaseService
+}
+
+func NewDomainUserService(connection *Connection, path string) *DomainUserService {
+	var result DomainUserService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+// Gets the domain user information.
+// Usage:
+// ....
+// GET /ovirt-engine/api/domains/5678/users/1234
+// ....
+// Will return the domain user information:
+// [source,xml]
+// ----
+// <user href="/ovirt-engine/api/users/1234" id="1234">
+//
+//	<name>admin</name>
+//	<namespace>*</namespace>
+//	<principal>admin</principal>
+//	<user_name>admin@internal-authz</user_name>
+//	<domain href="/ovirt-engine/api/domains/5678" id="5678">
+//	  <name>internal-authz</name>
+//	</domain>
+//	<groups/>
+//
+// </user>
+// ----
+type DomainUserServiceGetRequest struct {
+	DomainUserService *DomainUserService
+	header            map[string]string
+	query             map[string]string
+	follow            *string
+}
+
+func (p *DomainUserServiceGetRequest) Header(key, value string) *DomainUserServiceGetRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *DomainUserServiceGetRequest) Query(key, value string) *DomainUserServiceGetRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *DomainUserServiceGetRequest) Follow(follow string) *DomainUserServiceGetRequest {
+	p.follow = &follow
+	return p
+}
+
+func (p *DomainUserServiceGetRequest) Send() (*DomainUserServiceGetResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.DomainUserService.connection.URL(), p.DomainUserService.path)
+	values := make(url.Values)
+	if p.follow != nil {
+		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.DomainUserService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.DomainUserService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.DomainUserService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.DomainUserService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.DomainUserService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLUserReadOne(reader, nil, "")
+	if err != nil {
+		return nil, err
+	}
+	return &DomainUserServiceGetResponse{user: result}, nil
+}
+
+func (p *DomainUserServiceGetRequest) MustSend() *DomainUserServiceGetResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Gets the domain user information.
+// Usage:
+// ....
+// GET /ovirt-engine/api/domains/5678/users/1234
+// ....
+// Will return the domain user information:
+// [source,xml]
+// ----
+// <user href="/ovirt-engine/api/users/1234" id="1234">
+//
+//	<name>admin</name>
+//	<namespace>*</namespace>
+//	<principal>admin</principal>
+//	<user_name>admin@internal-authz</user_name>
+//	<domain href="/ovirt-engine/api/domains/5678" id="5678">
+//	  <name>internal-authz</name>
+//	</domain>
+//	<groups/>
+//
+// </user>
+// ----
+type DomainUserServiceGetResponse struct {
+	user *User
+}
+
+func (p *DomainUserServiceGetResponse) User() (*User, bool) {
+	if p.user != nil {
+		return p.user, true
+	}
+	return nil, false
+}
+
+func (p *DomainUserServiceGetResponse) MustUser() *User {
+	if p.user == nil {
+		panic("user in response does not exist")
+	}
+	return p.user
+}
+
+// Gets the domain user information.
+// Usage:
+// ....
+// GET /ovirt-engine/api/domains/5678/users/1234
+// ....
+// Will return the domain user information:
+// [source,xml]
+// ----
+// <user href="/ovirt-engine/api/users/1234" id="1234">
+//
+//	<name>admin</name>
+//	<namespace>*</namespace>
+//	<principal>admin</principal>
+//	<user_name>admin@internal-authz</user_name>
+//	<domain href="/ovirt-engine/api/domains/5678" id="5678">
+//	  <name>internal-authz</name>
+//	</domain>
+//	<groups/>
+//
+// </user>
+// ----
+func (p *DomainUserService) Get() *DomainUserServiceGetRequest {
+	return &DomainUserServiceGetRequest{DomainUserService: p}
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *DomainUserService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
+}
+
+func (op *DomainUserService) String() string {
+	return fmt.Sprintf("DomainUserService:%s", op.path)
+}
+
+// A service to list all domain users in the system.
+type DomainUsersService struct {
+	BaseService
+}
+
+func NewDomainUsersService(connection *Connection, path string) *DomainUsersService {
+	var result DomainUsersService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+// List all the users in the domain.
+// Usage:
+// ....
+// GET /ovirt-engine/api/domains/5678/users
+// ....
+// Will return the list of users in the domain:
+// [source,xml]
+// ----
+// <users>
+//
+//	<user href="/ovirt-engine/api/domains/5678/users/1234" id="1234">
+//	  <name>admin</name>
+//	  <namespace>*</namespace>
+//	  <principal>admin</principal>
+//	  <user_name>admin@internal-authz</user_name>
+//	  <domain href="/ovirt-engine/api/domains/5678" id="5678">
+//	    <name>internal-authz</name>
+//	  </domain>
+//	  <groups/>
+//	</user>
+//
+// </users>
+// ----
+// The order of the returned list of users isn't guaranteed.
+type DomainUsersServiceListRequest struct {
+	DomainUsersService *DomainUsersService
+	header             map[string]string
+	query              map[string]string
+	caseSensitive      *bool
+	follow             *string
+	max                *int64
+	search             *string
+}
+
+func (p *DomainUsersServiceListRequest) Header(key, value string) *DomainUsersServiceListRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *DomainUsersServiceListRequest) Query(key, value string) *DomainUsersServiceListRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *DomainUsersServiceListRequest) CaseSensitive(caseSensitive bool) *DomainUsersServiceListRequest {
+	p.caseSensitive = &caseSensitive
+	return p
+}
+
+func (p *DomainUsersServiceListRequest) Follow(follow string) *DomainUsersServiceListRequest {
+	p.follow = &follow
+	return p
+}
+
+func (p *DomainUsersServiceListRequest) Max(max int64) *DomainUsersServiceListRequest {
+	p.max = &max
+	return p
+}
+
+func (p *DomainUsersServiceListRequest) Search(search string) *DomainUsersServiceListRequest {
+	p.search = &search
+	return p
+}
+
+func (p *DomainUsersServiceListRequest) Send() (*DomainUsersServiceListResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.DomainUsersService.connection.URL(), p.DomainUsersService.path)
+	values := make(url.Values)
+	if p.caseSensitive != nil {
+		values["case_sensitive"] = []string{fmt.Sprintf("%v", *p.caseSensitive)}
+	}
+
+	if p.follow != nil {
+		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
+	}
+
+	if p.max != nil {
+		values["max"] = []string{fmt.Sprintf("%v", *p.max)}
+	}
+
+	if p.search != nil {
+		values["search"] = []string{fmt.Sprintf("%v", *p.search)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.DomainUsersService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.DomainUsersService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.DomainUsersService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.DomainUsersService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.DomainUsersService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLUserReadMany(reader, nil)
+	if err != nil {
+		return nil, err
+	}
+	return &DomainUsersServiceListResponse{users: result}, nil
+}
+
+func (p *DomainUsersServiceListRequest) MustSend() *DomainUsersServiceListResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// List all the users in the domain.
+// Usage:
+// ....
+// GET /ovirt-engine/api/domains/5678/users
+// ....
+// Will return the list of users in the domain:
+// [source,xml]
+// ----
+// <users>
+//
+//	<user href="/ovirt-engine/api/domains/5678/users/1234" id="1234">
+//	  <name>admin</name>
+//	  <namespace>*</namespace>
+//	  <principal>admin</principal>
+//	  <user_name>admin@internal-authz</user_name>
+//	  <domain href="/ovirt-engine/api/domains/5678" id="5678">
+//	    <name>internal-authz</name>
+//	  </domain>
+//	  <groups/>
+//	</user>
+//
+// </users>
+// ----
+// The order of the returned list of users isn't guaranteed.
+type DomainUsersServiceListResponse struct {
+	users *UserSlice
+}
+
+func (p *DomainUsersServiceListResponse) Users() (*UserSlice, bool) {
+	if p.users != nil {
+		return p.users, true
+	}
+	return nil, false
+}
+
+func (p *DomainUsersServiceListResponse) MustUsers() *UserSlice {
+	if p.users == nil {
+		panic("users in response does not exist")
+	}
+	return p.users
+}
+
+// List all the users in the domain.
+// Usage:
+// ....
+// GET /ovirt-engine/api/domains/5678/users
+// ....
+// Will return the list of users in the domain:
+// [source,xml]
+// ----
+// <users>
+//
+//	<user href="/ovirt-engine/api/domains/5678/users/1234" id="1234">
+//	  <name>admin</name>
+//	  <namespace>*</namespace>
+//	  <principal>admin</principal>
+//	  <user_name>admin@internal-authz</user_name>
+//	  <domain href="/ovirt-engine/api/domains/5678" id="5678">
+//	    <name>internal-authz</name>
+//	  </domain>
+//	  <groups/>
+//	</user>
+//
+// </users>
+// ----
+// The order of the returned list of users isn't guaranteed.
+func (p *DomainUsersService) List() *DomainUsersServiceListRequest {
+	return &DomainUsersServiceListRequest{DomainUsersService: p}
+}
+
+// Reference to a service to view details of a domain user.
+func (op *DomainUsersService) UserService(id string) *DomainUserService {
+	return NewDomainUserService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *DomainUsersService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	index := strings.Index(path, "/")
+	if index == -1 {
+		return op.UserService(path), nil
+	}
+	return op.UserService(path[:index]).Service(path[index+1:])
+}
+
+func (op *DomainUsersService) String() string {
+	return fmt.Sprintf("DomainUsersService:%s", op.path)
+}
+
+// A service to list all authentication domains in the system.
+type DomainsService struct {
+	BaseService
+}
+
+func NewDomainsService(connection *Connection, path string) *DomainsService {
+	var result DomainsService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+// List all the authentication domains in the system.
+// Usage:
+// ....
+// GET /ovirt-engine/api/domains
+// ....
+// Will return the list of domains:
+// [source,xml]
+// ----
+// <domains>
+//
+//	<domain href="/ovirt-engine/api/domains/5678" id="5678">
+//	  <name>internal-authz</name>
+//	  <link href="/ovirt-engine/api/domains/5678/users" rel="users"/>
+//	  <link href="/ovirt-engine/api/domains/5678/groups" rel="groups"/>
+//	  <link href="/ovirt-engine/api/domains/5678/users?search={query}" rel="users/search"/>
+//	  <link href="/ovirt-engine/api/domains/5678/groups?search={query}" rel="groups/search"/>
+//	</domain>
+//
+// </domains>
+// ----
+// The order of the returned list of domains isn't guaranteed.
+type DomainsServiceListRequest struct {
+	DomainsService *DomainsService
+	header         map[string]string
+	query          map[string]string
+	follow         *string
+	max            *int64
+}
+
+func (p *DomainsServiceListRequest) Header(key, value string) *DomainsServiceListRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *DomainsServiceListRequest) Query(key, value string) *DomainsServiceListRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *DomainsServiceListRequest) Follow(follow string) *DomainsServiceListRequest {
+	p.follow = &follow
+	return p
+}
+
+func (p *DomainsServiceListRequest) Max(max int64) *DomainsServiceListRequest {
+	p.max = &max
+	return p
+}
+
+func (p *DomainsServiceListRequest) Send() (*DomainsServiceListResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.DomainsService.connection.URL(), p.DomainsService.path)
+	values := make(url.Values)
+	if p.follow != nil {
+		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
+	}
+
+	if p.max != nil {
+		values["max"] = []string{fmt.Sprintf("%v", *p.max)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.DomainsService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.DomainsService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.DomainsService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.DomainsService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.DomainsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLDomainReadMany(reader, nil)
+	if err != nil {
+		return nil, err
+	}
+	return &DomainsServiceListResponse{domains: result}, nil
+}
+
+func (p *DomainsServiceListRequest) MustSend() *DomainsServiceListResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// List all the authentication domains in the system.
+// Usage:
+// ....
+// GET /ovirt-engine/api/domains
+// ....
+// Will return the list of domains:
+// [source,xml]
+// ----
+// <domains>
+//
+//	<domain href="/ovirt-engine/api/domains/5678" id="5678">
+//	  <name>internal-authz</name>
+//	  <link href="/ovirt-engine/api/domains/5678/users" rel="users"/>
+//	  <link href="/ovirt-engine/api/domains/5678/groups" rel="groups"/>
+//	  <link href="/ovirt-engine/api/domains/5678/users?search={query}" rel="users/search"/>
+//	  <link href="/ovirt-engine/api/domains/5678/groups?search={query}" rel="groups/search"/>
+//	</domain>
+//
+// </domains>
+// ----
+// The order of the returned list of domains isn't guaranteed.
+type DomainsServiceListResponse struct {
+	domains *DomainSlice
+}
+
+func (p *DomainsServiceListResponse) Domains() (*DomainSlice, bool) {
+	if p.domains != nil {
+		return p.domains, true
+	}
+	return nil, false
+}
+
+func (p *DomainsServiceListResponse) MustDomains() *DomainSlice {
+	if p.domains == nil {
+		panic("domains in response does not exist")
+	}
+	return p.domains
+}
+
+// List all the authentication domains in the system.
+// Usage:
+// ....
+// GET /ovirt-engine/api/domains
+// ....
+// Will return the list of domains:
+// [source,xml]
+// ----
+// <domains>
+//
+//	<domain href="/ovirt-engine/api/domains/5678" id="5678">
+//	  <name>internal-authz</name>
+//	  <link href="/ovirt-engine/api/domains/5678/users" rel="users"/>
+//	  <link href="/ovirt-engine/api/domains/5678/groups" rel="groups"/>
+//	  <link href="/ovirt-engine/api/domains/5678/users?search={query}" rel="users/search"/>
+//	  <link href="/ovirt-engine/api/domains/5678/groups?search={query}" rel="groups/search"/>
+//	</domain>
+//
+// </domains>
+// ----
+// The order of the returned list of domains isn't guaranteed.
+func (p *DomainsService) List() *DomainsServiceListRequest {
+	return &DomainsServiceListRequest{DomainsService: p}
+}
+
+// Reference to a service to view details of a domain.
+func (op *DomainsService) DomainService(id string) *DomainService {
+	return NewDomainService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *DomainsService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	index := strings.Index(path, "/")
+	if index == -1 {
+		return op.DomainService(path), nil
+	}
+	return op.DomainService(path[:index]).Service(path[index+1:])
+}
+
+func (op *DomainsService) String() string {
+	return fmt.Sprintf("DomainsService:%s", op.path)
+}
+
+// Manages a group of users. Use this service to either get groups details or remove groups. In order
+// to add new groups please use <<services/groups, service>> that manages the collection of groups.
+type GroupService struct {
+	BaseService
+}
+
+func NewGroupService(connection *Connection, path string) *GroupService {
+	var result GroupService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+// Gets the system group information.
+// Usage:
+// ....
+// GET /ovirt-engine/api/groups/123
+// ....
+// Will return the group information:
+// [source,xml]
+// ----
+// <group href="/ovirt-engine/api/groups/123" id="123">
+//
+//	<name>mygroup</name>
+//	<link href="/ovirt-engine/api/groups/123/roles" rel="roles"/>
+//	<link href="/ovirt-engine/api/groups/123/permissions" rel="permissions"/>
+//	<link href="/ovirt-engine/api/groups/123/tags" rel="tags"/>
+//	<domain_entry_id>476652557A382F67696B6D2B32762B37796E46476D513D3D</domain_entry_id>
+//	<namespace>DC=example,DC=com</namespace>
+//	<domain href="/ovirt-engine/api/domains/ABCDEF" id="ABCDEF">
+//	  <name>myextension-authz</name>
+//	</domain>
+//
+// </group>
+// ----
+type GroupServiceGetRequest struct {
+	GroupService *GroupService
+	header       map[string]string
+	query        map[string]string
+	follow       *string
+}
+
+func (p *GroupServiceGetRequest) Header(key, value string) *GroupServiceGetRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *GroupServiceGetRequest) Query(key, value string) *GroupServiceGetRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *GroupServiceGetRequest) Follow(follow string) *GroupServiceGetRequest {
+	p.follow = &follow
+	return p
+}
+
+func (p *GroupServiceGetRequest) Send() (*GroupServiceGetResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.GroupService.connection.URL(), p.GroupService.path)
+	values := make(url.Values)
+	if p.follow != nil {
+		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.GroupService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.GroupService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.GroupService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.GroupService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.GroupService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLGroupReadOne(reader, nil, "")
+	if err != nil {
+		return nil, err
+	}
+	return &GroupServiceGetResponse{get: result}, nil
+}
+
+func (p *GroupServiceGetRequest) MustSend() *GroupServiceGetResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Gets the system group information.
+// Usage:
+// ....
+// GET /ovirt-engine/api/groups/123
+// ....
+// Will return the group information:
+// [source,xml]
+// ----
+// <group href="/ovirt-engine/api/groups/123" id="123">
+//
+//	<name>mygroup</name>
+//	<link href="/ovirt-engine/api/groups/123/roles" rel="roles"/>
+//	<link href="/ovirt-engine/api/groups/123/permissions" rel="permissions"/>
+//	<link href="/ovirt-engine/api/groups/123/tags" rel="tags"/>
+//	<domain_entry_id>476652557A382F67696B6D2B32762B37796E46476D513D3D</domain_entry_id>
+//	<namespace>DC=example,DC=com</namespace>
+//	<domain href="/ovirt-engine/api/domains/ABCDEF" id="ABCDEF">
+//	  <name>myextension-authz</name>
+//	</domain>
+//
+// </group>
+// ----
+type GroupServiceGetResponse struct {
+	get *Group
+}
+
+func (p *GroupServiceGetResponse) Get() (*Group, bool) {
+	if p.get != nil {
+		return p.get, true
+	}
+	return nil, false
+}
+
+func (p *GroupServiceGetResponse) MustGet() *Group {
+	if p.get == nil {
+		panic("get in response does not exist")
+	}
+	return p.get
+}
+
+// Gets the system group information.
+// Usage:
+// ....
+// GET /ovirt-engine/api/groups/123
+// ....
+// Will return the group information:
+// [source,xml]
+// ----
+// <group href="/ovirt-engine/api/groups/123" id="123">
+//
+//	<name>mygroup</name>
+//	<link href="/ovirt-engine/api/groups/123/roles" rel="roles"/>
+//	<link href="/ovirt-engine/api/groups/123/permissions" rel="permissions"/>
+//	<link href="/ovirt-engine/api/groups/123/tags" rel="tags"/>
+//	<domain_entry_id>476652557A382F67696B6D2B32762B37796E46476D513D3D</domain_entry_id>
+//	<namespace>DC=example,DC=com</namespace>
+//	<domain href="/ovirt-engine/api/domains/ABCDEF" id="ABCDEF">
+//	  <name>myextension-authz</name>
+//	</domain>
+//
+// </group>
+// ----
+func (p *GroupService) Get() *GroupServiceGetRequest {
+	return &GroupServiceGetRequest{GroupService: p}
+}
+
+// Removes the system group.
+// Usage:
+// ....
+// DELETE /ovirt-engine/api/groups/123
+// ....
+type GroupServiceRemoveRequest struct {
+	GroupService *GroupService
+	header       map[string]string
+	query        map[string]string
+	async        *bool
+}
+
+func (p *GroupServiceRemoveRequest) Header(key, value string) *GroupServiceRemoveRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *GroupServiceRemoveRequest) Query(key, value string) *GroupServiceRemoveRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *GroupServiceRemoveRequest) Async(async bool) *GroupServiceRemoveRequest {
+	p.async = &async
+	return p
+}
+
+func (p *GroupServiceRemoveRequest) Send() (*GroupServiceRemoveResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.GroupService.connection.URL(), p.GroupService.path)
+	values := make(url.Values)
+	if p.async != nil {
+		values["async"] = []string{fmt.Sprintf("%v", *p.async)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("DELETE", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.GroupService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.GroupService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.GroupService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.GroupService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.GroupService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	return new(GroupServiceRemoveResponse), nil
+}
+
+func (p *GroupServiceRemoveRequest) MustSend() *GroupServiceRemoveResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Removes the system group.
+// Usage:
+// ....
+// DELETE /ovirt-engine/api/groups/123
+// ....
+type GroupServiceRemoveResponse struct {
+}
+
+// Removes the system group.
+// Usage:
+// ....
+// DELETE /ovirt-engine/api/groups/123
+// ....
+func (p *GroupService) Remove() *GroupServiceRemoveRequest {
+	return &GroupServiceRemoveRequest{GroupService: p}
+}
+
+// Reference to the service that manages the collection of permissions assigned to this system group.
+func (op *GroupService) PermissionsService() *AssignedPermissionsService {
+	return NewAssignedPermissionsService(op.connection, fmt.Sprintf("%s/permissions", op.path))
+}
+
+// Reference to the service that manages the collection of roles assigned to this system group.
+func (op *GroupService) RolesService() *AssignedRolesService {
+	return NewAssignedRolesService(op.connection, fmt.Sprintf("%s/roles", op.path))
+}
+
+// Reference to the service that manages the collection of tags assigned to this system group.
+func (op *GroupService) TagsService() *AssignedTagsService {
+	return NewAssignedTagsService(op.connection, fmt.Sprintf("%s/tags", op.path))
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *GroupService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	if path == "permissions" {
+		return op.PermissionsService(), nil
+	}
+	if strings.HasPrefix(path, "permissions/") {
+		return op.PermissionsService().Service(path[12:])
+	}
+	if path == "roles" {
+		return op.RolesService(), nil
+	}
+	if strings.HasPrefix(path, "roles/") {
+		return op.RolesService().Service(path[6:])
+	}
+	if path == "tags" {
+		return op.TagsService(), nil
+	}
+	if strings.HasPrefix(path, "tags/") {
+		return op.TagsService().Service(path[5:])
+	}
+	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
+}
+
+func (op *GroupService) String() string {
+	return fmt.Sprintf("GroupService:%s", op.path)
+}
+
+// Manages the collection of groups of users.
+type GroupsService struct {
+	BaseService
+}
+
+func NewGroupsService(connection *Connection, path string) *GroupsService {
+	var result GroupsService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+// Add group from a directory service. Please note that domain name is name of the authorization provider.
+// For example, to add the `Developers` group from the `internal-authz` authorization provider send a request
+// like this:
+// [source]
+// ----
+// POST /ovirt-engine/api/groups
+// ----
+// With a request body like this:
+// [source,xml]
+// ----
+// <group>
+//
+//	<name>Developers</name>
+//	<domain>
+//	  <name>internal-authz</name>
+//	</domain>
+//
+// </group>
+// ----
+type GroupsServiceAddRequest struct {
+	GroupsService *GroupsService
+	header        map[string]string
+	query         map[string]string
+	group         *Group
+}
+
+func (p *GroupsServiceAddRequest) Header(key, value string) *GroupsServiceAddRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *GroupsServiceAddRequest) Query(key, value string) *GroupsServiceAddRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *GroupsServiceAddRequest) Group(group *Group) *GroupsServiceAddRequest {
+	p.group = group
+	return p
+}
+
+func (p *GroupsServiceAddRequest) Send() (*GroupsServiceAddResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.GroupsService.connection.URL(), p.GroupsService.path)
+	values := make(url.Values)
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	var body bytes.Buffer
+	writer := NewXMLWriter(&body)
+	err := XMLGroupWriteOne(writer, p.group, "")
+	if err != nil {
+		return nil, err
+	}
+	writer.Flush()
+	req, err := http.NewRequest("POST", rawURL, &body)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.GroupsService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.GroupsService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.GroupsService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.GroupsService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.GroupsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200, 201, 202}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLGroupReadOne(reader, nil, "")
+	if err != nil {
+		return nil, err
+	}
+	return &GroupsServiceAddResponse{group: result}, nil
+}
+
+func (p *GroupsServiceAddRequest) MustSend() *GroupsServiceAddResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Add group from a directory service. Please note that domain name is name of the authorization provider.
+// For example, to add the `Developers` group from the `internal-authz` authorization provider send a request
+// like this:
+// [source]
+// ----
+// POST /ovirt-engine/api/groups
+// ----
+// With a request body like this:
+// [source,xml]
+// ----
+// <group>
+//
+//	<name>Developers</name>
+//	<domain>
+//	  <name>internal-authz</name>
+//	</domain>
+//
+// </group>
+// ----
+type GroupsServiceAddResponse struct {
+	group *Group
+}
+
+func (p *GroupsServiceAddResponse) Group() (*Group, bool) {
+	if p.group != nil {
+		return p.group, true
+	}
+	return nil, false
+}
+
+func (p *GroupsServiceAddResponse) MustGroup() *Group {
+	if p.group == nil {
+		panic("group in response does not exist")
+	}
+	return p.group
+}
+
+// Add group from a directory service. Please note that domain name is name of the authorization provider.
+// For example, to add the `Developers` group from the `internal-authz` authorization provider send a request
+// like this:
+// [source]
+// ----
+// POST /ovirt-engine/api/groups
+// ----
+// With a request body like this:
+// [source,xml]
+// ----
+// <group>
+//
+//	<name>Developers</name>
+//	<domain>
+//	  <name>internal-authz</name>
+//	</domain>
+//
+// </group>
+// ----
+func (p *GroupsService) Add() *GroupsServiceAddRequest {
+	return &GroupsServiceAddRequest{GroupsService: p}
+}
+
+// List all the groups in the system.
+// Usage:
+// ....
+// GET /ovirt-engine/api/groups
+// ....
+// Will return the list of groups:
+// [source,xml]
+// ----
+// <groups>
+//
+//	<group href="/ovirt-engine/api/groups/123" id="123">
+//	  <name>mygroup</name>
+//	  <link href="/ovirt-engine/api/groups/123/roles" rel="roles"/>
+//	  <link href="/ovirt-engine/api/groups/123/permissions" rel="permissions"/>
+//	  <link href="/ovirt-engine/api/groups/123/tags" rel="tags"/>
+//	  <domain_entry_id>476652557A382F67696B6D2B32762B37796E46476D513D3D</domain_entry_id>
+//	  <namespace>DC=example,DC=com</namespace>
+//	  <domain href="/ovirt-engine/api/domains/ABCDEF" id="ABCDEF">
+//	    <name>myextension-authz</name>
+//	  </domain>
+//	</group>
+//	...
+//
+// </groups>
+// ----
+// The order of the returned list of groups isn't guaranteed.
+type GroupsServiceListRequest struct {
+	GroupsService *GroupsService
+	header        map[string]string
+	query         map[string]string
+	caseSensitive *bool
+	follow        *string
+	max           *int64
+	search        *string
+}
+
+func (p *GroupsServiceListRequest) Header(key, value string) *GroupsServiceListRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *GroupsServiceListRequest) Query(key, value string) *GroupsServiceListRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *GroupsServiceListRequest) CaseSensitive(caseSensitive bool) *GroupsServiceListRequest {
+	p.caseSensitive = &caseSensitive
+	return p
+}
+
+func (p *GroupsServiceListRequest) Follow(follow string) *GroupsServiceListRequest {
+	p.follow = &follow
+	return p
+}
+
+func (p *GroupsServiceListRequest) Max(max int64) *GroupsServiceListRequest {
+	p.max = &max
+	return p
+}
+
+func (p *GroupsServiceListRequest) Search(search string) *GroupsServiceListRequest {
+	p.search = &search
+	return p
+}
+
+func (p *GroupsServiceListRequest) Send() (*GroupsServiceListResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.GroupsService.connection.URL(), p.GroupsService.path)
+	values := make(url.Values)
+	if p.caseSensitive != nil {
+		values["case_sensitive"] = []string{fmt.Sprintf("%v", *p.caseSensitive)}
+	}
+
+	if p.follow != nil {
+		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
+	}
+
+	if p.max != nil {
+		values["max"] = []string{fmt.Sprintf("%v", *p.max)}
+	}
+
+	if p.search != nil {
+		values["search"] = []string{fmt.Sprintf("%v", *p.search)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.GroupsService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.GroupsService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.GroupsService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.GroupsService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.GroupsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLGroupReadMany(reader, nil)
+	if err != nil {
+		return nil, err
+	}
+	return &GroupsServiceListResponse{groups: result}, nil
+}
+
+func (p *GroupsServiceListRequest) MustSend() *GroupsServiceListResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// List all the groups in the system.
+// Usage:
+// ....
+// GET /ovirt-engine/api/groups
+// ....
+// Will return the list of groups:
+// [source,xml]
+// ----
+// <groups>
+//
+//	<group href="/ovirt-engine/api/groups/123" id="123">
+//	  <name>mygroup</name>
+//	  <link href="/ovirt-engine/api/groups/123/roles" rel="roles"/>
+//	  <link href="/ovirt-engine/api/groups/123/permissions" rel="permissions"/>
+//	  <link href="/ovirt-engine/api/groups/123/tags" rel="tags"/>
+//	  <domain_entry_id>476652557A382F67696B6D2B32762B37796E46476D513D3D</domain_entry_id>
+//	  <namespace>DC=example,DC=com</namespace>
+//	  <domain href="/ovirt-engine/api/domains/ABCDEF" id="ABCDEF">
+//	    <name>myextension-authz</name>
+//	  </domain>
+//	</group>
+//	...
+//
+// </groups>
+// ----
+// The order of the returned list of groups isn't guaranteed.
+type GroupsServiceListResponse struct {
+	groups *GroupSlice
+}
+
+func (p *GroupsServiceListResponse) Groups() (*GroupSlice, bool) {
+	if p.groups != nil {
+		return p.groups, true
+	}
+	return nil, false
+}
+
+func (p *GroupsServiceListResponse) MustGroups() *GroupSlice {
+	if p.groups == nil {
+		panic("groups in response does not exist")
+	}
+	return p.groups
+}
+
+// List all the groups in the system.
+// Usage:
+// ....
+// GET /ovirt-engine/api/groups
+// ....
+// Will return the list of groups:
+// [source,xml]
+// ----
+// <groups>
+//
+//	<group href="/ovirt-engine/api/groups/123" id="123">
+//	  <name>mygroup</name>
+//	  <link href="/ovirt-engine/api/groups/123/roles" rel="roles"/>
+//	  <link href="/ovirt-engine/api/groups/123/permissions" rel="permissions"/>
+//	  <link href="/ovirt-engine/api/groups/123/tags" rel="tags"/>
+//	  <domain_entry_id>476652557A382F67696B6D2B32762B37796E46476D513D3D</domain_entry_id>
+//	  <namespace>DC=example,DC=com</namespace>
+//	  <domain href="/ovirt-engine/api/domains/ABCDEF" id="ABCDEF">
+//	    <name>myextension-authz</name>
+//	  </domain>
+//	</group>
+//	...
+//
+// </groups>
+// ----
+// The order of the returned list of groups isn't guaranteed.
+func (p *GroupsService) List() *GroupsServiceListRequest {
+	return &GroupsServiceListRequest{GroupsService: p}
+}
+
+// Reference to the service that manages a specific group.
+func (op *GroupsService) GroupService(id string) *GroupService {
+	return NewGroupService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *GroupsService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	index := strings.Index(path, "/")
+	if index == -1 {
+		return op.GroupService(path), nil
+	}
+	return op.GroupService(path[:index]).Service(path[index+1:])
+}
+
+func (op *GroupsService) String() string {
+	return fmt.Sprintf("GroupsService:%s", op.path)
+}
+
+type SshPublicKeyService struct {
+	BaseService
+}
+
+func NewSshPublicKeyService(connection *Connection, path string) *SshPublicKeyService {
+	var result SshPublicKeyService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+type SshPublicKeyServiceGetRequest struct {
+	SshPublicKeyService *SshPublicKeyService
+	header              map[string]string
+	query               map[string]string
+	follow              *string
+}
+
+func (p *SshPublicKeyServiceGetRequest) Header(key, value string) *SshPublicKeyServiceGetRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *SshPublicKeyServiceGetRequest) Query(key, value string) *SshPublicKeyServiceGetRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *SshPublicKeyServiceGetRequest) Follow(follow string) *SshPublicKeyServiceGetRequest {
+	p.follow = &follow
+	return p
+}
+
+func (p *SshPublicKeyServiceGetRequest) Send() (*SshPublicKeyServiceGetResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.SshPublicKeyService.connection.URL(), p.SshPublicKeyService.path)
+	values := make(url.Values)
+	if p.follow != nil {
+		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.SshPublicKeyService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.SshPublicKeyService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.SshPublicKeyService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.SshPublicKeyService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.SshPublicKeyService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLSshPublicKeyReadOne(reader, nil, "")
+	if err != nil {
+		return nil, err
+	}
+	return &SshPublicKeyServiceGetResponse{key: result}, nil
+}
+
+func (p *SshPublicKeyServiceGetRequest) MustSend() *SshPublicKeyServiceGetResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+type SshPublicKeyServiceGetResponse struct {
+	key *SshPublicKey
+}
+
+func (p *SshPublicKeyServiceGetResponse) Key() (*SshPublicKey, bool) {
+	if p.key != nil {
+		return p.key, true
+	}
+	return nil, false
+}
+
+func (p *SshPublicKeyServiceGetResponse) MustKey() *SshPublicKey {
+	if p.key == nil {
+		panic("key in response does not exist")
+	}
+	return p.key
+}
+
+func (p *SshPublicKeyService) Get() *SshPublicKeyServiceGetRequest {
+	return &SshPublicKeyServiceGetRequest{SshPublicKeyService: p}
+}
+
+type SshPublicKeyServiceRemoveRequest struct {
+	SshPublicKeyService *SshPublicKeyService
+	header              map[string]string
+	query               map[string]string
+	async               *bool
+}
+
+func (p *SshPublicKeyServiceRemoveRequest) Header(key, value string) *SshPublicKeyServiceRemoveRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *SshPublicKeyServiceRemoveRequest) Query(key, value string) *SshPublicKeyServiceRemoveRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *SshPublicKeyServiceRemoveRequest) Async(async bool) *SshPublicKeyServiceRemoveRequest {
+	p.async = &async
+	return p
+}
+
+func (p *SshPublicKeyServiceRemoveRequest) Send() (*SshPublicKeyServiceRemoveResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.SshPublicKeyService.connection.URL(), p.SshPublicKeyService.path)
+	values := make(url.Values)
+	if p.async != nil {
+		values["async"] = []string{fmt.Sprintf("%v", *p.async)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("DELETE", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.SshPublicKeyService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.SshPublicKeyService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.SshPublicKeyService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.SshPublicKeyService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.SshPublicKeyService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	return new(SshPublicKeyServiceRemoveResponse), nil
+}
+
+func (p *SshPublicKeyServiceRemoveRequest) MustSend() *SshPublicKeyServiceRemoveResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+type SshPublicKeyServiceRemoveResponse struct {
+}
+
+func (p *SshPublicKeyService) Remove() *SshPublicKeyServiceRemoveRequest {
+	return &SshPublicKeyServiceRemoveRequest{SshPublicKeyService: p}
+}
+
+// Replaces the key with a new resource.
+// IMPORTANT: Since version 4.4.8 of the engine this operation is deprecated, and preserved only for backwards
+// compatibility. It will be removed in the future. Instead please use DELETE followed by <<services/ssh_public_keys/methods/add, add operation>>.
+type SshPublicKeyServiceUpdateRequest struct {
+	SshPublicKeyService *SshPublicKeyService
+	header              map[string]string
+	query               map[string]string
+	async               *bool
+	key                 *SshPublicKey
+}
+
+func (p *SshPublicKeyServiceUpdateRequest) Header(key, value string) *SshPublicKeyServiceUpdateRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *SshPublicKeyServiceUpdateRequest) Query(key, value string) *SshPublicKeyServiceUpdateRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *SshPublicKeyServiceUpdateRequest) Async(async bool) *SshPublicKeyServiceUpdateRequest {
+	p.async = &async
+	return p
+}
+
+func (p *SshPublicKeyServiceUpdateRequest) Key(key *SshPublicKey) *SshPublicKeyServiceUpdateRequest {
+	p.key = key
+	return p
+}
+
+func (p *SshPublicKeyServiceUpdateRequest) Send() (*SshPublicKeyServiceUpdateResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.SshPublicKeyService.connection.URL(), p.SshPublicKeyService.path)
+	values := make(url.Values)
+	if p.async != nil {
+		values["async"] = []string{fmt.Sprintf("%v", *p.async)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	var body bytes.Buffer
+	writer := NewXMLWriter(&body)
+	err := XMLSshPublicKeyWriteOne(writer, p.key, "")
+	if err != nil {
+		return nil, err
+	}
+	writer.Flush()
+	req, err := http.NewRequest("PUT", rawURL, &body)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.SshPublicKeyService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.SshPublicKeyService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.SshPublicKeyService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.SshPublicKeyService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.SshPublicKeyService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLSshPublicKeyReadOne(reader, nil, "")
+	if err != nil {
+		return nil, err
+	}
+	return &SshPublicKeyServiceUpdateResponse{key: result}, nil
+}
+
+func (p *SshPublicKeyServiceUpdateRequest) MustSend() *SshPublicKeyServiceUpdateResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Replaces the key with a new resource.
+// IMPORTANT: Since version 4.4.8 of the engine this operation is deprecated, and preserved only for backwards
+// compatibility. It will be removed in the future. Instead please use DELETE followed by <<services/ssh_public_keys/methods/add, add operation>>.
+type SshPublicKeyServiceUpdateResponse struct {
+	key *SshPublicKey
+}
+
+func (p *SshPublicKeyServiceUpdateResponse) Key() (*SshPublicKey, bool) {
+	if p.key != nil {
+		return p.key, true
+	}
+	return nil, false
+}
+
+func (p *SshPublicKeyServiceUpdateResponse) MustKey() *SshPublicKey {
+	if p.key == nil {
+		panic("key in response does not exist")
+	}
+	return p.key
+}
+
+// Replaces the key with a new resource.
+// IMPORTANT: Since version 4.4.8 of the engine this operation is deprecated, and preserved only for backwards
+// compatibility. It will be removed in the future. Instead please use DELETE followed by <<services/ssh_public_keys/methods/add, add operation>>.
+func (p *SshPublicKeyService) Update() *SshPublicKeyServiceUpdateRequest {
+	return &SshPublicKeyServiceUpdateRequest{SshPublicKeyService: p}
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *SshPublicKeyService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
+}
+
+func (op *SshPublicKeyService) String() string {
+	return fmt.Sprintf("SshPublicKeyService:%s", op.path)
+}
+
+type SshPublicKeysService struct {
+	BaseService
+}
+
+func NewSshPublicKeysService(connection *Connection, path string) *SshPublicKeysService {
+	var result SshPublicKeysService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+type SshPublicKeysServiceAddRequest struct {
+	SshPublicKeysService *SshPublicKeysService
+	header               map[string]string
+	query                map[string]string
+	key                  *SshPublicKey
+}
+
+func (p *SshPublicKeysServiceAddRequest) Header(key, value string) *SshPublicKeysServiceAddRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *SshPublicKeysServiceAddRequest) Query(key, value string) *SshPublicKeysServiceAddRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *SshPublicKeysServiceAddRequest) Key(key *SshPublicKey) *SshPublicKeysServiceAddRequest {
+	p.key = key
+	return p
+}
+
+func (p *SshPublicKeysServiceAddRequest) Send() (*SshPublicKeysServiceAddResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.SshPublicKeysService.connection.URL(), p.SshPublicKeysService.path)
+	values := make(url.Values)
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	var body bytes.Buffer
+	writer := NewXMLWriter(&body)
+	err := XMLSshPublicKeyWriteOne(writer, p.key, "")
+	if err != nil {
+		return nil, err
+	}
+	writer.Flush()
+	req, err := http.NewRequest("POST", rawURL, &body)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.SshPublicKeysService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.SshPublicKeysService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.SshPublicKeysService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.SshPublicKeysService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.SshPublicKeysService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200, 201, 202}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLSshPublicKeyReadOne(reader, nil, "")
+	if err != nil {
+		return nil, err
+	}
+	return &SshPublicKeysServiceAddResponse{key: result}, nil
+}
+
+func (p *SshPublicKeysServiceAddRequest) MustSend() *SshPublicKeysServiceAddResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+type SshPublicKeysServiceAddResponse struct {
+	key *SshPublicKey
+}
+
+func (p *SshPublicKeysServiceAddResponse) Key() (*SshPublicKey, bool) {
+	if p.key != nil {
+		return p.key, true
+	}
+	return nil, false
+}
+
+func (p *SshPublicKeysServiceAddResponse) MustKey() *SshPublicKey {
+	if p.key == nil {
+		panic("key in response does not exist")
+	}
+	return p.key
+}
+
+func (p *SshPublicKeysService) Add() *SshPublicKeysServiceAddRequest {
+	return &SshPublicKeysServiceAddRequest{SshPublicKeysService: p}
+}
+
+// Returns a list of SSH public keys of the user.
+// For example, to retrieve the list of SSH keys of user with identifier `123`,
+// send a request like this:
+// [source]
+// ----
+// GET /ovirt-engine/api/users/123/sshpublickeys
+// ----
+// The result will be the following XML document:
+// [source,xml]
+// ----
+// <ssh_public_keys>
+//
+//	<ssh_public_key href="/ovirt-engine/api/users/123/sshpublickeys/456" id="456">
+//	  <content>ssh-rsa ...</content>
+//	  <user href="/ovirt-engine/api/users/123" id="123"/>
+//	</ssh_public_key>
+//
+// </ssh_public_keys>
+// ----
+// Or the following JSON object
+// [source,json]
+// ----
+//
+//	{
+//	  "ssh_public_key": [
+//	    {
+//	      "content": "ssh-rsa ...",
+//	      "user": {
+//	        "href": "/ovirt-engine/api/users/123",
+//	        "id": "123"
+//	      },
+//	      "href": "/ovirt-engine/api/users/123/sshpublickeys/456",
+//	      "id": "456"
+//	    }
+//	  ]
+//	}
+//
+// ----
+// The order of the returned list of keys is not guaranteed.
+type SshPublicKeysServiceListRequest struct {
+	SshPublicKeysService *SshPublicKeysService
+	header               map[string]string
+	query                map[string]string
+	follow               *string
+	max                  *int64
+}
+
+func (p *SshPublicKeysServiceListRequest) Header(key, value string) *SshPublicKeysServiceListRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *SshPublicKeysServiceListRequest) Query(key, value string) *SshPublicKeysServiceListRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *SshPublicKeysServiceListRequest) Follow(follow string) *SshPublicKeysServiceListRequest {
+	p.follow = &follow
+	return p
+}
+
+func (p *SshPublicKeysServiceListRequest) Max(max int64) *SshPublicKeysServiceListRequest {
+	p.max = &max
+	return p
+}
+
+func (p *SshPublicKeysServiceListRequest) Send() (*SshPublicKeysServiceListResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.SshPublicKeysService.connection.URL(), p.SshPublicKeysService.path)
+	values := make(url.Values)
+	if p.follow != nil {
+		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
+	}
+
+	if p.max != nil {
+		values["max"] = []string{fmt.Sprintf("%v", *p.max)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.SshPublicKeysService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.SshPublicKeysService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.SshPublicKeysService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.SshPublicKeysService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.SshPublicKeysService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLSshPublicKeyReadMany(reader, nil)
+	if err != nil {
+		return nil, err
+	}
+	return &SshPublicKeysServiceListResponse{keys: result}, nil
+}
+
+func (p *SshPublicKeysServiceListRequest) MustSend() *SshPublicKeysServiceListResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Returns a list of SSH public keys of the user.
+// For example, to retrieve the list of SSH keys of user with identifier `123`,
+// send a request like this:
+// [source]
+// ----
+// GET /ovirt-engine/api/users/123/sshpublickeys
+// ----
+// The result will be the following XML document:
+// [source,xml]
+// ----
+// <ssh_public_keys>
+//
+//	<ssh_public_key href="/ovirt-engine/api/users/123/sshpublickeys/456" id="456">
+//	  <content>ssh-rsa ...</content>
+//	  <user href="/ovirt-engine/api/users/123" id="123"/>
+//	</ssh_public_key>
+//
+// </ssh_public_keys>
+// ----
+// Or the following JSON object
+// [source,json]
+// ----
+//
+//	{
+//	  "ssh_public_key": [
+//	    {
+//	      "content": "ssh-rsa ...",
+//	      "user": {
+//	        "href": "/ovirt-engine/api/users/123",
+//	        "id": "123"
+//	      },
+//	      "href": "/ovirt-engine/api/users/123/sshpublickeys/456",
+//	      "id": "456"
+//	    }
+//	  ]
+//	}
+//
+// ----
+// The order of the returned list of keys is not guaranteed.
+type SshPublicKeysServiceListResponse struct {
+	keys *SshPublicKeySlice
+}
+
+func (p *SshPublicKeysServiceListResponse) Keys() (*SshPublicKeySlice, bool) {
+	if p.keys != nil {
+		return p.keys, true
+	}
+	return nil, false
+}
+
+func (p *SshPublicKeysServiceListResponse) MustKeys() *SshPublicKeySlice {
+	if p.keys == nil {
+		panic("keys in response does not exist")
+	}
+	return p.keys
+}
+
+// Returns a list of SSH public keys of the user.
+// For example, to retrieve the list of SSH keys of user with identifier `123`,
+// send a request like this:
+// [source]
+// ----
+// GET /ovirt-engine/api/users/123/sshpublickeys
+// ----
+// The result will be the following XML document:
+// [source,xml]
+// ----
+// <ssh_public_keys>
+//
+//	<ssh_public_key href="/ovirt-engine/api/users/123/sshpublickeys/456" id="456">
+//	  <content>ssh-rsa ...</content>
+//	  <user href="/ovirt-engine/api/users/123" id="123"/>
+//	</ssh_public_key>
+//
+// </ssh_public_keys>
+// ----
+// Or the following JSON object
+// [source,json]
+// ----
+//
+//	{
+//	  "ssh_public_key": [
+//	    {
+//	      "content": "ssh-rsa ...",
+//	      "user": {
+//	        "href": "/ovirt-engine/api/users/123",
+//	        "id": "123"
+//	      },
+//	      "href": "/ovirt-engine/api/users/123/sshpublickeys/456",
+//	      "id": "456"
+//	    }
+//	  ]
+//	}
+//
+// ----
+// The order of the returned list of keys is not guaranteed.
+func (p *SshPublicKeysService) List() *SshPublicKeysServiceListRequest {
+	return &SshPublicKeysServiceListRequest{SshPublicKeysService: p}
+}
+
+func (op *SshPublicKeysService) KeyService(id string) *SshPublicKeyService {
+	return NewSshPublicKeyService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *SshPublicKeysService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	index := strings.Index(path, "/")
+	if index == -1 {
+		return op.KeyService(path), nil
+	}
+	return op.KeyService(path[:index]).Service(path[index+1:])
+}
+
+func (op *SshPublicKeysService) String() string {
+	return fmt.Sprintf("SshPublicKeysService:%s", op.path)
+}
+
+type UserOptionService struct {
+	BaseService
+}
+
+func NewUserOptionService(connection *Connection, path string) *UserOptionService {
+	var result UserOptionService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+// Returns a user profile property of type JSON.
+// Example request(for user with identifier `123` and option with identifier `456`):
+// [source]
+// ----
+// GET /ovirt-engine/api/users/123/options/456
+// ----
+// The result will be the following XML document:
+// [source,xml]
+// ----
+//
+//	<user_option href="/ovirt-engine/api/users/123/options/456" id="456">
+//	  <name>SomeName</name>
+//	  <content>["any", "JSON"]</content>
+//	  <user href="/ovirt-engine/api/users/123" id="123"/>
+//	</user_option>
+//
+// ----
+type UserOptionServiceGetRequest struct {
+	UserOptionService *UserOptionService
+	header            map[string]string
+	query             map[string]string
+}
+
+func (p *UserOptionServiceGetRequest) Header(key, value string) *UserOptionServiceGetRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *UserOptionServiceGetRequest) Query(key, value string) *UserOptionServiceGetRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *UserOptionServiceGetRequest) Send() (*UserOptionServiceGetResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.UserOptionService.connection.URL(), p.UserOptionService.path)
+	values := make(url.Values)
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.UserOptionService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.UserOptionService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.UserOptionService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.UserOptionService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.UserOptionService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLUserOptionReadOne(reader, nil, "")
+	if err != nil {
+		return nil, err
+	}
+	return &UserOptionServiceGetResponse{option: result}, nil
+}
+
+func (p *UserOptionServiceGetRequest) MustSend() *UserOptionServiceGetResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Returns a user profile property of type JSON.
+// Example request(for user with identifier `123` and option with identifier `456`):
+// [source]
+// ----
+// GET /ovirt-engine/api/users/123/options/456
+// ----
+// The result will be the following XML document:
+// [source,xml]
+// ----
+//
+//	<user_option href="/ovirt-engine/api/users/123/options/456" id="456">
+//	  <name>SomeName</name>
+//	  <content>["any", "JSON"]</content>
+//	  <user href="/ovirt-engine/api/users/123" id="123"/>
+//	</user_option>
+//
+// ----
+type UserOptionServiceGetResponse struct {
+	option *UserOption
+}
+
+func (p *UserOptionServiceGetResponse) Option() (*UserOption, bool) {
+	if p.option != nil {
+		return p.option, true
+	}
+	return nil, false
+}
+
+func (p *UserOptionServiceGetResponse) MustOption() *UserOption {
+	if p.option == nil {
+		panic("option in response does not exist")
+	}
+	return p.option
+}
+
+// Returns a user profile property of type JSON.
+// Example request(for user with identifier `123` and option with identifier `456`):
+// [source]
+// ----
+// GET /ovirt-engine/api/users/123/options/456
+// ----
+// The result will be the following XML document:
+// [source,xml]
+// ----
+//
+//	<user_option href="/ovirt-engine/api/users/123/options/456" id="456">
+//	  <name>SomeName</name>
+//	  <content>["any", "JSON"]</content>
+//	  <user href="/ovirt-engine/api/users/123" id="123"/>
+//	</user_option>
+//
+// ----
+func (p *UserOptionService) Get() *UserOptionServiceGetRequest {
+	return &UserOptionServiceGetRequest{UserOptionService: p}
+}
+
+// Deletes an existing property of type JSON.
+// Example request(for user with identifier `123` and option with identifier `456`):
+// [source]
+// ----
+// DELETE /ovirt-engine/api/users/123/options/456
+// ----
+type UserOptionServiceRemoveRequest struct {
+	UserOptionService *UserOptionService
+	header            map[string]string
+	query             map[string]string
+}
+
+func (p *UserOptionServiceRemoveRequest) Header(key, value string) *UserOptionServiceRemoveRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *UserOptionServiceRemoveRequest) Query(key, value string) *UserOptionServiceRemoveRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *UserOptionServiceRemoveRequest) Send() (*UserOptionServiceRemoveResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.UserOptionService.connection.URL(), p.UserOptionService.path)
+	values := make(url.Values)
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("DELETE", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.UserOptionService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.UserOptionService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.UserOptionService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.UserOptionService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.UserOptionService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	return new(UserOptionServiceRemoveResponse), nil
+}
+
+func (p *UserOptionServiceRemoveRequest) MustSend() *UserOptionServiceRemoveResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Deletes an existing property of type JSON.
+// Example request(for user with identifier `123` and option with identifier `456`):
+// [source]
+// ----
+// DELETE /ovirt-engine/api/users/123/options/456
+// ----
+type UserOptionServiceRemoveResponse struct {
+}
+
+// Deletes an existing property of type JSON.
+// Example request(for user with identifier `123` and option with identifier `456`):
+// [source]
+// ----
+// DELETE /ovirt-engine/api/users/123/options/456
+// ----
+func (p *UserOptionService) Remove() *UserOptionServiceRemoveRequest {
+	return &UserOptionServiceRemoveRequest{UserOptionService: p}
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *UserOptionService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
+}
+
+func (op *UserOptionService) String() string {
+	return fmt.Sprintf("UserOptionService:%s", op.path)
+}
+
+type UserOptionsService struct {
+	BaseService
+}
+
+func NewUserOptionsService(connection *Connection, path string) *UserOptionsService {
+	var result UserOptionsService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+// Adds a new user profile property of type JSON.
+// Example request(for user with identifier `123`):
+// [source]
+// ----
+// POST /ovirt-engine/api/users/123/options
+// ----
+// Payload:
+// [source,xml]
+// ----
+//
+//	<user_option>
+//	  <name>SomeName</name>
+//	  <content>["any", "JSON"]</content>
+//	</user_option>
+//
+// ----
+type UserOptionsServiceAddRequest struct {
+	UserOptionsService *UserOptionsService
+	header             map[string]string
+	query              map[string]string
+	option             *UserOption
+}
+
+func (p *UserOptionsServiceAddRequest) Header(key, value string) *UserOptionsServiceAddRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *UserOptionsServiceAddRequest) Query(key, value string) *UserOptionsServiceAddRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *UserOptionsServiceAddRequest) Option(option *UserOption) *UserOptionsServiceAddRequest {
+	p.option = option
+	return p
+}
+
+func (p *UserOptionsServiceAddRequest) Send() (*UserOptionsServiceAddResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.UserOptionsService.connection.URL(), p.UserOptionsService.path)
+	values := make(url.Values)
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	var body bytes.Buffer
+	writer := NewXMLWriter(&body)
+	err := XMLUserOptionWriteOne(writer, p.option, "")
+	if err != nil {
+		return nil, err
+	}
+	writer.Flush()
+	req, err := http.NewRequest("POST", rawURL, &body)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.UserOptionsService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.UserOptionsService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.UserOptionsService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.UserOptionsService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.UserOptionsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200, 201, 202}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLUserOptionReadOne(reader, nil, "")
+	if err != nil {
+		return nil, err
+	}
+	return &UserOptionsServiceAddResponse{option: result}, nil
+}
+
+func (p *UserOptionsServiceAddRequest) MustSend() *UserOptionsServiceAddResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Adds a new user profile property of type JSON.
+// Example request(for user with identifier `123`):
+// [source]
+// ----
+// POST /ovirt-engine/api/users/123/options
+// ----
+// Payload:
+// [source,xml]
+// ----
+//
+//	<user_option>
+//	  <name>SomeName</name>
+//	  <content>["any", "JSON"]</content>
+//	</user_option>
+//
+// ----
+type UserOptionsServiceAddResponse struct {
+	option *UserOption
+}
+
+func (p *UserOptionsServiceAddResponse) Option() (*UserOption, bool) {
+	if p.option != nil {
+		return p.option, true
+	}
+	return nil, false
+}
+
+func (p *UserOptionsServiceAddResponse) MustOption() *UserOption {
+	if p.option == nil {
+		panic("option in response does not exist")
+	}
+	return p.option
+}
+
+// Adds a new user profile property of type JSON.
+// Example request(for user with identifier `123`):
+// [source]
+// ----
+// POST /ovirt-engine/api/users/123/options
+// ----
+// Payload:
+// [source,xml]
+// ----
+//
+//	<user_option>
+//	  <name>SomeName</name>
+//	  <content>["any", "JSON"]</content>
+//	</user_option>
+//
+// ----
+func (p *UserOptionsService) Add() *UserOptionsServiceAddRequest {
+	return &UserOptionsServiceAddRequest{UserOptionsService: p}
+}
+
+// Returns a list of user profile properties of type JSON.
+// Example request(for user with identifier `123`):
+// [source]
+// ----
+// GET /ovirt-engine/api/users/123/options
+// ----
+// The result will be the following XML document:
+// [source,xml]
+// ----
+// <user_options>
+//
+//	<user_option href="/ovirt-engine/api/users/123/options/456" id="456">
+//	  <name>SomeName</name>
+//	  <content>["any", "JSON"]</content>
+//	  <user href="/ovirt-engine/api/users/123" id="123"/>
+//	</user_option>
+//
+// </user_options>
+// ----
+type UserOptionsServiceListRequest struct {
+	UserOptionsService *UserOptionsService
+	header             map[string]string
+	query              map[string]string
+}
+
+func (p *UserOptionsServiceListRequest) Header(key, value string) *UserOptionsServiceListRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *UserOptionsServiceListRequest) Query(key, value string) *UserOptionsServiceListRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *UserOptionsServiceListRequest) Send() (*UserOptionsServiceListResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.UserOptionsService.connection.URL(), p.UserOptionsService.path)
+	values := make(url.Values)
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.UserOptionsService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.UserOptionsService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.UserOptionsService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.UserOptionsService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.UserOptionsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLUserOptionReadMany(reader, nil)
+	if err != nil {
+		return nil, err
+	}
+	return &UserOptionsServiceListResponse{options: result}, nil
+}
+
+func (p *UserOptionsServiceListRequest) MustSend() *UserOptionsServiceListResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Returns a list of user profile properties of type JSON.
+// Example request(for user with identifier `123`):
+// [source]
+// ----
+// GET /ovirt-engine/api/users/123/options
+// ----
+// The result will be the following XML document:
+// [source,xml]
+// ----
+// <user_options>
+//
+//	<user_option href="/ovirt-engine/api/users/123/options/456" id="456">
+//	  <name>SomeName</name>
+//	  <content>["any", "JSON"]</content>
+//	  <user href="/ovirt-engine/api/users/123" id="123"/>
+//	</user_option>
+//
+// </user_options>
+// ----
+type UserOptionsServiceListResponse struct {
+	options *UserOptionSlice
+}
+
+func (p *UserOptionsServiceListResponse) Options() (*UserOptionSlice, bool) {
+	if p.options != nil {
+		return p.options, true
+	}
+	return nil, false
+}
+
+func (p *UserOptionsServiceListResponse) MustOptions() *UserOptionSlice {
+	if p.options == nil {
+		panic("options in response does not exist")
+	}
+	return p.options
+}
+
+// Returns a list of user profile properties of type JSON.
+// Example request(for user with identifier `123`):
+// [source]
+// ----
+// GET /ovirt-engine/api/users/123/options
+// ----
+// The result will be the following XML document:
+// [source,xml]
+// ----
+// <user_options>
+//
+//	<user_option href="/ovirt-engine/api/users/123/options/456" id="456">
+//	  <name>SomeName</name>
+//	  <content>["any", "JSON"]</content>
+//	  <user href="/ovirt-engine/api/users/123" id="123"/>
+//	</user_option>
+//
+// </user_options>
+// ----
+func (p *UserOptionsService) List() *UserOptionsServiceListRequest {
+	return &UserOptionsServiceListRequest{UserOptionsService: p}
+}
+
+func (op *UserOptionsService) OptionService(id string) *UserOptionService {
+	return NewUserOptionService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *UserOptionsService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	index := strings.Index(path, "/")
+	if index == -1 {
+		return op.OptionService(path), nil
+	}
+	return op.OptionService(path[:index]).Service(path[index+1:])
+}
+
+func (op *UserOptionsService) String() string {
+	return fmt.Sprintf("UserOptionsService:%s", op.path)
+}
+
+// A service to manage a user in the system.
+// Use this service to either get users details or remove users.
+// In order to add new users please use
+// <<services/users>>.
+type UserService struct {
+	BaseService
+}
+
+func NewUserService(connection *Connection, path string) *UserService {
+	var result UserService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+// Gets the system user information.
+// Usage:
+// ....
+// GET /ovirt-engine/api/users/1234
+// ....
+// Will return the user information:
+// [source,xml]
+// ----
+// <user href="/ovirt-engine/api/users/1234" id="1234">
+//
+//	<name>admin</name>
+//	<link href="/ovirt-engine/api/users/1234/sshpublickeys" rel="sshpublickeys"/>
+//	<link href="/ovirt-engine/api/users/1234/roles" rel="roles"/>
+//	<link href="/ovirt-engine/api/users/1234/permissions" rel="permissions"/>
+//	<link href="/ovirt-engine/api/users/1234/tags" rel="tags"/>
+//	<department></department>
+//	<domain_entry_id>23456</domain_entry_id>
+//	<email>user1@domain.com</email>
+//	<last_name>Lastname</last_name>
+//	<namespace>*</namespace>
+//	<principal>user1</principal>
+//	<user_name>user1@domain-authz</user_name>
+//	<domain href="/ovirt-engine/api/domains/45678" id="45678">
+//	  <name>domain-authz</name>
+//	</domain>
+//
+// </user>
+// ----
+type UserServiceGetRequest struct {
+	UserService *UserService
+	header      map[string]string
+	query       map[string]string
+	follow      *string
+}
+
+func (p *UserServiceGetRequest) Header(key, value string) *UserServiceGetRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *UserServiceGetRequest) Query(key, value string) *UserServiceGetRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *UserServiceGetRequest) Follow(follow string) *UserServiceGetRequest {
+	p.follow = &follow
+	return p
+}
+
+func (p *UserServiceGetRequest) Send() (*UserServiceGetResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.UserService.connection.URL(), p.UserService.path)
+	values := make(url.Values)
+	if p.follow != nil {
+		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.UserService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.UserService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.UserService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.UserService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.UserService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLUserReadOne(reader, nil, "")
+	if err != nil {
+		return nil, err
+	}
+	return &UserServiceGetResponse{user: result}, nil
+}
+
+func (p *UserServiceGetRequest) MustSend() *UserServiceGetResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Gets the system user information.
+// Usage:
+// ....
+// GET /ovirt-engine/api/users/1234
+// ....
+// Will return the user information:
+// [source,xml]
+// ----
+// <user href="/ovirt-engine/api/users/1234" id="1234">
+//
+//	<name>admin</name>
+//	<link href="/ovirt-engine/api/users/1234/sshpublickeys" rel="sshpublickeys"/>
+//	<link href="/ovirt-engine/api/users/1234/roles" rel="roles"/>
+//	<link href="/ovirt-engine/api/users/1234/permissions" rel="permissions"/>
+//	<link href="/ovirt-engine/api/users/1234/tags" rel="tags"/>
+//	<department></department>
+//	<domain_entry_id>23456</domain_entry_id>
+//	<email>user1@domain.com</email>
+//	<last_name>Lastname</last_name>
+//	<namespace>*</namespace>
+//	<principal>user1</principal>
+//	<user_name>user1@domain-authz</user_name>
+//	<domain href="/ovirt-engine/api/domains/45678" id="45678">
+//	  <name>domain-authz</name>
+//	</domain>
+//
+// </user>
+// ----
+type UserServiceGetResponse struct {
+	user *User
+}
+
+func (p *UserServiceGetResponse) User() (*User, bool) {
+	if p.user != nil {
+		return p.user, true
+	}
+	return nil, false
+}
+
+func (p *UserServiceGetResponse) MustUser() *User {
+	if p.user == nil {
+		panic("user in response does not exist")
+	}
+	return p.user
+}
+
+// Gets the system user information.
+// Usage:
+// ....
+// GET /ovirt-engine/api/users/1234
+// ....
+// Will return the user information:
+// [source,xml]
+// ----
+// <user href="/ovirt-engine/api/users/1234" id="1234">
+//
+//	<name>admin</name>
+//	<link href="/ovirt-engine/api/users/1234/sshpublickeys" rel="sshpublickeys"/>
+//	<link href="/ovirt-engine/api/users/1234/roles" rel="roles"/>
+//	<link href="/ovirt-engine/api/users/1234/permissions" rel="permissions"/>
+//	<link href="/ovirt-engine/api/users/1234/tags" rel="tags"/>
+//	<department></department>
+//	<domain_entry_id>23456</domain_entry_id>
+//	<email>user1@domain.com</email>
+//	<last_name>Lastname</last_name>
+//	<namespace>*</namespace>
+//	<principal>user1</principal>
+//	<user_name>user1@domain-authz</user_name>
+//	<domain href="/ovirt-engine/api/domains/45678" id="45678">
+//	  <name>domain-authz</name>
+//	</domain>
+//
+// </user>
+// ----
+func (p *UserService) Get() *UserServiceGetRequest {
+	return &UserServiceGetRequest{UserService: p}
+}
+
+// Removes the system user.
+// Usage:
+// ....
+// DELETE /ovirt-engine/api/users/1234
+// ....
+type UserServiceRemoveRequest struct {
+	UserService *UserService
+	header      map[string]string
+	query       map[string]string
+	async       *bool
+}
+
+func (p *UserServiceRemoveRequest) Header(key, value string) *UserServiceRemoveRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *UserServiceRemoveRequest) Query(key, value string) *UserServiceRemoveRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *UserServiceRemoveRequest) Async(async bool) *UserServiceRemoveRequest {
+	p.async = &async
+	return p
+}
+
+func (p *UserServiceRemoveRequest) Send() (*UserServiceRemoveResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.UserService.connection.URL(), p.UserService.path)
+	values := make(url.Values)
+	if p.async != nil {
+		values["async"] = []string{fmt.Sprintf("%v", *p.async)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("DELETE", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.UserService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.UserService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.UserService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.UserService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.UserService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	return new(UserServiceRemoveResponse), nil
+}
+
+func (p *UserServiceRemoveRequest) MustSend() *UserServiceRemoveResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Removes the system user.
+// Usage:
+// ....
+// DELETE /ovirt-engine/api/users/1234
+// ....
+type UserServiceRemoveResponse struct {
+}
+
+// Removes the system user.
+// Usage:
+// ....
+// DELETE /ovirt-engine/api/users/1234
+// ....
+func (p *UserService) Remove() *UserServiceRemoveRequest {
+	return &UserServiceRemoveRequest{UserService: p}
+}
+
+// Updates information about the user.
+// Only the `user_options` field can be updated.
+// For example, to update user options:
+// [source]
+// ----
+// PUT /ovirt-engine/api/users/123
+// ----
+// With a request body like this:
+// [source,xml]
+// ----
+// <user>
+//
+//	<user_options>
+//	   <property>
+//	      <name>test</name>
+//	      <value>["any","JSON"]</value>
+//	   </property>
+//	</user_options>
+//
+// </user>
+// ----
+// IMPORTANT: Since version 4.4.5 of the engine this operation is deprecated, and preserved only for backwards
+// compatibility. It will be removed in the future. Please use the <<services/user_option, options>>
+// endpoint instead.
+type UserServiceUpdateRequest struct {
+	UserService *UserService
+	header      map[string]string
+	query       map[string]string
+	user        *User
+}
+
+func (p *UserServiceUpdateRequest) Header(key, value string) *UserServiceUpdateRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *UserServiceUpdateRequest) Query(key, value string) *UserServiceUpdateRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *UserServiceUpdateRequest) User(user *User) *UserServiceUpdateRequest {
+	p.user = user
+	return p
+}
+
+func (p *UserServiceUpdateRequest) Send() (*UserServiceUpdateResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.UserService.connection.URL(), p.UserService.path)
+	values := make(url.Values)
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	var body bytes.Buffer
+	writer := NewXMLWriter(&body)
+	err := XMLUserWriteOne(writer, p.user, "")
+	if err != nil {
+		return nil, err
+	}
+	writer.Flush()
+	req, err := http.NewRequest("PUT", rawURL, &body)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.UserService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.UserService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.UserService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.UserService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.UserService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLUserReadOne(reader, nil, "")
+	if err != nil {
+		return nil, err
+	}
+	return &UserServiceUpdateResponse{user: result}, nil
+}
+
+func (p *UserServiceUpdateRequest) MustSend() *UserServiceUpdateResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Updates information about the user.
+// Only the `user_options` field can be updated.
+// For example, to update user options:
+// [source]
+// ----
+// PUT /ovirt-engine/api/users/123
+// ----
+// With a request body like this:
+// [source,xml]
+// ----
+// <user>
+//
+//	<user_options>
+//	   <property>
+//	      <name>test</name>
+//	      <value>["any","JSON"]</value>
+//	   </property>
+//	</user_options>
+//
+// </user>
+// ----
+// IMPORTANT: Since version 4.4.5 of the engine this operation is deprecated, and preserved only for backwards
+// compatibility. It will be removed in the future. Please use the <<services/user_option, options>>
+// endpoint instead.
+type UserServiceUpdateResponse struct {
+	user *User
+}
+
+func (p *UserServiceUpdateResponse) User() (*User, bool) {
+	if p.user != nil {
+		return p.user, true
+	}
+	return nil, false
+}
+
+func (p *UserServiceUpdateResponse) MustUser() *User {
+	if p.user == nil {
+		panic("user in response does not exist")
+	}
+	return p.user
+}
+
+// Updates information about the user.
+// Only the `user_options` field can be updated.
+// For example, to update user options:
+// [source]
+// ----
+// PUT /ovirt-engine/api/users/123
+// ----
+// With a request body like this:
+// [source,xml]
+// ----
+// <user>
+//
+//	<user_options>
+//	   <property>
+//	      <name>test</name>
+//	      <value>["any","JSON"]</value>
+//	   </property>
+//	</user_options>
+//
+// </user>
+// ----
+// IMPORTANT: Since version 4.4.5 of the engine this operation is deprecated, and preserved only for backwards
+// compatibility. It will be removed in the future. Please use the <<services/user_option, options>>
+// endpoint instead.
+func (p *UserService) Update() *UserServiceUpdateRequest {
+	return &UserServiceUpdateRequest{UserService: p}
+}
+
+// List of event-subscriptions for this user.
+func (op *UserService) EventSubscriptionsService() *EventSubscriptionsService {
+	return NewEventSubscriptionsService(op.connection, fmt.Sprintf("%s/eventsubscriptions", op.path))
+}
+
+func (op *UserService) GroupsService() *DomainUserGroupsService {
+	return NewDomainUserGroupsService(op.connection, fmt.Sprintf("%s/groups", op.path))
+}
+
+func (op *UserService) OptionsService() *UserOptionsService {
+	return NewUserOptionsService(op.connection, fmt.Sprintf("%s/options", op.path))
+}
+
+func (op *UserService) PermissionsService() *AssignedPermissionsService {
+	return NewAssignedPermissionsService(op.connection, fmt.Sprintf("%s/permissions", op.path))
+}
+
+func (op *UserService) RolesService() *AssignedRolesService {
+	return NewAssignedRolesService(op.connection, fmt.Sprintf("%s/roles", op.path))
+}
+
+func (op *UserService) SshPublicKeysService() *SshPublicKeysService {
+	return NewSshPublicKeysService(op.connection, fmt.Sprintf("%s/sshpublickeys", op.path))
+}
+
+func (op *UserService) TagsService() *AssignedTagsService {
+	return NewAssignedTagsService(op.connection, fmt.Sprintf("%s/tags", op.path))
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *UserService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	if path == "eventsubscriptions" {
+		return op.EventSubscriptionsService(), nil
+	}
+	if strings.HasPrefix(path, "eventsubscriptions/") {
+		return op.EventSubscriptionsService().Service(path[19:])
+	}
+	if path == "groups" {
+		return op.GroupsService(), nil
+	}
+	if strings.HasPrefix(path, "groups/") {
+		return op.GroupsService().Service(path[7:])
+	}
+	if path == "options" {
+		return op.OptionsService(), nil
+	}
+	if strings.HasPrefix(path, "options/") {
+		return op.OptionsService().Service(path[8:])
+	}
+	if path == "permissions" {
+		return op.PermissionsService(), nil
+	}
+	if strings.HasPrefix(path, "permissions/") {
+		return op.PermissionsService().Service(path[12:])
+	}
+	if path == "roles" {
+		return op.RolesService(), nil
+	}
+	if strings.HasPrefix(path, "roles/") {
+		return op.RolesService().Service(path[6:])
+	}
+	if path == "sshpublickeys" {
+		return op.SshPublicKeysService(), nil
+	}
+	if strings.HasPrefix(path, "sshpublickeys/") {
+		return op.SshPublicKeysService().Service(path[14:])
+	}
+	if path == "tags" {
+		return op.TagsService(), nil
+	}
+	if strings.HasPrefix(path, "tags/") {
+		return op.TagsService().Service(path[5:])
+	}
+	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
+}
+
+func (op *UserService) String() string {
+	return fmt.Sprintf("UserService:%s", op.path)
+}
+
+// A service to manage the users in the system.
+type UsersService struct {
+	BaseService
+}
+
+func NewUsersService(connection *Connection, path string) *UsersService {
+	var result UsersService
+	result.connection = connection
+	result.path = path
+	return &result
+}
+
+// Add user from a directory service.
+// For example, to add the `myuser` user from the `myextension-authz` authorization provider send a request
+// like this:
+// [source]
+// ----
+// POST /ovirt-engine/api/users
+// ----
+// With a request body like this:
+// [source,xml]
+// ----
+// <user>
+//
+//	<user_name>myuser@myextension-authz</user_name>
+//	<domain>
+//	  <name>myextension-authz</name>
+//	</domain>
+//
+// </user>
+// ----
+// In case you are working with Active Directory you have to pass user principal name (UPN) as `username`, followed
+// by authorization provider name. Due to https://bugzilla.redhat.com/1147900[bug 1147900] you need to provide
+// also `principal` parameter set to UPN of the user.
+// For example, to add the user with UPN `myuser@mysubdomain.mydomain.com` from the `myextension-authz`
+// authorization provider send a request body like this:
+// [source,xml]
+// ----
+// <user>
+//
+//	<principal>myuser@mysubdomain.mydomain.com</principal>
+//	<user_name>myuser@mysubdomain.mydomain.com@myextension-authz</user_name>
+//	<domain>
+//	  <name>myextension-authz</name>
+//	</domain>
+//
+// </user>
+// ----
+type UsersServiceAddRequest struct {
+	UsersService *UsersService
+	header       map[string]string
+	query        map[string]string
+	user         *User
+}
+
+func (p *UsersServiceAddRequest) Header(key, value string) *UsersServiceAddRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *UsersServiceAddRequest) Query(key, value string) *UsersServiceAddRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *UsersServiceAddRequest) User(user *User) *UsersServiceAddRequest {
+	p.user = user
+	return p
+}
+
+func (p *UsersServiceAddRequest) Send() (*UsersServiceAddResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.UsersService.connection.URL(), p.UsersService.path)
+	values := make(url.Values)
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	var body bytes.Buffer
+	writer := NewXMLWriter(&body)
+	err := XMLUserWriteOne(writer, p.user, "")
+	if err != nil {
+		return nil, err
+	}
+	writer.Flush()
+	req, err := http.NewRequest("POST", rawURL, &body)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.UsersService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.UsersService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.UsersService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.UsersService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.UsersService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200, 201, 202}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLUserReadOne(reader, nil, "")
+	if err != nil {
+		return nil, err
+	}
+	return &UsersServiceAddResponse{user: result}, nil
+}
+
+func (p *UsersServiceAddRequest) MustSend() *UsersServiceAddResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// Add user from a directory service.
+// For example, to add the `myuser` user from the `myextension-authz` authorization provider send a request
+// like this:
+// [source]
+// ----
+// POST /ovirt-engine/api/users
+// ----
+// With a request body like this:
+// [source,xml]
+// ----
+// <user>
+//
+//	<user_name>myuser@myextension-authz</user_name>
+//	<domain>
+//	  <name>myextension-authz</name>
+//	</domain>
+//
+// </user>
+// ----
+// In case you are working with Active Directory you have to pass user principal name (UPN) as `username`, followed
+// by authorization provider name. Due to https://bugzilla.redhat.com/1147900[bug 1147900] you need to provide
+// also `principal` parameter set to UPN of the user.
+// For example, to add the user with UPN `myuser@mysubdomain.mydomain.com` from the `myextension-authz`
+// authorization provider send a request body like this:
+// [source,xml]
+// ----
+// <user>
+//
+//	<principal>myuser@mysubdomain.mydomain.com</principal>
+//	<user_name>myuser@mysubdomain.mydomain.com@myextension-authz</user_name>
+//	<domain>
+//	  <name>myextension-authz</name>
+//	</domain>
+//
+// </user>
+// ----
+type UsersServiceAddResponse struct {
+	user *User
+}
+
+func (p *UsersServiceAddResponse) User() (*User, bool) {
+	if p.user != nil {
+		return p.user, true
+	}
+	return nil, false
+}
+
+func (p *UsersServiceAddResponse) MustUser() *User {
+	if p.user == nil {
+		panic("user in response does not exist")
+	}
+	return p.user
+}
+
+// Add user from a directory service.
+// For example, to add the `myuser` user from the `myextension-authz` authorization provider send a request
+// like this:
+// [source]
+// ----
+// POST /ovirt-engine/api/users
+// ----
+// With a request body like this:
+// [source,xml]
+// ----
+// <user>
+//
+//	<user_name>myuser@myextension-authz</user_name>
+//	<domain>
+//	  <name>myextension-authz</name>
+//	</domain>
+//
+// </user>
+// ----
+// In case you are working with Active Directory you have to pass user principal name (UPN) as `username`, followed
+// by authorization provider name. Due to https://bugzilla.redhat.com/1147900[bug 1147900] you need to provide
+// also `principal` parameter set to UPN of the user.
+// For example, to add the user with UPN `myuser@mysubdomain.mydomain.com` from the `myextension-authz`
+// authorization provider send a request body like this:
+// [source,xml]
+// ----
+// <user>
+//
+//	<principal>myuser@mysubdomain.mydomain.com</principal>
+//	<user_name>myuser@mysubdomain.mydomain.com@myextension-authz</user_name>
+//	<domain>
+//	  <name>myextension-authz</name>
+//	</domain>
+//
+// </user>
+// ----
+func (p *UsersService) Add() *UsersServiceAddRequest {
+	return &UsersServiceAddRequest{UsersService: p}
+}
+
+// List all the users in the system.
+// Usage:
+// ....
+// GET /ovirt-engine/api/users
+// ....
+// Will return the list of users:
+// [source,xml]
+// ----
+// <users>
+//
+//	<user href="/ovirt-engine/api/users/1234" id="1234">
+//	  <name>admin</name>
+//	  <link href="/ovirt-engine/api/users/1234/sshpublickeys" rel="sshpublickeys"/>
+//	  <link href="/ovirt-engine/api/users/1234/roles" rel="roles"/>
+//	  <link href="/ovirt-engine/api/users/1234/permissions" rel="permissions"/>
+//	  <link href="/ovirt-engine/api/users/1234/tags" rel="tags"/>
+//	  <domain_entry_id>23456</domain_entry_id>
+//	  <namespace>*</namespace>
+//	  <principal>user1</principal>
+//	  <user_name>user1@domain-authz</user_name>
+//	  <domain href="/ovirt-engine/api/domains/45678" id="45678">
+//	    <name>domain-authz</name>
+//	  </domain>
+//	</user>
+//
+// </users>
+// ----
+// The order of the returned list of users isn't guaranteed.
+type UsersServiceListRequest struct {
+	UsersService  *UsersService
+	header        map[string]string
+	query         map[string]string
+	caseSensitive *bool
+	follow        *string
+	max           *int64
+	search        *string
+}
+
+func (p *UsersServiceListRequest) Header(key, value string) *UsersServiceListRequest {
+	if p.header == nil {
+		p.header = make(map[string]string)
+	}
+	p.header[key] = value
+	return p
+}
+
+func (p *UsersServiceListRequest) Query(key, value string) *UsersServiceListRequest {
+	if p.query == nil {
+		p.query = make(map[string]string)
+	}
+	p.query[key] = value
+	return p
+}
+
+func (p *UsersServiceListRequest) CaseSensitive(caseSensitive bool) *UsersServiceListRequest {
+	p.caseSensitive = &caseSensitive
+	return p
+}
+
+func (p *UsersServiceListRequest) Follow(follow string) *UsersServiceListRequest {
+	p.follow = &follow
+	return p
+}
+
+func (p *UsersServiceListRequest) Max(max int64) *UsersServiceListRequest {
+	p.max = &max
+	return p
+}
+
+func (p *UsersServiceListRequest) Search(search string) *UsersServiceListRequest {
+	p.search = &search
+	return p
+}
+
+func (p *UsersServiceListRequest) Send() (*UsersServiceListResponse, error) {
+	rawURL := fmt.Sprintf("%s%s", p.UsersService.connection.URL(), p.UsersService.path)
+	values := make(url.Values)
+	if p.caseSensitive != nil {
+		values["case_sensitive"] = []string{fmt.Sprintf("%v", *p.caseSensitive)}
+	}
+
+	if p.follow != nil {
+		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
+	}
+
+	if p.max != nil {
+		values["max"] = []string{fmt.Sprintf("%v", *p.max)}
+	}
+
+	if p.search != nil {
+		values["search"] = []string{fmt.Sprintf("%v", *p.search)}
+	}
+
+	if p.query != nil {
+		for k, v := range p.query {
+			values[k] = []string{v}
+		}
+	}
+	if len(values) > 0 {
+		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
+	}
+	req, err := http.NewRequest("GET", rawURL, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	for hk, hv := range p.UsersService.connection.headers {
+		req.Header.Add(hk, hv)
+	}
+
+	if p.header != nil {
+		for hk, hv := range p.header {
+			req.Header.Add(hk, hv)
+		}
+	}
+
+	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
+	req.Header.Add("Version", "4")
+	req.Header.Add("Content-Type", "application/xml")
+	req.Header.Add("Accept", "application/xml")
+	// get OAuth access token
+	token, err := p.UsersService.connection.authenticate()
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
+	// Send the request and wait for the response
+	resp, err := p.UsersService.connection.client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if p.UsersService.connection.logFunc != nil {
+		dumpReq, err := httputil.DumpRequestOut(req, true)
+		if err != nil {
+			return nil, err
+		}
+		dumpResp, err := httputil.DumpResponse(resp, true)
+		if err != nil {
+			return nil, err
+		}
+		p.UsersService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
+	}
+	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
+	if errReadBody != nil {
+		return nil, errReadBody
+	}
+	if !Contains(resp.StatusCode, []int{200}) {
+		return nil, CheckFault(respBodyBytes, resp)
+	}
+	reader := NewXMLReader(respBodyBytes)
+	result, err := XMLUserReadMany(reader, nil)
+	if err != nil {
+		return nil, err
+	}
+	return &UsersServiceListResponse{users: result}, nil
+}
+
+func (p *UsersServiceListRequest) MustSend() *UsersServiceListResponse {
+	if v, err := p.Send(); err != nil {
+		panic(err)
+	} else {
+		return v
+	}
+}
+
+// List all the users in the system.
+// Usage:
+// ....
+// GET /ovirt-engine/api/users
+// ....
+// Will return the list of users:
+// [source,xml]
+// ----
+// <users>
+//
+//	<user href="/ovirt-engine/api/users/1234" id="1234">
+//	  <name>admin</name>
+//	  <link href="/ovirt-engine/api/users/1234/sshpublickeys" rel="sshpublickeys"/>
+//	  <link href="/ovirt-engine/api/users/1234/roles" rel="roles"/>
+//	  <link href="/ovirt-engine/api/users/1234/permissions" rel="permissions"/>
+//	  <link href="/ovirt-engine/api/users/1234/tags" rel="tags"/>
+//	  <domain_entry_id>23456</domain_entry_id>
+//	  <namespace>*</namespace>
+//	  <principal>user1</principal>
+//	  <user_name>user1@domain-authz</user_name>
+//	  <domain href="/ovirt-engine/api/domains/45678" id="45678">
+//	    <name>domain-authz</name>
+//	  </domain>
+//	</user>
+//
+// </users>
+// ----
+// The order of the returned list of users isn't guaranteed.
+type UsersServiceListResponse struct {
+	users *UserSlice
+}
+
+func (p *UsersServiceListResponse) Users() (*UserSlice, bool) {
+	if p.users != nil {
+		return p.users, true
+	}
+	return nil, false
+}
+
+func (p *UsersServiceListResponse) MustUsers() *UserSlice {
+	if p.users == nil {
+		panic("users in response does not exist")
+	}
+	return p.users
+}
+
+// List all the users in the system.
+// Usage:
+// ....
+// GET /ovirt-engine/api/users
+// ....
+// Will return the list of users:
+// [source,xml]
+// ----
+// <users>
+//
+//	<user href="/ovirt-engine/api/users/1234" id="1234">
+//	  <name>admin</name>
+//	  <link href="/ovirt-engine/api/users/1234/sshpublickeys" rel="sshpublickeys"/>
+//	  <link href="/ovirt-engine/api/users/1234/roles" rel="roles"/>
+//	  <link href="/ovirt-engine/api/users/1234/permissions" rel="permissions"/>
+//	  <link href="/ovirt-engine/api/users/1234/tags" rel="tags"/>
+//	  <domain_entry_id>23456</domain_entry_id>
+//	  <namespace>*</namespace>
+//	  <principal>user1</principal>
+//	  <user_name>user1@domain-authz</user_name>
+//	  <domain href="/ovirt-engine/api/domains/45678" id="45678">
+//	    <name>domain-authz</name>
+//	  </domain>
+//	</user>
+//
+// </users>
+// ----
+// The order of the returned list of users isn't guaranteed.
+func (p *UsersService) List() *UsersServiceListRequest {
+	return &UsersServiceListRequest{UsersService: p}
+}
+
+func (op *UsersService) UserService(id string) *UserService {
+	return NewUserService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
+}
+
+// Service locator method, returns individual service on which the URI is dispatched.
+func (op *UsersService) Service(path string) (Service, error) {
+	if path == "" {
+		return op, nil
+	}
+	index := strings.Index(path, "/")
+	if index == -1 {
+		return op.UserService(path), nil
+	}
+	return op.UserService(path[:index]).Service(path[index+1:])
+}
+
+func (op *UsersService) String() string {
+	return fmt.Sprintf("UsersService:%s", op.path)
+}
+
 type TemplateNicsService struct {
 	BaseService
 }
@@ -81316,25 +86386,6 @@ func NewTemplateService(connection *Connection, path string) *TemplateService {
 //
 // </action>
 // ----
-// Since version 4.2 of the engine it is also possible to export a template as a virtual appliance (OVA).
-// For example, to export template `123` as an OVA file named `myvm.ova` that is placed in the directory `/home/ovirt/` on host `myhost`:
-// [source]
-// ----
-// POST /ovirt-engine/api/templates/123/export
-// ----
-// With a request body like this:
-// [source,xml]
-// ----
-// <action>
-//
-//	<host>
-//	  <name>myhost</name>
-//	</host>
-//	<directory>/home/ovirt</directory>
-//	<filename>myvm.ova</filename>
-//
-// </action>
-// ----
 type TemplateServiceExportRequest struct {
 	TemplateService *TemplateService
 	header          map[string]string
@@ -81470,25 +86521,6 @@ func (p *TemplateServiceExportRequest) MustSend() *TemplateServiceExportResponse
 //
 // </action>
 // ----
-// Since version 4.2 of the engine it is also possible to export a template as a virtual appliance (OVA).
-// For example, to export template `123` as an OVA file named `myvm.ova` that is placed in the directory `/home/ovirt/` on host `myhost`:
-// [source]
-// ----
-// POST /ovirt-engine/api/templates/123/export
-// ----
-// With a request body like this:
-// [source,xml]
-// ----
-// <action>
-//
-//	<host>
-//	  <name>myhost</name>
-//	</host>
-//	<directory>/home/ovirt</directory>
-//	<filename>myvm.ova</filename>
-//
-// </action>
-// ----
 type TemplateServiceExportResponse struct {
 }
 
@@ -81505,25 +86537,6 @@ type TemplateServiceExportResponse struct {
 //
 //	<storage_domain id="456"/>
 //	<exclusive>true<exclusive/>
-//
-// </action>
-// ----
-// Since version 4.2 of the engine it is also possible to export a template as a virtual appliance (OVA).
-// For example, to export template `123` as an OVA file named `myvm.ova` that is placed in the directory `/home/ovirt/` on host `myhost`:
-// [source]
-// ----
-// POST /ovirt-engine/api/templates/123/export
-// ----
-// With a request body like this:
-// [source,xml]
-// ----
-// <action>
-//
-//	<host>
-//	  <name>myhost</name>
-//	</host>
-//	<directory>/home/ovirt</directory>
-//	<filename>myvm.ova</filename>
 //
 // </action>
 // ----
@@ -83183,7 +88196,7 @@ func NewTemplatesService(connection *Connection, path string) *TemplatesService 
 // original virtual machine. To do so use the `vm.disk_attachments` attribute, specifying the identifier of the disk
 // of the original virtual machine and the characteristics that you want to change. For example, if the original
 // virtual machine has a disk with the identifier `456`, and, for that disk, you want to change the name to `mydisk`
-// the format to xref:types-disk_format[_Copy On Write_] and make it xref:types-disk[sparse], send a request body like
+// the format to <<types/disk_format, _Copy On Write_>> and make it <<types/disk, sparse>>, send a request body like
 // this:
 // [source,xml]
 // ----
@@ -83435,7 +88448,7 @@ func (p *TemplatesServiceAddRequest) MustSend() *TemplatesServiceAddResponse {
 // original virtual machine. To do so use the `vm.disk_attachments` attribute, specifying the identifier of the disk
 // of the original virtual machine and the characteristics that you want to change. For example, if the original
 // virtual machine has a disk with the identifier `456`, and, for that disk, you want to change the name to `mydisk`
-// the format to xref:types-disk_format[_Copy On Write_] and make it xref:types-disk[sparse], send a request body like
+// the format to <<types/disk_format, _Copy On Write_>> and make it <<types/disk, sparse>>, send a request body like
 // this:
 // [source,xml]
 // ----
@@ -83574,7 +88587,7 @@ func (p *TemplatesServiceAddResponse) MustTemplate() *Template {
 // original virtual machine. To do so use the `vm.disk_attachments` attribute, specifying the identifier of the disk
 // of the original virtual machine and the characteristics that you want to change. For example, if the original
 // virtual machine has a disk with the identifier `456`, and, for that disk, you want to change the name to `mydisk`
-// the format to xref:types-disk_format[_Copy On Write_] and make it xref:types-disk[sparse], send a request body like
+// the format to <<types/disk_format, _Copy On Write_>> and make it <<types/disk, sparse>>, send a request body like
 // this:
 // [source,xml]
 // ----
@@ -87099,7 +92112,7 @@ func (p *VmCdromService) Get() *VmCdromServiceGetRequest {
 // </cdrom>
 // ----
 // By default the above operations change permanently the disk that will be visible to the virtual machine
-// after the next boot, but they do not have any effect on the currently running virtual machine. If you want
+// after the next boot, but they don't have any effect on the currently running virtual machine. If you want
 // to change the disk that is visible to the current running virtual machine, add the `current=true` parameter.
 // For example, to eject the current disk send a request like this:
 // [source]
@@ -87266,7 +92279,7 @@ func (p *VmCdromServiceUpdateRequest) MustSend() *VmCdromServiceUpdateResponse {
 // </cdrom>
 // ----
 // By default the above operations change permanently the disk that will be visible to the virtual machine
-// after the next boot, but they do not have any effect on the currently running virtual machine. If you want
+// after the next boot, but they don't have any effect on the currently running virtual machine. If you want
 // to change the disk that is visible to the current running virtual machine, add the `current=true` parameter.
 // For example, to eject the current disk send a request like this:
 // [source]
@@ -87330,7 +92343,7 @@ func (p *VmCdromServiceUpdateResponse) MustCdrom() *Cdrom {
 // </cdrom>
 // ----
 // By default the above operations change permanently the disk that will be visible to the virtual machine
-// after the next boot, but they do not have any effect on the currently running virtual machine. If you want
+// after the next boot, but they don't have any effect on the currently running virtual machine. If you want
 // to change the disk that is visible to the current running virtual machine, add the `current=true` parameter.
 // For example, to eject the current disk send a request like this:
 // [source]
@@ -87367,7 +92380,7 @@ func (op *VmCdromService) String() string {
 // Manages the CDROM devices of a virtual machine.
 // Currently virtual machines have exactly one CDROM device. No new devices can be added, and the existing one can't
 // be removed, thus there are no `add` or `remove` methods. Changing and ejecting CDROM disks is done with the
-// xref:services-vm_cdrom-methods-update[update] method of the xref:services-vm_cdrom[service] that manages the
+// <<services/vm_cdrom/methods/update, update>> method of the <<services/vm_cdrom, service>> that manages the
 // CDROM device.
 type VmCdromsService struct {
 	BaseService
@@ -89257,7 +94270,8 @@ func (p *VmDiskService) Reduce() *VmDiskServiceReduceRequest {
 
 // Detach the disk from the virtual machine.
 // NOTE: In version 3 of the API this used to also remove the disk completely from the system, but starting with
-// version 4 it doesn't. If you need to remove it completely use the xref:services-disk-methods-remove[remove method of the top level disk service].
+// version 4 it doesn't. If you need to remove it completely use the <<services/disk/methods/remove,remove
+// method of the top level disk service>>.
 type VmDiskServiceRemoveRequest struct {
 	VmDiskService *VmDiskService
 	header        map[string]string
@@ -89363,13 +94377,15 @@ func (p *VmDiskServiceRemoveRequest) MustSend() *VmDiskServiceRemoveResponse {
 
 // Detach the disk from the virtual machine.
 // NOTE: In version 3 of the API this used to also remove the disk completely from the system, but starting with
-// version 4 it doesn't. If you need to remove it completely use the xref:services-disk-methods-remove[remove method of the top level disk service].
+// version 4 it doesn't. If you need to remove it completely use the <<services/disk/methods/remove,remove
+// method of the top level disk service>>.
 type VmDiskServiceRemoveResponse struct {
 }
 
 // Detach the disk from the virtual machine.
 // NOTE: In version 3 of the API this used to also remove the disk completely from the system, but starting with
-// version 4 it doesn't. If you need to remove it completely use the xref:services-disk-methods-remove[remove method of the top level disk service].
+// version 4 it doesn't. If you need to remove it completely use the <<services/disk/methods/remove,remove
+// method of the top level disk service>>.
 func (p *VmDiskService) Remove() *VmDiskServiceRemoveRequest {
 	return &VmDiskServiceRemoveRequest{VmDiskService: p}
 }
@@ -91547,7 +96563,7 @@ func NewVmHostDevicesService(connection *Connection, path string) *VmHostDevices
 // ----
 // POST /ovirt-engine/api/vms/123/hostdevices
 // ----
-// With request body of type xref:types-host_device[HostDevice], for example
+// With request body of type <<types/host_device,HostDevice>>, for example
 // [source,xml]
 // ----
 // <host_device id="123" />
@@ -91556,7 +96572,7 @@ func NewVmHostDevicesService(connection *Connection, path string) *VmHostDevices
 // to *exactly* one host. The device ID is then taken relative to this host.
 // NOTE: Attachment of a PCI device that is part of a bigger IOMMU group will result in attachment of the remaining
 // devices from that IOMMU group as "placeholders". These devices are then identified using the `placeholder`
-// attribute of the xref:types-host_device[HostDevice] type set to `true`.
+// attribute of the <<types/host_device,HostDevice>> type set to `true`.
 // In case you want attach a device that already serves as an IOMMU placeholder, simply issue an explicit Add operation
 // for it, and its `placeholder` flag will be cleared, and the device will be accessible to the virtual machine.
 type VmHostDevicesServiceAddRequest struct {
@@ -91676,7 +96692,7 @@ func (p *VmHostDevicesServiceAddRequest) MustSend() *VmHostDevicesServiceAddResp
 // ----
 // POST /ovirt-engine/api/vms/123/hostdevices
 // ----
-// With request body of type xref:types-host_device[HostDevice], for example
+// With request body of type <<types/host_device,HostDevice>>, for example
 // [source,xml]
 // ----
 // <host_device id="123" />
@@ -91685,7 +96701,7 @@ func (p *VmHostDevicesServiceAddRequest) MustSend() *VmHostDevicesServiceAddResp
 // to *exactly* one host. The device ID is then taken relative to this host.
 // NOTE: Attachment of a PCI device that is part of a bigger IOMMU group will result in attachment of the remaining
 // devices from that IOMMU group as "placeholders". These devices are then identified using the `placeholder`
-// attribute of the xref:types-host_device[HostDevice] type set to `true`.
+// attribute of the <<types/host_device,HostDevice>> type set to `true`.
 // In case you want attach a device that already serves as an IOMMU placeholder, simply issue an explicit Add operation
 // for it, and its `placeholder` flag will be cleared, and the device will be accessible to the virtual machine.
 type VmHostDevicesServiceAddResponse struct {
@@ -91712,7 +96728,7 @@ func (p *VmHostDevicesServiceAddResponse) MustDevice() *HostDevice {
 // ----
 // POST /ovirt-engine/api/vms/123/hostdevices
 // ----
-// With request body of type xref:types-host_device[HostDevice], for example
+// With request body of type <<types/host_device,HostDevice>>, for example
 // [source,xml]
 // ----
 // <host_device id="123" />
@@ -91721,7 +96737,7 @@ func (p *VmHostDevicesServiceAddResponse) MustDevice() *HostDevice {
 // to *exactly* one host. The device ID is then taken relative to this host.
 // NOTE: Attachment of a PCI device that is part of a bigger IOMMU group will result in attachment of the remaining
 // devices from that IOMMU group as "placeholders". These devices are then identified using the `placeholder`
-// attribute of the xref:types-host_device[HostDevice] type set to `true`.
+// attribute of the <<types/host_device,HostDevice>> type set to `true`.
 // In case you want attach a device that already serves as an IOMMU placeholder, simply issue an explicit Add operation
 // for it, and its `placeholder` flag will be cleared, and the device will be accessible to the virtual machine.
 func (p *VmHostDevicesService) Add() *VmHostDevicesServiceAddRequest {
@@ -93477,7 +98493,7 @@ func (p *VmNicService) Update() *VmNicServiceUpdateRequest {
 }
 
 // Reference to the service that manages the network filter parameters of the NIC.
-// A single top-level network filter may assigned to the NIC by the NIC's xref:types-vnic_profile[vNIC Profile].
+// A single top-level network filter may assigned to the NIC by the NIC's <<types/vnic_profile,vNIC Profile>>.
 func (op *VmNicService) NetworkFilterParametersService() *NicNetworkFilterParametersService {
 	return NewNicNetworkFilterParametersService(op.connection, fmt.Sprintf("%s/networkfilterparameters", op.path))
 }
@@ -96392,7 +101408,7 @@ func NewVmService(connection *Connection, path string) *VmService {
 
 // Apply an automatic CPU and NUMA configuration on the VM.
 // IMPORTANT: Since version 4.5 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. Instead please use PUT followed by xref:services-vm-methods-update[update operation].
+// compatibility. It will be removed in the future. Instead please use PUT followed by <<services/vm/methods/update, update operation>>.
 // An example for a request:
 // [source]
 // ----
@@ -96530,7 +101546,7 @@ func (p *VmServiceAutoPinCpuAndNumaNodesRequest) MustSend() *VmServiceAutoPinCpu
 
 // Apply an automatic CPU and NUMA configuration on the VM.
 // IMPORTANT: Since version 4.5 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. Instead please use PUT followed by xref:services-vm-methods-update[update operation].
+// compatibility. It will be removed in the future. Instead please use PUT followed by <<services/vm/methods/update, update operation>>.
 // An example for a request:
 // [source]
 // ----
@@ -96550,7 +101566,7 @@ type VmServiceAutoPinCpuAndNumaNodesResponse struct {
 
 // Apply an automatic CPU and NUMA configuration on the VM.
 // IMPORTANT: Since version 4.5 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. Instead please use PUT followed by xref:services-vm-methods-update[update operation].
+// compatibility. It will be removed in the future. Instead please use PUT followed by <<services/vm/methods/update, update operation>>.
 // An example for a request:
 // [source]
 // ----
@@ -96864,7 +101880,7 @@ func (p *VmService) Clone() *VmServiceCloneRequest {
 }
 
 // Permanently restores the virtual machine to the state of the previewed snapshot.
-// See the xref:services-vm-methods-preview_snapshot[preview_snapshot] operation for details.
+// See the <<services/vm/methods/preview_snapshot, preview_snapshot>> operation for details.
 type VmServiceCommitSnapshotRequest struct {
 	VmService *VmService
 	header    map[string]string
@@ -96978,12 +101994,12 @@ func (p *VmServiceCommitSnapshotRequest) MustSend() *VmServiceCommitSnapshotResp
 }
 
 // Permanently restores the virtual machine to the state of the previewed snapshot.
-// See the xref:services-vm-methods-preview_snapshot[preview_snapshot] operation for details.
+// See the <<services/vm/methods/preview_snapshot, preview_snapshot>> operation for details.
 type VmServiceCommitSnapshotResponse struct {
 }
 
 // Permanently restores the virtual machine to the state of the previewed snapshot.
-// See the xref:services-vm-methods-preview_snapshot[preview_snapshot] operation for details.
+// See the <<services/vm/methods/preview_snapshot, preview_snapshot>> operation for details.
 func (p *VmService) CommitSnapshot() *VmServiceCommitSnapshotRequest {
 	return &VmServiceCommitSnapshotRequest{VmService: p}
 }
@@ -98271,8 +103287,8 @@ func (p *VmService) Migrate() *VmServiceMigrateRequest {
 // Temporarily restores the virtual machine to the state of a snapshot.
 // The snapshot is indicated with the `snapshot.id` parameter. It is restored temporarily, so that the content can
 // be inspected. Once that inspection is finished, the state of the virtual machine can be made permanent, using the
-// xref:services-vm-methods-commit_snapshot[commit_snapshot] method, or discarded using the
-// xref:services-vm-methods-undo_snapshot[undo_snapshot] method.
+// <<services/vm/methods/commit_snapshot, commit_snapshot>> method, or discarded using the
+// <<services/vm/methods/undo_snapshot, undo_snapshot>> method.
 type VmServicePreviewSnapshotRequest struct {
 	VmService     *VmService
 	header        map[string]string
@@ -98433,16 +103449,16 @@ func (p *VmServicePreviewSnapshotRequest) MustSend() *VmServicePreviewSnapshotRe
 // Temporarily restores the virtual machine to the state of a snapshot.
 // The snapshot is indicated with the `snapshot.id` parameter. It is restored temporarily, so that the content can
 // be inspected. Once that inspection is finished, the state of the virtual machine can be made permanent, using the
-// xref:services-vm-methods-commit_snapshot[commit_snapshot] method, or discarded using the
-// xref:services-vm-methods-undo_snapshot[undo_snapshot] method.
+// <<services/vm/methods/commit_snapshot, commit_snapshot>> method, or discarded using the
+// <<services/vm/methods/undo_snapshot, undo_snapshot>> method.
 type VmServicePreviewSnapshotResponse struct {
 }
 
 // Temporarily restores the virtual machine to the state of a snapshot.
 // The snapshot is indicated with the `snapshot.id` parameter. It is restored temporarily, so that the content can
 // be inspected. Once that inspection is finished, the state of the virtual machine can be made permanent, using the
-// xref:services-vm-methods-commit_snapshot[commit_snapshot] method, or discarded using the
-// xref:services-vm-methods-undo_snapshot[undo_snapshot] method.
+// <<services/vm/methods/commit_snapshot, commit_snapshot>> method, or discarded using the
+// <<services/vm/methods/undo_snapshot, undo_snapshot>> method.
 func (p *VmService) PreviewSnapshot() *VmServicePreviewSnapshotRequest {
 	return &VmServicePreviewSnapshotRequest{VmService: p}
 }
@@ -100229,8 +105245,8 @@ func (p *VmService) ThawFilesystems() *VmServiceThawFilesystemsRequest {
 // VNC and SPICE, then the authentication token will only be valid for
 // the SPICE protocol.
 // In order to obtain an authentication token for a specific protocol, for
-// example for VNC, use the `ticket` method of the
-// xref:services-vm_graphics_console[service], which manages the graphics consoles of the virtual machine, by sending
+// example for VNC, use the `ticket` method of the <<services/vm_graphics_console,
+// service>>, which manages the graphics consoles of the virtual machine, by sending
 // a request:
 // [source]
 // ----
@@ -100384,8 +105400,8 @@ func (p *VmServiceTicketRequest) MustSend() *VmServiceTicketResponse {
 // VNC and SPICE, then the authentication token will only be valid for
 // the SPICE protocol.
 // In order to obtain an authentication token for a specific protocol, for
-// example for VNC, use the `ticket` method of the
-// xref:services-vm_graphics_console[service], which manages the graphics consoles of the virtual machine, by sending
+// example for VNC, use the `ticket` method of the <<services/vm_graphics_console,
+// service>>, which manages the graphics consoles of the virtual machine, by sending
 // a request:
 // [source]
 // ----
@@ -100437,8 +105453,8 @@ func (p *VmServiceTicketResponse) MustTicket() *Ticket {
 // VNC and SPICE, then the authentication token will only be valid for
 // the SPICE protocol.
 // In order to obtain an authentication token for a specific protocol, for
-// example for VNC, use the `ticket` method of the
-// xref:services-vm_graphics_console[service], which manages the graphics consoles of the virtual machine, by sending
+// example for VNC, use the `ticket` method of the <<services/vm_graphics_console,
+// service>>, which manages the graphics consoles of the virtual machine, by sending
 // a request:
 // [source]
 // ----
@@ -100769,7 +105785,7 @@ func (p *VmService) ExportToPathOnHost() *VmServiceExportToPathOnHostRequest {
 }
 
 // Restores the virtual machine to the state it had before previewing the snapshot.
-// See the xref:services-vm-methods-preview_snapshot[preview_snapshot] operation for details.
+// See the <<services/vm/methods/preview_snapshot, preview_snapshot>> operation for details.
 type VmServiceUndoSnapshotRequest struct {
 	VmService *VmService
 	header    map[string]string
@@ -100883,12 +105899,12 @@ func (p *VmServiceUndoSnapshotRequest) MustSend() *VmServiceUndoSnapshotResponse
 }
 
 // Restores the virtual machine to the state it had before previewing the snapshot.
-// See the xref:services-vm-methods-preview_snapshot[preview_snapshot] operation for details.
+// See the <<services/vm/methods/preview_snapshot, preview_snapshot>> operation for details.
 type VmServiceUndoSnapshotResponse struct {
 }
 
 // Restores the virtual machine to the state it had before previewing the snapshot.
-// See the xref:services-vm-methods-preview_snapshot[preview_snapshot] operation for details.
+// See the <<services/vm/methods/preview_snapshot, preview_snapshot>> operation for details.
 func (p *VmService) UndoSnapshot() *VmServiceUndoSnapshotRequest {
 	return &VmServiceUndoSnapshotRequest{VmService: p}
 }
@@ -102679,7 +107695,7 @@ func NewVmsService(connection *Connection, path string) *VmsService {
 // </vm>
 // ----
 // In order to boot from CDROM, you first need to insert a disk, as described in the
-// xref:services-vm_cdrom[CDROM service]. Then booting from that CDROM can be specified using the `os.boot.devices`
+// <<services/vm_cdrom, CDROM service>>. Then booting from that CDROM can be specified using the `os.boot.devices`
 // attribute:
 // [source,xml]
 // ----
@@ -102991,7 +108007,7 @@ func (p *VmsServiceAddRequest) MustSend() *VmsServiceAddResponse {
 // </vm>
 // ----
 // In order to boot from CDROM, you first need to insert a disk, as described in the
-// xref:services-vm_cdrom[CDROM service]. Then booting from that CDROM can be specified using the `os.boot.devices`
+// <<services/vm_cdrom, CDROM service>>. Then booting from that CDROM can be specified using the `os.boot.devices`
 // attribute:
 // [source,xml]
 // ----
@@ -103160,7 +108176,7 @@ func (p *VmsServiceAddResponse) MustVm() *Vm {
 // </vm>
 // ----
 // In order to boot from CDROM, you first need to insert a disk, as described in the
-// xref:services-vm_cdrom[CDROM service]. Then booting from that CDROM can be specified using the `os.boot.devices`
+// <<services/vm_cdrom, CDROM service>>. Then booting from that CDROM can be specified using the `os.boot.devices`
 // attribute:
 // [source,xml]
 // ----
@@ -104403,7 +109419,7 @@ func NewVnicProfilesService(connection *Connection, path string) *VnicProfilesSe
 // ----
 // Please note that there is a default network filter to each VNIC profile.
 // For more details of how the default network filter is calculated please refer to
-// the documentation in xref:services-network_filters[NetworkFilters].
+// the documentation in <<services/network_filters,NetworkFilters>>.
 // NOTE: The automatically created vNIC profile for the external network will be without network filter.
 // The output of creating a new VNIC profile depends in the  body  arguments that were given.
 // In case no network filter was given, the default network filter will be configured. For example:
@@ -104576,7 +109592,7 @@ func (p *VnicProfilesServiceAddRequest) MustSend() *VnicProfilesServiceAddRespon
 // ----
 // Please note that there is a default network filter to each VNIC profile.
 // For more details of how the default network filter is calculated please refer to
-// the documentation in xref:services-network_filters[NetworkFilters].
+// the documentation in <<services/network_filters,NetworkFilters>>.
 // NOTE: The automatically created vNIC profile for the external network will be without network filter.
 // The output of creating a new VNIC profile depends in the  body  arguments that were given.
 // In case no network filter was given, the default network filter will be configured. For example:
@@ -104656,7 +109672,7 @@ func (p *VnicProfilesServiceAddResponse) MustProfile() *VnicProfile {
 // ----
 // Please note that there is a default network filter to each VNIC profile.
 // For more details of how the default network filter is calculated please refer to
-// the documentation in xref:services-network_filters[NetworkFilters].
+// the documentation in <<services/network_filters,NetworkFilters>>.
 // NOTE: The automatically created vNIC profile for the external network will be without network filter.
 // The output of creating a new VNIC profile depends in the  body  arguments that were given.
 // In case no network filter was given, the default network filter will be configured. For example:
@@ -105461,4997 +110477,6 @@ func (op *WeightsService) Service(path string) (Service, error) {
 
 func (op *WeightsService) String() string {
 	return fmt.Sprintf("WeightsService:%s", op.path)
-}
-
-type DomainGroupService struct {
-	BaseService
-}
-
-func NewDomainGroupService(connection *Connection, path string) *DomainGroupService {
-	var result DomainGroupService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-type DomainGroupServiceGetRequest struct {
-	DomainGroupService *DomainGroupService
-	header             map[string]string
-	query              map[string]string
-	follow             *string
-}
-
-func (p *DomainGroupServiceGetRequest) Header(key, value string) *DomainGroupServiceGetRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *DomainGroupServiceGetRequest) Query(key, value string) *DomainGroupServiceGetRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *DomainGroupServiceGetRequest) Follow(follow string) *DomainGroupServiceGetRequest {
-	p.follow = &follow
-	return p
-}
-
-func (p *DomainGroupServiceGetRequest) Send() (*DomainGroupServiceGetResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.DomainGroupService.connection.URL(), p.DomainGroupService.path)
-	values := make(url.Values)
-	if p.follow != nil {
-		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.DomainGroupService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.DomainGroupService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.DomainGroupService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.DomainGroupService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.DomainGroupService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLGroupReadOne(reader, nil, "")
-	if err != nil {
-		return nil, err
-	}
-	return &DomainGroupServiceGetResponse{get: result}, nil
-}
-
-func (p *DomainGroupServiceGetRequest) MustSend() *DomainGroupServiceGetResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-type DomainGroupServiceGetResponse struct {
-	get *Group
-}
-
-func (p *DomainGroupServiceGetResponse) Get() (*Group, bool) {
-	if p.get != nil {
-		return p.get, true
-	}
-	return nil, false
-}
-
-func (p *DomainGroupServiceGetResponse) MustGet() *Group {
-	if p.get == nil {
-		panic("get in response does not exist")
-	}
-	return p.get
-}
-
-func (p *DomainGroupService) Get() *DomainGroupServiceGetRequest {
-	return &DomainGroupServiceGetRequest{DomainGroupService: p}
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *DomainGroupService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
-}
-
-func (op *DomainGroupService) String() string {
-	return fmt.Sprintf("DomainGroupService:%s", op.path)
-}
-
-type DomainGroupsService struct {
-	BaseService
-}
-
-func NewDomainGroupsService(connection *Connection, path string) *DomainGroupsService {
-	var result DomainGroupsService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-// Returns the list of groups.
-// The order of the returned list of groups isn't guaranteed.
-type DomainGroupsServiceListRequest struct {
-	DomainGroupsService *DomainGroupsService
-	header              map[string]string
-	query               map[string]string
-	caseSensitive       *bool
-	follow              *string
-	max                 *int64
-	search              *string
-}
-
-func (p *DomainGroupsServiceListRequest) Header(key, value string) *DomainGroupsServiceListRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *DomainGroupsServiceListRequest) Query(key, value string) *DomainGroupsServiceListRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *DomainGroupsServiceListRequest) CaseSensitive(caseSensitive bool) *DomainGroupsServiceListRequest {
-	p.caseSensitive = &caseSensitive
-	return p
-}
-
-func (p *DomainGroupsServiceListRequest) Follow(follow string) *DomainGroupsServiceListRequest {
-	p.follow = &follow
-	return p
-}
-
-func (p *DomainGroupsServiceListRequest) Max(max int64) *DomainGroupsServiceListRequest {
-	p.max = &max
-	return p
-}
-
-func (p *DomainGroupsServiceListRequest) Search(search string) *DomainGroupsServiceListRequest {
-	p.search = &search
-	return p
-}
-
-func (p *DomainGroupsServiceListRequest) Send() (*DomainGroupsServiceListResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.DomainGroupsService.connection.URL(), p.DomainGroupsService.path)
-	values := make(url.Values)
-	if p.caseSensitive != nil {
-		values["case_sensitive"] = []string{fmt.Sprintf("%v", *p.caseSensitive)}
-	}
-
-	if p.follow != nil {
-		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
-	}
-
-	if p.max != nil {
-		values["max"] = []string{fmt.Sprintf("%v", *p.max)}
-	}
-
-	if p.search != nil {
-		values["search"] = []string{fmt.Sprintf("%v", *p.search)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.DomainGroupsService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.DomainGroupsService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.DomainGroupsService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.DomainGroupsService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.DomainGroupsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLGroupReadMany(reader, nil)
-	if err != nil {
-		return nil, err
-	}
-	return &DomainGroupsServiceListResponse{groups: result}, nil
-}
-
-func (p *DomainGroupsServiceListRequest) MustSend() *DomainGroupsServiceListResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Returns the list of groups.
-// The order of the returned list of groups isn't guaranteed.
-type DomainGroupsServiceListResponse struct {
-	groups *GroupSlice
-}
-
-func (p *DomainGroupsServiceListResponse) Groups() (*GroupSlice, bool) {
-	if p.groups != nil {
-		return p.groups, true
-	}
-	return nil, false
-}
-
-func (p *DomainGroupsServiceListResponse) MustGroups() *GroupSlice {
-	if p.groups == nil {
-		panic("groups in response does not exist")
-	}
-	return p.groups
-}
-
-// Returns the list of groups.
-// The order of the returned list of groups isn't guaranteed.
-func (p *DomainGroupsService) List() *DomainGroupsServiceListRequest {
-	return &DomainGroupsServiceListRequest{DomainGroupsService: p}
-}
-
-func (op *DomainGroupsService) GroupService(id string) *DomainGroupService {
-	return NewDomainGroupService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *DomainGroupsService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	index := strings.Index(path, "/")
-	if index == -1 {
-		return op.GroupService(path), nil
-	}
-	return op.GroupService(path[:index]).Service(path[index+1:])
-}
-
-func (op *DomainGroupsService) String() string {
-	return fmt.Sprintf("DomainGroupsService:%s", op.path)
-}
-
-// A service to view details of an authentication domain in the system.
-type DomainService struct {
-	BaseService
-}
-
-func NewDomainService(connection *Connection, path string) *DomainService {
-	var result DomainService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-// Gets the authentication domain information.
-// Usage:
-// ....
-// GET /ovirt-engine/api/domains/5678
-// ....
-// Will return the domain information:
-// [source,xml]
-// ----
-// <domain href="/ovirt-engine/api/domains/5678" id="5678">
-//
-//	<name>internal-authz</name>
-//	<link href="/ovirt-engine/api/domains/5678/users" rel="users"/>
-//	<link href="/ovirt-engine/api/domains/5678/groups" rel="groups"/>
-//	<link href="/ovirt-engine/api/domains/5678/users?search={query}" rel="users/search"/>
-//	<link href="/ovirt-engine/api/domains/5678/groups?search={query}" rel="groups/search"/>
-//
-// </domain>
-// ----
-type DomainServiceGetRequest struct {
-	DomainService *DomainService
-	header        map[string]string
-	query         map[string]string
-	follow        *string
-}
-
-func (p *DomainServiceGetRequest) Header(key, value string) *DomainServiceGetRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *DomainServiceGetRequest) Query(key, value string) *DomainServiceGetRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *DomainServiceGetRequest) Follow(follow string) *DomainServiceGetRequest {
-	p.follow = &follow
-	return p
-}
-
-func (p *DomainServiceGetRequest) Send() (*DomainServiceGetResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.DomainService.connection.URL(), p.DomainService.path)
-	values := make(url.Values)
-	if p.follow != nil {
-		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.DomainService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.DomainService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.DomainService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.DomainService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.DomainService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLDomainReadOne(reader, nil, "")
-	if err != nil {
-		return nil, err
-	}
-	return &DomainServiceGetResponse{domain: result}, nil
-}
-
-func (p *DomainServiceGetRequest) MustSend() *DomainServiceGetResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Gets the authentication domain information.
-// Usage:
-// ....
-// GET /ovirt-engine/api/domains/5678
-// ....
-// Will return the domain information:
-// [source,xml]
-// ----
-// <domain href="/ovirt-engine/api/domains/5678" id="5678">
-//
-//	<name>internal-authz</name>
-//	<link href="/ovirt-engine/api/domains/5678/users" rel="users"/>
-//	<link href="/ovirt-engine/api/domains/5678/groups" rel="groups"/>
-//	<link href="/ovirt-engine/api/domains/5678/users?search={query}" rel="users/search"/>
-//	<link href="/ovirt-engine/api/domains/5678/groups?search={query}" rel="groups/search"/>
-//
-// </domain>
-// ----
-type DomainServiceGetResponse struct {
-	domain *Domain
-}
-
-func (p *DomainServiceGetResponse) Domain() (*Domain, bool) {
-	if p.domain != nil {
-		return p.domain, true
-	}
-	return nil, false
-}
-
-func (p *DomainServiceGetResponse) MustDomain() *Domain {
-	if p.domain == nil {
-		panic("domain in response does not exist")
-	}
-	return p.domain
-}
-
-// Gets the authentication domain information.
-// Usage:
-// ....
-// GET /ovirt-engine/api/domains/5678
-// ....
-// Will return the domain information:
-// [source,xml]
-// ----
-// <domain href="/ovirt-engine/api/domains/5678" id="5678">
-//
-//	<name>internal-authz</name>
-//	<link href="/ovirt-engine/api/domains/5678/users" rel="users"/>
-//	<link href="/ovirt-engine/api/domains/5678/groups" rel="groups"/>
-//	<link href="/ovirt-engine/api/domains/5678/users?search={query}" rel="users/search"/>
-//	<link href="/ovirt-engine/api/domains/5678/groups?search={query}" rel="groups/search"/>
-//
-// </domain>
-// ----
-func (p *DomainService) Get() *DomainServiceGetRequest {
-	return &DomainServiceGetRequest{DomainService: p}
-}
-
-// Reference to a service to manage domain groups.
-func (op *DomainService) GroupsService() *DomainGroupsService {
-	return NewDomainGroupsService(op.connection, fmt.Sprintf("%s/groups", op.path))
-}
-
-// Reference to a service to manage domain users.
-func (op *DomainService) UsersService() *DomainUsersService {
-	return NewDomainUsersService(op.connection, fmt.Sprintf("%s/users", op.path))
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *DomainService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	if path == "groups" {
-		return op.GroupsService(), nil
-	}
-	if strings.HasPrefix(path, "groups/") {
-		return op.GroupsService().Service(path[7:])
-	}
-	if path == "users" {
-		return op.UsersService(), nil
-	}
-	if strings.HasPrefix(path, "users/") {
-		return op.UsersService().Service(path[6:])
-	}
-	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
-}
-
-func (op *DomainService) String() string {
-	return fmt.Sprintf("DomainService:%s", op.path)
-}
-
-// A service that shows a user's group membership in the AAA extension.
-type DomainUserGroupsService struct {
-	BaseService
-}
-
-func NewDomainUserGroupsService(connection *Connection, path string) *DomainUserGroupsService {
-	var result DomainUserGroupsService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-// Returns the list of groups that the user is a member of.
-type DomainUserGroupsServiceListRequest struct {
-	DomainUserGroupsService *DomainUserGroupsService
-	header                  map[string]string
-	query                   map[string]string
-	follow                  *string
-}
-
-func (p *DomainUserGroupsServiceListRequest) Header(key, value string) *DomainUserGroupsServiceListRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *DomainUserGroupsServiceListRequest) Query(key, value string) *DomainUserGroupsServiceListRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *DomainUserGroupsServiceListRequest) Follow(follow string) *DomainUserGroupsServiceListRequest {
-	p.follow = &follow
-	return p
-}
-
-func (p *DomainUserGroupsServiceListRequest) Send() (*DomainUserGroupsServiceListResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.DomainUserGroupsService.connection.URL(), p.DomainUserGroupsService.path)
-	values := make(url.Values)
-	if p.follow != nil {
-		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.DomainUserGroupsService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.DomainUserGroupsService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.DomainUserGroupsService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.DomainUserGroupsService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.DomainUserGroupsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLGroupReadMany(reader, nil)
-	if err != nil {
-		return nil, err
-	}
-	return &DomainUserGroupsServiceListResponse{groups: result}, nil
-}
-
-func (p *DomainUserGroupsServiceListRequest) MustSend() *DomainUserGroupsServiceListResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Returns the list of groups that the user is a member of.
-type DomainUserGroupsServiceListResponse struct {
-	groups *GroupSlice
-}
-
-func (p *DomainUserGroupsServiceListResponse) Groups() (*GroupSlice, bool) {
-	if p.groups != nil {
-		return p.groups, true
-	}
-	return nil, false
-}
-
-func (p *DomainUserGroupsServiceListResponse) MustGroups() *GroupSlice {
-	if p.groups == nil {
-		panic("groups in response does not exist")
-	}
-	return p.groups
-}
-
-// Returns the list of groups that the user is a member of.
-func (p *DomainUserGroupsService) List() *DomainUserGroupsServiceListRequest {
-	return &DomainUserGroupsServiceListRequest{DomainUserGroupsService: p}
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *DomainUserGroupsService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
-}
-
-func (op *DomainUserGroupsService) String() string {
-	return fmt.Sprintf("DomainUserGroupsService:%s", op.path)
-}
-
-// A service to view a domain user in the system.
-type DomainUserService struct {
-	BaseService
-}
-
-func NewDomainUserService(connection *Connection, path string) *DomainUserService {
-	var result DomainUserService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-// Gets the domain user information.
-// Usage:
-// ....
-// GET /ovirt-engine/api/domains/5678/users/1234
-// ....
-// Will return the domain user information:
-// [source,xml]
-// ----
-// <user href="/ovirt-engine/api/users/1234" id="1234">
-//
-//	<name>admin</name>
-//	<namespace>*</namespace>
-//	<principal>admin</principal>
-//	<user_name>admin@internal-authz</user_name>
-//	<domain href="/ovirt-engine/api/domains/5678" id="5678">
-//	  <name>internal-authz</name>
-//	</domain>
-//	<groups/>
-//
-// </user>
-// ----
-type DomainUserServiceGetRequest struct {
-	DomainUserService *DomainUserService
-	header            map[string]string
-	query             map[string]string
-	follow            *string
-}
-
-func (p *DomainUserServiceGetRequest) Header(key, value string) *DomainUserServiceGetRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *DomainUserServiceGetRequest) Query(key, value string) *DomainUserServiceGetRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *DomainUserServiceGetRequest) Follow(follow string) *DomainUserServiceGetRequest {
-	p.follow = &follow
-	return p
-}
-
-func (p *DomainUserServiceGetRequest) Send() (*DomainUserServiceGetResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.DomainUserService.connection.URL(), p.DomainUserService.path)
-	values := make(url.Values)
-	if p.follow != nil {
-		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.DomainUserService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.DomainUserService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.DomainUserService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.DomainUserService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.DomainUserService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLUserReadOne(reader, nil, "")
-	if err != nil {
-		return nil, err
-	}
-	return &DomainUserServiceGetResponse{user: result}, nil
-}
-
-func (p *DomainUserServiceGetRequest) MustSend() *DomainUserServiceGetResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Gets the domain user information.
-// Usage:
-// ....
-// GET /ovirt-engine/api/domains/5678/users/1234
-// ....
-// Will return the domain user information:
-// [source,xml]
-// ----
-// <user href="/ovirt-engine/api/users/1234" id="1234">
-//
-//	<name>admin</name>
-//	<namespace>*</namespace>
-//	<principal>admin</principal>
-//	<user_name>admin@internal-authz</user_name>
-//	<domain href="/ovirt-engine/api/domains/5678" id="5678">
-//	  <name>internal-authz</name>
-//	</domain>
-//	<groups/>
-//
-// </user>
-// ----
-type DomainUserServiceGetResponse struct {
-	user *User
-}
-
-func (p *DomainUserServiceGetResponse) User() (*User, bool) {
-	if p.user != nil {
-		return p.user, true
-	}
-	return nil, false
-}
-
-func (p *DomainUserServiceGetResponse) MustUser() *User {
-	if p.user == nil {
-		panic("user in response does not exist")
-	}
-	return p.user
-}
-
-// Gets the domain user information.
-// Usage:
-// ....
-// GET /ovirt-engine/api/domains/5678/users/1234
-// ....
-// Will return the domain user information:
-// [source,xml]
-// ----
-// <user href="/ovirt-engine/api/users/1234" id="1234">
-//
-//	<name>admin</name>
-//	<namespace>*</namespace>
-//	<principal>admin</principal>
-//	<user_name>admin@internal-authz</user_name>
-//	<domain href="/ovirt-engine/api/domains/5678" id="5678">
-//	  <name>internal-authz</name>
-//	</domain>
-//	<groups/>
-//
-// </user>
-// ----
-func (p *DomainUserService) Get() *DomainUserServiceGetRequest {
-	return &DomainUserServiceGetRequest{DomainUserService: p}
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *DomainUserService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
-}
-
-func (op *DomainUserService) String() string {
-	return fmt.Sprintf("DomainUserService:%s", op.path)
-}
-
-// A service to list all domain users in the system.
-type DomainUsersService struct {
-	BaseService
-}
-
-func NewDomainUsersService(connection *Connection, path string) *DomainUsersService {
-	var result DomainUsersService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-// List all the users in the domain.
-// Usage:
-// ....
-// GET /ovirt-engine/api/domains/5678/users
-// ....
-// Will return the list of users in the domain:
-// [source,xml]
-// ----
-// <users>
-//
-//	<user href="/ovirt-engine/api/domains/5678/users/1234" id="1234">
-//	  <name>admin</name>
-//	  <namespace>*</namespace>
-//	  <principal>admin</principal>
-//	  <user_name>admin@internal-authz</user_name>
-//	  <domain href="/ovirt-engine/api/domains/5678" id="5678">
-//	    <name>internal-authz</name>
-//	  </domain>
-//	  <groups/>
-//	</user>
-//
-// </users>
-// ----
-// The order of the returned list of users isn't guaranteed.
-type DomainUsersServiceListRequest struct {
-	DomainUsersService *DomainUsersService
-	header             map[string]string
-	query              map[string]string
-	caseSensitive      *bool
-	follow             *string
-	max                *int64
-	search             *string
-}
-
-func (p *DomainUsersServiceListRequest) Header(key, value string) *DomainUsersServiceListRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *DomainUsersServiceListRequest) Query(key, value string) *DomainUsersServiceListRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *DomainUsersServiceListRequest) CaseSensitive(caseSensitive bool) *DomainUsersServiceListRequest {
-	p.caseSensitive = &caseSensitive
-	return p
-}
-
-func (p *DomainUsersServiceListRequest) Follow(follow string) *DomainUsersServiceListRequest {
-	p.follow = &follow
-	return p
-}
-
-func (p *DomainUsersServiceListRequest) Max(max int64) *DomainUsersServiceListRequest {
-	p.max = &max
-	return p
-}
-
-func (p *DomainUsersServiceListRequest) Search(search string) *DomainUsersServiceListRequest {
-	p.search = &search
-	return p
-}
-
-func (p *DomainUsersServiceListRequest) Send() (*DomainUsersServiceListResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.DomainUsersService.connection.URL(), p.DomainUsersService.path)
-	values := make(url.Values)
-	if p.caseSensitive != nil {
-		values["case_sensitive"] = []string{fmt.Sprintf("%v", *p.caseSensitive)}
-	}
-
-	if p.follow != nil {
-		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
-	}
-
-	if p.max != nil {
-		values["max"] = []string{fmt.Sprintf("%v", *p.max)}
-	}
-
-	if p.search != nil {
-		values["search"] = []string{fmt.Sprintf("%v", *p.search)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.DomainUsersService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.DomainUsersService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.DomainUsersService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.DomainUsersService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.DomainUsersService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLUserReadMany(reader, nil)
-	if err != nil {
-		return nil, err
-	}
-	return &DomainUsersServiceListResponse{users: result}, nil
-}
-
-func (p *DomainUsersServiceListRequest) MustSend() *DomainUsersServiceListResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// List all the users in the domain.
-// Usage:
-// ....
-// GET /ovirt-engine/api/domains/5678/users
-// ....
-// Will return the list of users in the domain:
-// [source,xml]
-// ----
-// <users>
-//
-//	<user href="/ovirt-engine/api/domains/5678/users/1234" id="1234">
-//	  <name>admin</name>
-//	  <namespace>*</namespace>
-//	  <principal>admin</principal>
-//	  <user_name>admin@internal-authz</user_name>
-//	  <domain href="/ovirt-engine/api/domains/5678" id="5678">
-//	    <name>internal-authz</name>
-//	  </domain>
-//	  <groups/>
-//	</user>
-//
-// </users>
-// ----
-// The order of the returned list of users isn't guaranteed.
-type DomainUsersServiceListResponse struct {
-	users *UserSlice
-}
-
-func (p *DomainUsersServiceListResponse) Users() (*UserSlice, bool) {
-	if p.users != nil {
-		return p.users, true
-	}
-	return nil, false
-}
-
-func (p *DomainUsersServiceListResponse) MustUsers() *UserSlice {
-	if p.users == nil {
-		panic("users in response does not exist")
-	}
-	return p.users
-}
-
-// List all the users in the domain.
-// Usage:
-// ....
-// GET /ovirt-engine/api/domains/5678/users
-// ....
-// Will return the list of users in the domain:
-// [source,xml]
-// ----
-// <users>
-//
-//	<user href="/ovirt-engine/api/domains/5678/users/1234" id="1234">
-//	  <name>admin</name>
-//	  <namespace>*</namespace>
-//	  <principal>admin</principal>
-//	  <user_name>admin@internal-authz</user_name>
-//	  <domain href="/ovirt-engine/api/domains/5678" id="5678">
-//	    <name>internal-authz</name>
-//	  </domain>
-//	  <groups/>
-//	</user>
-//
-// </users>
-// ----
-// The order of the returned list of users isn't guaranteed.
-func (p *DomainUsersService) List() *DomainUsersServiceListRequest {
-	return &DomainUsersServiceListRequest{DomainUsersService: p}
-}
-
-// Reference to a service to view details of a domain user.
-func (op *DomainUsersService) UserService(id string) *DomainUserService {
-	return NewDomainUserService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *DomainUsersService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	index := strings.Index(path, "/")
-	if index == -1 {
-		return op.UserService(path), nil
-	}
-	return op.UserService(path[:index]).Service(path[index+1:])
-}
-
-func (op *DomainUsersService) String() string {
-	return fmt.Sprintf("DomainUsersService:%s", op.path)
-}
-
-// A service to list all authentication domains in the system.
-type DomainsService struct {
-	BaseService
-}
-
-func NewDomainsService(connection *Connection, path string) *DomainsService {
-	var result DomainsService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-// List all the authentication domains in the system.
-// Usage:
-// ....
-// GET /ovirt-engine/api/domains
-// ....
-// Will return the list of domains:
-// [source,xml]
-// ----
-// <domains>
-//
-//	<domain href="/ovirt-engine/api/domains/5678" id="5678">
-//	  <name>internal-authz</name>
-//	  <link href="/ovirt-engine/api/domains/5678/users" rel="users"/>
-//	  <link href="/ovirt-engine/api/domains/5678/groups" rel="groups"/>
-//	  <link href="/ovirt-engine/api/domains/5678/users?search={query}" rel="users/search"/>
-//	  <link href="/ovirt-engine/api/domains/5678/groups?search={query}" rel="groups/search"/>
-//	</domain>
-//
-// </domains>
-// ----
-// The order of the returned list of domains isn't guaranteed.
-type DomainsServiceListRequest struct {
-	DomainsService *DomainsService
-	header         map[string]string
-	query          map[string]string
-	follow         *string
-	max            *int64
-}
-
-func (p *DomainsServiceListRequest) Header(key, value string) *DomainsServiceListRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *DomainsServiceListRequest) Query(key, value string) *DomainsServiceListRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *DomainsServiceListRequest) Follow(follow string) *DomainsServiceListRequest {
-	p.follow = &follow
-	return p
-}
-
-func (p *DomainsServiceListRequest) Max(max int64) *DomainsServiceListRequest {
-	p.max = &max
-	return p
-}
-
-func (p *DomainsServiceListRequest) Send() (*DomainsServiceListResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.DomainsService.connection.URL(), p.DomainsService.path)
-	values := make(url.Values)
-	if p.follow != nil {
-		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
-	}
-
-	if p.max != nil {
-		values["max"] = []string{fmt.Sprintf("%v", *p.max)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.DomainsService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.DomainsService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.DomainsService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.DomainsService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.DomainsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLDomainReadMany(reader, nil)
-	if err != nil {
-		return nil, err
-	}
-	return &DomainsServiceListResponse{domains: result}, nil
-}
-
-func (p *DomainsServiceListRequest) MustSend() *DomainsServiceListResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// List all the authentication domains in the system.
-// Usage:
-// ....
-// GET /ovirt-engine/api/domains
-// ....
-// Will return the list of domains:
-// [source,xml]
-// ----
-// <domains>
-//
-//	<domain href="/ovirt-engine/api/domains/5678" id="5678">
-//	  <name>internal-authz</name>
-//	  <link href="/ovirt-engine/api/domains/5678/users" rel="users"/>
-//	  <link href="/ovirt-engine/api/domains/5678/groups" rel="groups"/>
-//	  <link href="/ovirt-engine/api/domains/5678/users?search={query}" rel="users/search"/>
-//	  <link href="/ovirt-engine/api/domains/5678/groups?search={query}" rel="groups/search"/>
-//	</domain>
-//
-// </domains>
-// ----
-// The order of the returned list of domains isn't guaranteed.
-type DomainsServiceListResponse struct {
-	domains *DomainSlice
-}
-
-func (p *DomainsServiceListResponse) Domains() (*DomainSlice, bool) {
-	if p.domains != nil {
-		return p.domains, true
-	}
-	return nil, false
-}
-
-func (p *DomainsServiceListResponse) MustDomains() *DomainSlice {
-	if p.domains == nil {
-		panic("domains in response does not exist")
-	}
-	return p.domains
-}
-
-// List all the authentication domains in the system.
-// Usage:
-// ....
-// GET /ovirt-engine/api/domains
-// ....
-// Will return the list of domains:
-// [source,xml]
-// ----
-// <domains>
-//
-//	<domain href="/ovirt-engine/api/domains/5678" id="5678">
-//	  <name>internal-authz</name>
-//	  <link href="/ovirt-engine/api/domains/5678/users" rel="users"/>
-//	  <link href="/ovirt-engine/api/domains/5678/groups" rel="groups"/>
-//	  <link href="/ovirt-engine/api/domains/5678/users?search={query}" rel="users/search"/>
-//	  <link href="/ovirt-engine/api/domains/5678/groups?search={query}" rel="groups/search"/>
-//	</domain>
-//
-// </domains>
-// ----
-// The order of the returned list of domains isn't guaranteed.
-func (p *DomainsService) List() *DomainsServiceListRequest {
-	return &DomainsServiceListRequest{DomainsService: p}
-}
-
-// Reference to a service to view details of a domain.
-func (op *DomainsService) DomainService(id string) *DomainService {
-	return NewDomainService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *DomainsService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	index := strings.Index(path, "/")
-	if index == -1 {
-		return op.DomainService(path), nil
-	}
-	return op.DomainService(path[:index]).Service(path[index+1:])
-}
-
-func (op *DomainsService) String() string {
-	return fmt.Sprintf("DomainsService:%s", op.path)
-}
-
-// Manages a group of users. Use this service to either get groups details or remove groups. In order
-// to add new groups please use xref:services-groups[service] that manages the collection of groups.
-type GroupService struct {
-	BaseService
-}
-
-func NewGroupService(connection *Connection, path string) *GroupService {
-	var result GroupService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-// Gets the system group information.
-// Usage:
-// ....
-// GET /ovirt-engine/api/groups/123
-// ....
-// Will return the group information:
-// [source,xml]
-// ----
-// <group href="/ovirt-engine/api/groups/123" id="123">
-//
-//	<name>mygroup</name>
-//	<link href="/ovirt-engine/api/groups/123/roles" rel="roles"/>
-//	<link href="/ovirt-engine/api/groups/123/permissions" rel="permissions"/>
-//	<link href="/ovirt-engine/api/groups/123/tags" rel="tags"/>
-//	<domain_entry_id>476652557A382F67696B6D2B32762B37796E46476D513D3D</domain_entry_id>
-//	<namespace>DC=example,DC=com</namespace>
-//	<domain href="/ovirt-engine/api/domains/ABCDEF" id="ABCDEF">
-//	  <name>myextension-authz</name>
-//	</domain>
-//
-// </group>
-// ----
-type GroupServiceGetRequest struct {
-	GroupService *GroupService
-	header       map[string]string
-	query        map[string]string
-	follow       *string
-}
-
-func (p *GroupServiceGetRequest) Header(key, value string) *GroupServiceGetRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *GroupServiceGetRequest) Query(key, value string) *GroupServiceGetRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *GroupServiceGetRequest) Follow(follow string) *GroupServiceGetRequest {
-	p.follow = &follow
-	return p
-}
-
-func (p *GroupServiceGetRequest) Send() (*GroupServiceGetResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.GroupService.connection.URL(), p.GroupService.path)
-	values := make(url.Values)
-	if p.follow != nil {
-		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.GroupService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.GroupService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.GroupService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.GroupService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.GroupService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLGroupReadOne(reader, nil, "")
-	if err != nil {
-		return nil, err
-	}
-	return &GroupServiceGetResponse{get: result}, nil
-}
-
-func (p *GroupServiceGetRequest) MustSend() *GroupServiceGetResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Gets the system group information.
-// Usage:
-// ....
-// GET /ovirt-engine/api/groups/123
-// ....
-// Will return the group information:
-// [source,xml]
-// ----
-// <group href="/ovirt-engine/api/groups/123" id="123">
-//
-//	<name>mygroup</name>
-//	<link href="/ovirt-engine/api/groups/123/roles" rel="roles"/>
-//	<link href="/ovirt-engine/api/groups/123/permissions" rel="permissions"/>
-//	<link href="/ovirt-engine/api/groups/123/tags" rel="tags"/>
-//	<domain_entry_id>476652557A382F67696B6D2B32762B37796E46476D513D3D</domain_entry_id>
-//	<namespace>DC=example,DC=com</namespace>
-//	<domain href="/ovirt-engine/api/domains/ABCDEF" id="ABCDEF">
-//	  <name>myextension-authz</name>
-//	</domain>
-//
-// </group>
-// ----
-type GroupServiceGetResponse struct {
-	get *Group
-}
-
-func (p *GroupServiceGetResponse) Get() (*Group, bool) {
-	if p.get != nil {
-		return p.get, true
-	}
-	return nil, false
-}
-
-func (p *GroupServiceGetResponse) MustGet() *Group {
-	if p.get == nil {
-		panic("get in response does not exist")
-	}
-	return p.get
-}
-
-// Gets the system group information.
-// Usage:
-// ....
-// GET /ovirt-engine/api/groups/123
-// ....
-// Will return the group information:
-// [source,xml]
-// ----
-// <group href="/ovirt-engine/api/groups/123" id="123">
-//
-//	<name>mygroup</name>
-//	<link href="/ovirt-engine/api/groups/123/roles" rel="roles"/>
-//	<link href="/ovirt-engine/api/groups/123/permissions" rel="permissions"/>
-//	<link href="/ovirt-engine/api/groups/123/tags" rel="tags"/>
-//	<domain_entry_id>476652557A382F67696B6D2B32762B37796E46476D513D3D</domain_entry_id>
-//	<namespace>DC=example,DC=com</namespace>
-//	<domain href="/ovirt-engine/api/domains/ABCDEF" id="ABCDEF">
-//	  <name>myextension-authz</name>
-//	</domain>
-//
-// </group>
-// ----
-func (p *GroupService) Get() *GroupServiceGetRequest {
-	return &GroupServiceGetRequest{GroupService: p}
-}
-
-// Removes the system group.
-// Usage:
-// ....
-// DELETE /ovirt-engine/api/groups/123
-// ....
-type GroupServiceRemoveRequest struct {
-	GroupService *GroupService
-	header       map[string]string
-	query        map[string]string
-	async        *bool
-}
-
-func (p *GroupServiceRemoveRequest) Header(key, value string) *GroupServiceRemoveRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *GroupServiceRemoveRequest) Query(key, value string) *GroupServiceRemoveRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *GroupServiceRemoveRequest) Async(async bool) *GroupServiceRemoveRequest {
-	p.async = &async
-	return p
-}
-
-func (p *GroupServiceRemoveRequest) Send() (*GroupServiceRemoveResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.GroupService.connection.URL(), p.GroupService.path)
-	values := make(url.Values)
-	if p.async != nil {
-		values["async"] = []string{fmt.Sprintf("%v", *p.async)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("DELETE", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.GroupService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.GroupService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.GroupService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.GroupService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.GroupService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	return new(GroupServiceRemoveResponse), nil
-}
-
-func (p *GroupServiceRemoveRequest) MustSend() *GroupServiceRemoveResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Removes the system group.
-// Usage:
-// ....
-// DELETE /ovirt-engine/api/groups/123
-// ....
-type GroupServiceRemoveResponse struct {
-}
-
-// Removes the system group.
-// Usage:
-// ....
-// DELETE /ovirt-engine/api/groups/123
-// ....
-func (p *GroupService) Remove() *GroupServiceRemoveRequest {
-	return &GroupServiceRemoveRequest{GroupService: p}
-}
-
-// Reference to the service that manages the collection of permissions assigned to this system group.
-func (op *GroupService) PermissionsService() *AssignedPermissionsService {
-	return NewAssignedPermissionsService(op.connection, fmt.Sprintf("%s/permissions", op.path))
-}
-
-// Reference to the service that manages the collection of roles assigned to this system group.
-func (op *GroupService) RolesService() *AssignedRolesService {
-	return NewAssignedRolesService(op.connection, fmt.Sprintf("%s/roles", op.path))
-}
-
-// Reference to the service that manages the collection of tags assigned to this system group.
-func (op *GroupService) TagsService() *AssignedTagsService {
-	return NewAssignedTagsService(op.connection, fmt.Sprintf("%s/tags", op.path))
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *GroupService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	if path == "permissions" {
-		return op.PermissionsService(), nil
-	}
-	if strings.HasPrefix(path, "permissions/") {
-		return op.PermissionsService().Service(path[12:])
-	}
-	if path == "roles" {
-		return op.RolesService(), nil
-	}
-	if strings.HasPrefix(path, "roles/") {
-		return op.RolesService().Service(path[6:])
-	}
-	if path == "tags" {
-		return op.TagsService(), nil
-	}
-	if strings.HasPrefix(path, "tags/") {
-		return op.TagsService().Service(path[5:])
-	}
-	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
-}
-
-func (op *GroupService) String() string {
-	return fmt.Sprintf("GroupService:%s", op.path)
-}
-
-// Manages the collection of groups of users.
-type GroupsService struct {
-	BaseService
-}
-
-func NewGroupsService(connection *Connection, path string) *GroupsService {
-	var result GroupsService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-// Add group from a directory service. Please note that domain name is name of the authorization provider.
-// For example, to add the `Developers` group from the `internal-authz` authorization provider send a request
-// like this:
-// [source]
-// ----
-// POST /ovirt-engine/api/groups
-// ----
-// With a request body like this:
-// [source,xml]
-// ----
-// <group>
-//
-//	<name>Developers</name>
-//	<domain>
-//	  <name>internal-authz</name>
-//	</domain>
-//
-// </group>
-// ----
-type GroupsServiceAddRequest struct {
-	GroupsService *GroupsService
-	header        map[string]string
-	query         map[string]string
-	group         *Group
-}
-
-func (p *GroupsServiceAddRequest) Header(key, value string) *GroupsServiceAddRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *GroupsServiceAddRequest) Query(key, value string) *GroupsServiceAddRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *GroupsServiceAddRequest) Group(group *Group) *GroupsServiceAddRequest {
-	p.group = group
-	return p
-}
-
-func (p *GroupsServiceAddRequest) Send() (*GroupsServiceAddResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.GroupsService.connection.URL(), p.GroupsService.path)
-	values := make(url.Values)
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	var body bytes.Buffer
-	writer := NewXMLWriter(&body)
-	err := XMLGroupWriteOne(writer, p.group, "")
-	if err != nil {
-		return nil, err
-	}
-	writer.Flush()
-	req, err := http.NewRequest("POST", rawURL, &body)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.GroupsService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.GroupsService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.GroupsService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.GroupsService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.GroupsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200, 201, 202}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLGroupReadOne(reader, nil, "")
-	if err != nil {
-		return nil, err
-	}
-	return &GroupsServiceAddResponse{group: result}, nil
-}
-
-func (p *GroupsServiceAddRequest) MustSend() *GroupsServiceAddResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Add group from a directory service. Please note that domain name is name of the authorization provider.
-// For example, to add the `Developers` group from the `internal-authz` authorization provider send a request
-// like this:
-// [source]
-// ----
-// POST /ovirt-engine/api/groups
-// ----
-// With a request body like this:
-// [source,xml]
-// ----
-// <group>
-//
-//	<name>Developers</name>
-//	<domain>
-//	  <name>internal-authz</name>
-//	</domain>
-//
-// </group>
-// ----
-type GroupsServiceAddResponse struct {
-	group *Group
-}
-
-func (p *GroupsServiceAddResponse) Group() (*Group, bool) {
-	if p.group != nil {
-		return p.group, true
-	}
-	return nil, false
-}
-
-func (p *GroupsServiceAddResponse) MustGroup() *Group {
-	if p.group == nil {
-		panic("group in response does not exist")
-	}
-	return p.group
-}
-
-// Add group from a directory service. Please note that domain name is name of the authorization provider.
-// For example, to add the `Developers` group from the `internal-authz` authorization provider send a request
-// like this:
-// [source]
-// ----
-// POST /ovirt-engine/api/groups
-// ----
-// With a request body like this:
-// [source,xml]
-// ----
-// <group>
-//
-//	<name>Developers</name>
-//	<domain>
-//	  <name>internal-authz</name>
-//	</domain>
-//
-// </group>
-// ----
-func (p *GroupsService) Add() *GroupsServiceAddRequest {
-	return &GroupsServiceAddRequest{GroupsService: p}
-}
-
-// List all the groups in the system.
-// Usage:
-// ....
-// GET /ovirt-engine/api/groups
-// ....
-// Will return the list of groups:
-// [source,xml]
-// ----
-// <groups>
-//
-//	<group href="/ovirt-engine/api/groups/123" id="123">
-//	  <name>mygroup</name>
-//	  <link href="/ovirt-engine/api/groups/123/roles" rel="roles"/>
-//	  <link href="/ovirt-engine/api/groups/123/permissions" rel="permissions"/>
-//	  <link href="/ovirt-engine/api/groups/123/tags" rel="tags"/>
-//	  <domain_entry_id>476652557A382F67696B6D2B32762B37796E46476D513D3D</domain_entry_id>
-//	  <namespace>DC=example,DC=com</namespace>
-//	  <domain href="/ovirt-engine/api/domains/ABCDEF" id="ABCDEF">
-//	    <name>myextension-authz</name>
-//	  </domain>
-//	</group>
-//	...
-//
-// </groups>
-// ----
-// The order of the returned list of groups isn't guaranteed.
-type GroupsServiceListRequest struct {
-	GroupsService *GroupsService
-	header        map[string]string
-	query         map[string]string
-	caseSensitive *bool
-	follow        *string
-	max           *int64
-	search        *string
-}
-
-func (p *GroupsServiceListRequest) Header(key, value string) *GroupsServiceListRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *GroupsServiceListRequest) Query(key, value string) *GroupsServiceListRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *GroupsServiceListRequest) CaseSensitive(caseSensitive bool) *GroupsServiceListRequest {
-	p.caseSensitive = &caseSensitive
-	return p
-}
-
-func (p *GroupsServiceListRequest) Follow(follow string) *GroupsServiceListRequest {
-	p.follow = &follow
-	return p
-}
-
-func (p *GroupsServiceListRequest) Max(max int64) *GroupsServiceListRequest {
-	p.max = &max
-	return p
-}
-
-func (p *GroupsServiceListRequest) Search(search string) *GroupsServiceListRequest {
-	p.search = &search
-	return p
-}
-
-func (p *GroupsServiceListRequest) Send() (*GroupsServiceListResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.GroupsService.connection.URL(), p.GroupsService.path)
-	values := make(url.Values)
-	if p.caseSensitive != nil {
-		values["case_sensitive"] = []string{fmt.Sprintf("%v", *p.caseSensitive)}
-	}
-
-	if p.follow != nil {
-		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
-	}
-
-	if p.max != nil {
-		values["max"] = []string{fmt.Sprintf("%v", *p.max)}
-	}
-
-	if p.search != nil {
-		values["search"] = []string{fmt.Sprintf("%v", *p.search)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.GroupsService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.GroupsService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.GroupsService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.GroupsService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.GroupsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLGroupReadMany(reader, nil)
-	if err != nil {
-		return nil, err
-	}
-	return &GroupsServiceListResponse{groups: result}, nil
-}
-
-func (p *GroupsServiceListRequest) MustSend() *GroupsServiceListResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// List all the groups in the system.
-// Usage:
-// ....
-// GET /ovirt-engine/api/groups
-// ....
-// Will return the list of groups:
-// [source,xml]
-// ----
-// <groups>
-//
-//	<group href="/ovirt-engine/api/groups/123" id="123">
-//	  <name>mygroup</name>
-//	  <link href="/ovirt-engine/api/groups/123/roles" rel="roles"/>
-//	  <link href="/ovirt-engine/api/groups/123/permissions" rel="permissions"/>
-//	  <link href="/ovirt-engine/api/groups/123/tags" rel="tags"/>
-//	  <domain_entry_id>476652557A382F67696B6D2B32762B37796E46476D513D3D</domain_entry_id>
-//	  <namespace>DC=example,DC=com</namespace>
-//	  <domain href="/ovirt-engine/api/domains/ABCDEF" id="ABCDEF">
-//	    <name>myextension-authz</name>
-//	  </domain>
-//	</group>
-//	...
-//
-// </groups>
-// ----
-// The order of the returned list of groups isn't guaranteed.
-type GroupsServiceListResponse struct {
-	groups *GroupSlice
-}
-
-func (p *GroupsServiceListResponse) Groups() (*GroupSlice, bool) {
-	if p.groups != nil {
-		return p.groups, true
-	}
-	return nil, false
-}
-
-func (p *GroupsServiceListResponse) MustGroups() *GroupSlice {
-	if p.groups == nil {
-		panic("groups in response does not exist")
-	}
-	return p.groups
-}
-
-// List all the groups in the system.
-// Usage:
-// ....
-// GET /ovirt-engine/api/groups
-// ....
-// Will return the list of groups:
-// [source,xml]
-// ----
-// <groups>
-//
-//	<group href="/ovirt-engine/api/groups/123" id="123">
-//	  <name>mygroup</name>
-//	  <link href="/ovirt-engine/api/groups/123/roles" rel="roles"/>
-//	  <link href="/ovirt-engine/api/groups/123/permissions" rel="permissions"/>
-//	  <link href="/ovirt-engine/api/groups/123/tags" rel="tags"/>
-//	  <domain_entry_id>476652557A382F67696B6D2B32762B37796E46476D513D3D</domain_entry_id>
-//	  <namespace>DC=example,DC=com</namespace>
-//	  <domain href="/ovirt-engine/api/domains/ABCDEF" id="ABCDEF">
-//	    <name>myextension-authz</name>
-//	  </domain>
-//	</group>
-//	...
-//
-// </groups>
-// ----
-// The order of the returned list of groups isn't guaranteed.
-func (p *GroupsService) List() *GroupsServiceListRequest {
-	return &GroupsServiceListRequest{GroupsService: p}
-}
-
-// Reference to the service that manages a specific group.
-func (op *GroupsService) GroupService(id string) *GroupService {
-	return NewGroupService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *GroupsService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	index := strings.Index(path, "/")
-	if index == -1 {
-		return op.GroupService(path), nil
-	}
-	return op.GroupService(path[:index]).Service(path[index+1:])
-}
-
-func (op *GroupsService) String() string {
-	return fmt.Sprintf("GroupsService:%s", op.path)
-}
-
-type SshPublicKeyService struct {
-	BaseService
-}
-
-func NewSshPublicKeyService(connection *Connection, path string) *SshPublicKeyService {
-	var result SshPublicKeyService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-type SshPublicKeyServiceGetRequest struct {
-	SshPublicKeyService *SshPublicKeyService
-	header              map[string]string
-	query               map[string]string
-	follow              *string
-}
-
-func (p *SshPublicKeyServiceGetRequest) Header(key, value string) *SshPublicKeyServiceGetRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *SshPublicKeyServiceGetRequest) Query(key, value string) *SshPublicKeyServiceGetRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *SshPublicKeyServiceGetRequest) Follow(follow string) *SshPublicKeyServiceGetRequest {
-	p.follow = &follow
-	return p
-}
-
-func (p *SshPublicKeyServiceGetRequest) Send() (*SshPublicKeyServiceGetResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.SshPublicKeyService.connection.URL(), p.SshPublicKeyService.path)
-	values := make(url.Values)
-	if p.follow != nil {
-		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.SshPublicKeyService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.SshPublicKeyService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.SshPublicKeyService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.SshPublicKeyService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.SshPublicKeyService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLSshPublicKeyReadOne(reader, nil, "")
-	if err != nil {
-		return nil, err
-	}
-	return &SshPublicKeyServiceGetResponse{key: result}, nil
-}
-
-func (p *SshPublicKeyServiceGetRequest) MustSend() *SshPublicKeyServiceGetResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-type SshPublicKeyServiceGetResponse struct {
-	key *SshPublicKey
-}
-
-func (p *SshPublicKeyServiceGetResponse) Key() (*SshPublicKey, bool) {
-	if p.key != nil {
-		return p.key, true
-	}
-	return nil, false
-}
-
-func (p *SshPublicKeyServiceGetResponse) MustKey() *SshPublicKey {
-	if p.key == nil {
-		panic("key in response does not exist")
-	}
-	return p.key
-}
-
-func (p *SshPublicKeyService) Get() *SshPublicKeyServiceGetRequest {
-	return &SshPublicKeyServiceGetRequest{SshPublicKeyService: p}
-}
-
-type SshPublicKeyServiceRemoveRequest struct {
-	SshPublicKeyService *SshPublicKeyService
-	header              map[string]string
-	query               map[string]string
-	async               *bool
-}
-
-func (p *SshPublicKeyServiceRemoveRequest) Header(key, value string) *SshPublicKeyServiceRemoveRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *SshPublicKeyServiceRemoveRequest) Query(key, value string) *SshPublicKeyServiceRemoveRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *SshPublicKeyServiceRemoveRequest) Async(async bool) *SshPublicKeyServiceRemoveRequest {
-	p.async = &async
-	return p
-}
-
-func (p *SshPublicKeyServiceRemoveRequest) Send() (*SshPublicKeyServiceRemoveResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.SshPublicKeyService.connection.URL(), p.SshPublicKeyService.path)
-	values := make(url.Values)
-	if p.async != nil {
-		values["async"] = []string{fmt.Sprintf("%v", *p.async)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("DELETE", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.SshPublicKeyService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.SshPublicKeyService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.SshPublicKeyService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.SshPublicKeyService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.SshPublicKeyService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	return new(SshPublicKeyServiceRemoveResponse), nil
-}
-
-func (p *SshPublicKeyServiceRemoveRequest) MustSend() *SshPublicKeyServiceRemoveResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-type SshPublicKeyServiceRemoveResponse struct {
-}
-
-func (p *SshPublicKeyService) Remove() *SshPublicKeyServiceRemoveRequest {
-	return &SshPublicKeyServiceRemoveRequest{SshPublicKeyService: p}
-}
-
-// Replaces the key with a new resource.
-// IMPORTANT: Since version 4.4.8 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. Instead please use DELETE followed by xref:services-ssh_public_keys-methods-add[add operation].
-type SshPublicKeyServiceUpdateRequest struct {
-	SshPublicKeyService *SshPublicKeyService
-	header              map[string]string
-	query               map[string]string
-	async               *bool
-	key                 *SshPublicKey
-}
-
-func (p *SshPublicKeyServiceUpdateRequest) Header(key, value string) *SshPublicKeyServiceUpdateRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *SshPublicKeyServiceUpdateRequest) Query(key, value string) *SshPublicKeyServiceUpdateRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *SshPublicKeyServiceUpdateRequest) Async(async bool) *SshPublicKeyServiceUpdateRequest {
-	p.async = &async
-	return p
-}
-
-func (p *SshPublicKeyServiceUpdateRequest) Key(key *SshPublicKey) *SshPublicKeyServiceUpdateRequest {
-	p.key = key
-	return p
-}
-
-func (p *SshPublicKeyServiceUpdateRequest) Send() (*SshPublicKeyServiceUpdateResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.SshPublicKeyService.connection.URL(), p.SshPublicKeyService.path)
-	values := make(url.Values)
-	if p.async != nil {
-		values["async"] = []string{fmt.Sprintf("%v", *p.async)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	var body bytes.Buffer
-	writer := NewXMLWriter(&body)
-	err := XMLSshPublicKeyWriteOne(writer, p.key, "")
-	if err != nil {
-		return nil, err
-	}
-	writer.Flush()
-	req, err := http.NewRequest("PUT", rawURL, &body)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.SshPublicKeyService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.SshPublicKeyService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.SshPublicKeyService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.SshPublicKeyService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.SshPublicKeyService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLSshPublicKeyReadOne(reader, nil, "")
-	if err != nil {
-		return nil, err
-	}
-	return &SshPublicKeyServiceUpdateResponse{key: result}, nil
-}
-
-func (p *SshPublicKeyServiceUpdateRequest) MustSend() *SshPublicKeyServiceUpdateResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Replaces the key with a new resource.
-// IMPORTANT: Since version 4.4.8 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. Instead please use DELETE followed by xref:services-ssh_public_keys-methods-add[add operation].
-type SshPublicKeyServiceUpdateResponse struct {
-	key *SshPublicKey
-}
-
-func (p *SshPublicKeyServiceUpdateResponse) Key() (*SshPublicKey, bool) {
-	if p.key != nil {
-		return p.key, true
-	}
-	return nil, false
-}
-
-func (p *SshPublicKeyServiceUpdateResponse) MustKey() *SshPublicKey {
-	if p.key == nil {
-		panic("key in response does not exist")
-	}
-	return p.key
-}
-
-// Replaces the key with a new resource.
-// IMPORTANT: Since version 4.4.8 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. Instead please use DELETE followed by xref:services-ssh_public_keys-methods-add[add operation].
-func (p *SshPublicKeyService) Update() *SshPublicKeyServiceUpdateRequest {
-	return &SshPublicKeyServiceUpdateRequest{SshPublicKeyService: p}
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *SshPublicKeyService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
-}
-
-func (op *SshPublicKeyService) String() string {
-	return fmt.Sprintf("SshPublicKeyService:%s", op.path)
-}
-
-type SshPublicKeysService struct {
-	BaseService
-}
-
-func NewSshPublicKeysService(connection *Connection, path string) *SshPublicKeysService {
-	var result SshPublicKeysService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-type SshPublicKeysServiceAddRequest struct {
-	SshPublicKeysService *SshPublicKeysService
-	header               map[string]string
-	query                map[string]string
-	key                  *SshPublicKey
-}
-
-func (p *SshPublicKeysServiceAddRequest) Header(key, value string) *SshPublicKeysServiceAddRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *SshPublicKeysServiceAddRequest) Query(key, value string) *SshPublicKeysServiceAddRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *SshPublicKeysServiceAddRequest) Key(key *SshPublicKey) *SshPublicKeysServiceAddRequest {
-	p.key = key
-	return p
-}
-
-func (p *SshPublicKeysServiceAddRequest) Send() (*SshPublicKeysServiceAddResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.SshPublicKeysService.connection.URL(), p.SshPublicKeysService.path)
-	values := make(url.Values)
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	var body bytes.Buffer
-	writer := NewXMLWriter(&body)
-	err := XMLSshPublicKeyWriteOne(writer, p.key, "")
-	if err != nil {
-		return nil, err
-	}
-	writer.Flush()
-	req, err := http.NewRequest("POST", rawURL, &body)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.SshPublicKeysService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.SshPublicKeysService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.SshPublicKeysService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.SshPublicKeysService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.SshPublicKeysService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200, 201, 202}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLSshPublicKeyReadOne(reader, nil, "")
-	if err != nil {
-		return nil, err
-	}
-	return &SshPublicKeysServiceAddResponse{key: result}, nil
-}
-
-func (p *SshPublicKeysServiceAddRequest) MustSend() *SshPublicKeysServiceAddResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-type SshPublicKeysServiceAddResponse struct {
-	key *SshPublicKey
-}
-
-func (p *SshPublicKeysServiceAddResponse) Key() (*SshPublicKey, bool) {
-	if p.key != nil {
-		return p.key, true
-	}
-	return nil, false
-}
-
-func (p *SshPublicKeysServiceAddResponse) MustKey() *SshPublicKey {
-	if p.key == nil {
-		panic("key in response does not exist")
-	}
-	return p.key
-}
-
-func (p *SshPublicKeysService) Add() *SshPublicKeysServiceAddRequest {
-	return &SshPublicKeysServiceAddRequest{SshPublicKeysService: p}
-}
-
-// Returns a list of SSH public keys of the user.
-// For example, to retrieve the list of SSH keys of user with identifier `123`,
-// send a request like this:
-// [source]
-// ----
-// GET /ovirt-engine/api/users/123/sshpublickeys
-// ----
-// The result will be the following XML document:
-// [source,xml]
-// ----
-// <ssh_public_keys>
-//
-//	<ssh_public_key href="/ovirt-engine/api/users/123/sshpublickeys/456" id="456">
-//	  <content>ssh-rsa ...</content>
-//	  <user href="/ovirt-engine/api/users/123" id="123"/>
-//	</ssh_public_key>
-//
-// </ssh_public_keys>
-// ----
-// Or the following JSON object
-// [source,json]
-// ----
-//
-//	{
-//	  "ssh_public_key": [
-//	    {
-//	      "content": "ssh-rsa ...",
-//	      "user": {
-//	        "href": "/ovirt-engine/api/users/123",
-//	        "id": "123"
-//	      },
-//	      "href": "/ovirt-engine/api/users/123/sshpublickeys/456",
-//	      "id": "456"
-//	    }
-//	  ]
-//	}
-//
-// ----
-// The order of the returned list of keys is not guaranteed.
-type SshPublicKeysServiceListRequest struct {
-	SshPublicKeysService *SshPublicKeysService
-	header               map[string]string
-	query                map[string]string
-	follow               *string
-	max                  *int64
-}
-
-func (p *SshPublicKeysServiceListRequest) Header(key, value string) *SshPublicKeysServiceListRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *SshPublicKeysServiceListRequest) Query(key, value string) *SshPublicKeysServiceListRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *SshPublicKeysServiceListRequest) Follow(follow string) *SshPublicKeysServiceListRequest {
-	p.follow = &follow
-	return p
-}
-
-func (p *SshPublicKeysServiceListRequest) Max(max int64) *SshPublicKeysServiceListRequest {
-	p.max = &max
-	return p
-}
-
-func (p *SshPublicKeysServiceListRequest) Send() (*SshPublicKeysServiceListResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.SshPublicKeysService.connection.URL(), p.SshPublicKeysService.path)
-	values := make(url.Values)
-	if p.follow != nil {
-		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
-	}
-
-	if p.max != nil {
-		values["max"] = []string{fmt.Sprintf("%v", *p.max)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.SshPublicKeysService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.SshPublicKeysService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.SshPublicKeysService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.SshPublicKeysService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.SshPublicKeysService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLSshPublicKeyReadMany(reader, nil)
-	if err != nil {
-		return nil, err
-	}
-	return &SshPublicKeysServiceListResponse{keys: result}, nil
-}
-
-func (p *SshPublicKeysServiceListRequest) MustSend() *SshPublicKeysServiceListResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Returns a list of SSH public keys of the user.
-// For example, to retrieve the list of SSH keys of user with identifier `123`,
-// send a request like this:
-// [source]
-// ----
-// GET /ovirt-engine/api/users/123/sshpublickeys
-// ----
-// The result will be the following XML document:
-// [source,xml]
-// ----
-// <ssh_public_keys>
-//
-//	<ssh_public_key href="/ovirt-engine/api/users/123/sshpublickeys/456" id="456">
-//	  <content>ssh-rsa ...</content>
-//	  <user href="/ovirt-engine/api/users/123" id="123"/>
-//	</ssh_public_key>
-//
-// </ssh_public_keys>
-// ----
-// Or the following JSON object
-// [source,json]
-// ----
-//
-//	{
-//	  "ssh_public_key": [
-//	    {
-//	      "content": "ssh-rsa ...",
-//	      "user": {
-//	        "href": "/ovirt-engine/api/users/123",
-//	        "id": "123"
-//	      },
-//	      "href": "/ovirt-engine/api/users/123/sshpublickeys/456",
-//	      "id": "456"
-//	    }
-//	  ]
-//	}
-//
-// ----
-// The order of the returned list of keys is not guaranteed.
-type SshPublicKeysServiceListResponse struct {
-	keys *SshPublicKeySlice
-}
-
-func (p *SshPublicKeysServiceListResponse) Keys() (*SshPublicKeySlice, bool) {
-	if p.keys != nil {
-		return p.keys, true
-	}
-	return nil, false
-}
-
-func (p *SshPublicKeysServiceListResponse) MustKeys() *SshPublicKeySlice {
-	if p.keys == nil {
-		panic("keys in response does not exist")
-	}
-	return p.keys
-}
-
-// Returns a list of SSH public keys of the user.
-// For example, to retrieve the list of SSH keys of user with identifier `123`,
-// send a request like this:
-// [source]
-// ----
-// GET /ovirt-engine/api/users/123/sshpublickeys
-// ----
-// The result will be the following XML document:
-// [source,xml]
-// ----
-// <ssh_public_keys>
-//
-//	<ssh_public_key href="/ovirt-engine/api/users/123/sshpublickeys/456" id="456">
-//	  <content>ssh-rsa ...</content>
-//	  <user href="/ovirt-engine/api/users/123" id="123"/>
-//	</ssh_public_key>
-//
-// </ssh_public_keys>
-// ----
-// Or the following JSON object
-// [source,json]
-// ----
-//
-//	{
-//	  "ssh_public_key": [
-//	    {
-//	      "content": "ssh-rsa ...",
-//	      "user": {
-//	        "href": "/ovirt-engine/api/users/123",
-//	        "id": "123"
-//	      },
-//	      "href": "/ovirt-engine/api/users/123/sshpublickeys/456",
-//	      "id": "456"
-//	    }
-//	  ]
-//	}
-//
-// ----
-// The order of the returned list of keys is not guaranteed.
-func (p *SshPublicKeysService) List() *SshPublicKeysServiceListRequest {
-	return &SshPublicKeysServiceListRequest{SshPublicKeysService: p}
-}
-
-func (op *SshPublicKeysService) KeyService(id string) *SshPublicKeyService {
-	return NewSshPublicKeyService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *SshPublicKeysService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	index := strings.Index(path, "/")
-	if index == -1 {
-		return op.KeyService(path), nil
-	}
-	return op.KeyService(path[:index]).Service(path[index+1:])
-}
-
-func (op *SshPublicKeysService) String() string {
-	return fmt.Sprintf("SshPublicKeysService:%s", op.path)
-}
-
-type UserOptionService struct {
-	BaseService
-}
-
-func NewUserOptionService(connection *Connection, path string) *UserOptionService {
-	var result UserOptionService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-// Returns a user profile property of type JSON.
-// Example request(for user with identifier `123` and option with identifier `456`):
-// [source]
-// ----
-// GET /ovirt-engine/api/users/123/options/456
-// ----
-// The result will be the following XML document:
-// [source,xml]
-// ----
-//
-//	<user_option href="/ovirt-engine/api/users/123/options/456" id="456">
-//	  <name>SomeName</name>
-//	  <content>["any", "JSON"]</content>
-//	  <user href="/ovirt-engine/api/users/123" id="123"/>
-//	</user_option>
-//
-// ----
-type UserOptionServiceGetRequest struct {
-	UserOptionService *UserOptionService
-	header            map[string]string
-	query             map[string]string
-}
-
-func (p *UserOptionServiceGetRequest) Header(key, value string) *UserOptionServiceGetRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *UserOptionServiceGetRequest) Query(key, value string) *UserOptionServiceGetRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *UserOptionServiceGetRequest) Send() (*UserOptionServiceGetResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.UserOptionService.connection.URL(), p.UserOptionService.path)
-	values := make(url.Values)
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.UserOptionService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.UserOptionService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.UserOptionService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.UserOptionService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.UserOptionService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLUserOptionReadOne(reader, nil, "")
-	if err != nil {
-		return nil, err
-	}
-	return &UserOptionServiceGetResponse{option: result}, nil
-}
-
-func (p *UserOptionServiceGetRequest) MustSend() *UserOptionServiceGetResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Returns a user profile property of type JSON.
-// Example request(for user with identifier `123` and option with identifier `456`):
-// [source]
-// ----
-// GET /ovirt-engine/api/users/123/options/456
-// ----
-// The result will be the following XML document:
-// [source,xml]
-// ----
-//
-//	<user_option href="/ovirt-engine/api/users/123/options/456" id="456">
-//	  <name>SomeName</name>
-//	  <content>["any", "JSON"]</content>
-//	  <user href="/ovirt-engine/api/users/123" id="123"/>
-//	</user_option>
-//
-// ----
-type UserOptionServiceGetResponse struct {
-	option *UserOption
-}
-
-func (p *UserOptionServiceGetResponse) Option() (*UserOption, bool) {
-	if p.option != nil {
-		return p.option, true
-	}
-	return nil, false
-}
-
-func (p *UserOptionServiceGetResponse) MustOption() *UserOption {
-	if p.option == nil {
-		panic("option in response does not exist")
-	}
-	return p.option
-}
-
-// Returns a user profile property of type JSON.
-// Example request(for user with identifier `123` and option with identifier `456`):
-// [source]
-// ----
-// GET /ovirt-engine/api/users/123/options/456
-// ----
-// The result will be the following XML document:
-// [source,xml]
-// ----
-//
-//	<user_option href="/ovirt-engine/api/users/123/options/456" id="456">
-//	  <name>SomeName</name>
-//	  <content>["any", "JSON"]</content>
-//	  <user href="/ovirt-engine/api/users/123" id="123"/>
-//	</user_option>
-//
-// ----
-func (p *UserOptionService) Get() *UserOptionServiceGetRequest {
-	return &UserOptionServiceGetRequest{UserOptionService: p}
-}
-
-// Deletes an existing property of type JSON.
-// Example request(for user with identifier `123` and option with identifier `456`):
-// [source]
-// ----
-// DELETE /ovirt-engine/api/users/123/options/456
-// ----
-type UserOptionServiceRemoveRequest struct {
-	UserOptionService *UserOptionService
-	header            map[string]string
-	query             map[string]string
-}
-
-func (p *UserOptionServiceRemoveRequest) Header(key, value string) *UserOptionServiceRemoveRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *UserOptionServiceRemoveRequest) Query(key, value string) *UserOptionServiceRemoveRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *UserOptionServiceRemoveRequest) Send() (*UserOptionServiceRemoveResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.UserOptionService.connection.URL(), p.UserOptionService.path)
-	values := make(url.Values)
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("DELETE", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.UserOptionService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.UserOptionService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.UserOptionService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.UserOptionService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.UserOptionService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	return new(UserOptionServiceRemoveResponse), nil
-}
-
-func (p *UserOptionServiceRemoveRequest) MustSend() *UserOptionServiceRemoveResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Deletes an existing property of type JSON.
-// Example request(for user with identifier `123` and option with identifier `456`):
-// [source]
-// ----
-// DELETE /ovirt-engine/api/users/123/options/456
-// ----
-type UserOptionServiceRemoveResponse struct {
-}
-
-// Deletes an existing property of type JSON.
-// Example request(for user with identifier `123` and option with identifier `456`):
-// [source]
-// ----
-// DELETE /ovirt-engine/api/users/123/options/456
-// ----
-func (p *UserOptionService) Remove() *UserOptionServiceRemoveRequest {
-	return &UserOptionServiceRemoveRequest{UserOptionService: p}
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *UserOptionService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
-}
-
-func (op *UserOptionService) String() string {
-	return fmt.Sprintf("UserOptionService:%s", op.path)
-}
-
-type UserOptionsService struct {
-	BaseService
-}
-
-func NewUserOptionsService(connection *Connection, path string) *UserOptionsService {
-	var result UserOptionsService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-// Adds a new user profile property of type JSON.
-// Example request(for user with identifier `123`):
-// [source]
-// ----
-// POST /ovirt-engine/api/users/123/options
-// ----
-// Payload:
-// [source,xml]
-// ----
-//
-//	<user_option>
-//	  <name>SomeName</name>
-//	  <content>["any", "JSON"]</content>
-//	</user_option>
-//
-// ----
-type UserOptionsServiceAddRequest struct {
-	UserOptionsService *UserOptionsService
-	header             map[string]string
-	query              map[string]string
-	option             *UserOption
-}
-
-func (p *UserOptionsServiceAddRequest) Header(key, value string) *UserOptionsServiceAddRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *UserOptionsServiceAddRequest) Query(key, value string) *UserOptionsServiceAddRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *UserOptionsServiceAddRequest) Option(option *UserOption) *UserOptionsServiceAddRequest {
-	p.option = option
-	return p
-}
-
-func (p *UserOptionsServiceAddRequest) Send() (*UserOptionsServiceAddResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.UserOptionsService.connection.URL(), p.UserOptionsService.path)
-	values := make(url.Values)
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	var body bytes.Buffer
-	writer := NewXMLWriter(&body)
-	err := XMLUserOptionWriteOne(writer, p.option, "")
-	if err != nil {
-		return nil, err
-	}
-	writer.Flush()
-	req, err := http.NewRequest("POST", rawURL, &body)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.UserOptionsService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.UserOptionsService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.UserOptionsService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.UserOptionsService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.UserOptionsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200, 201, 202}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLUserOptionReadOne(reader, nil, "")
-	if err != nil {
-		return nil, err
-	}
-	return &UserOptionsServiceAddResponse{option: result}, nil
-}
-
-func (p *UserOptionsServiceAddRequest) MustSend() *UserOptionsServiceAddResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Adds a new user profile property of type JSON.
-// Example request(for user with identifier `123`):
-// [source]
-// ----
-// POST /ovirt-engine/api/users/123/options
-// ----
-// Payload:
-// [source,xml]
-// ----
-//
-//	<user_option>
-//	  <name>SomeName</name>
-//	  <content>["any", "JSON"]</content>
-//	</user_option>
-//
-// ----
-type UserOptionsServiceAddResponse struct {
-	option *UserOption
-}
-
-func (p *UserOptionsServiceAddResponse) Option() (*UserOption, bool) {
-	if p.option != nil {
-		return p.option, true
-	}
-	return nil, false
-}
-
-func (p *UserOptionsServiceAddResponse) MustOption() *UserOption {
-	if p.option == nil {
-		panic("option in response does not exist")
-	}
-	return p.option
-}
-
-// Adds a new user profile property of type JSON.
-// Example request(for user with identifier `123`):
-// [source]
-// ----
-// POST /ovirt-engine/api/users/123/options
-// ----
-// Payload:
-// [source,xml]
-// ----
-//
-//	<user_option>
-//	  <name>SomeName</name>
-//	  <content>["any", "JSON"]</content>
-//	</user_option>
-//
-// ----
-func (p *UserOptionsService) Add() *UserOptionsServiceAddRequest {
-	return &UserOptionsServiceAddRequest{UserOptionsService: p}
-}
-
-// Returns a list of user profile properties of type JSON.
-// Example request(for user with identifier `123`):
-// [source]
-// ----
-// GET /ovirt-engine/api/users/123/options
-// ----
-// The result will be the following XML document:
-// [source,xml]
-// ----
-// <user_options>
-//
-//	<user_option href="/ovirt-engine/api/users/123/options/456" id="456">
-//	  <name>SomeName</name>
-//	  <content>["any", "JSON"]</content>
-//	  <user href="/ovirt-engine/api/users/123" id="123"/>
-//	</user_option>
-//
-// </user_options>
-// ----
-type UserOptionsServiceListRequest struct {
-	UserOptionsService *UserOptionsService
-	header             map[string]string
-	query              map[string]string
-}
-
-func (p *UserOptionsServiceListRequest) Header(key, value string) *UserOptionsServiceListRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *UserOptionsServiceListRequest) Query(key, value string) *UserOptionsServiceListRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *UserOptionsServiceListRequest) Send() (*UserOptionsServiceListResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.UserOptionsService.connection.URL(), p.UserOptionsService.path)
-	values := make(url.Values)
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.UserOptionsService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.UserOptionsService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.UserOptionsService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.UserOptionsService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.UserOptionsService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLUserOptionReadMany(reader, nil)
-	if err != nil {
-		return nil, err
-	}
-	return &UserOptionsServiceListResponse{options: result}, nil
-}
-
-func (p *UserOptionsServiceListRequest) MustSend() *UserOptionsServiceListResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Returns a list of user profile properties of type JSON.
-// Example request(for user with identifier `123`):
-// [source]
-// ----
-// GET /ovirt-engine/api/users/123/options
-// ----
-// The result will be the following XML document:
-// [source,xml]
-// ----
-// <user_options>
-//
-//	<user_option href="/ovirt-engine/api/users/123/options/456" id="456">
-//	  <name>SomeName</name>
-//	  <content>["any", "JSON"]</content>
-//	  <user href="/ovirt-engine/api/users/123" id="123"/>
-//	</user_option>
-//
-// </user_options>
-// ----
-type UserOptionsServiceListResponse struct {
-	options *UserOptionSlice
-}
-
-func (p *UserOptionsServiceListResponse) Options() (*UserOptionSlice, bool) {
-	if p.options != nil {
-		return p.options, true
-	}
-	return nil, false
-}
-
-func (p *UserOptionsServiceListResponse) MustOptions() *UserOptionSlice {
-	if p.options == nil {
-		panic("options in response does not exist")
-	}
-	return p.options
-}
-
-// Returns a list of user profile properties of type JSON.
-// Example request(for user with identifier `123`):
-// [source]
-// ----
-// GET /ovirt-engine/api/users/123/options
-// ----
-// The result will be the following XML document:
-// [source,xml]
-// ----
-// <user_options>
-//
-//	<user_option href="/ovirt-engine/api/users/123/options/456" id="456">
-//	  <name>SomeName</name>
-//	  <content>["any", "JSON"]</content>
-//	  <user href="/ovirt-engine/api/users/123" id="123"/>
-//	</user_option>
-//
-// </user_options>
-// ----
-func (p *UserOptionsService) List() *UserOptionsServiceListRequest {
-	return &UserOptionsServiceListRequest{UserOptionsService: p}
-}
-
-func (op *UserOptionsService) OptionService(id string) *UserOptionService {
-	return NewUserOptionService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *UserOptionsService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	index := strings.Index(path, "/")
-	if index == -1 {
-		return op.OptionService(path), nil
-	}
-	return op.OptionService(path[:index]).Service(path[index+1:])
-}
-
-func (op *UserOptionsService) String() string {
-	return fmt.Sprintf("UserOptionsService:%s", op.path)
-}
-
-// A service to manage a user in the system.
-// Use this service to either get users details or remove users.
-// In order to add new users please use
-// xref:services-users[users].
-type UserService struct {
-	BaseService
-}
-
-func NewUserService(connection *Connection, path string) *UserService {
-	var result UserService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-// Gets the system user information.
-// Usage:
-// ....
-// GET /ovirt-engine/api/users/1234
-// ....
-// Will return the user information:
-// [source,xml]
-// ----
-// <user href="/ovirt-engine/api/users/1234" id="1234">
-//
-//	<name>admin</name>
-//	<link href="/ovirt-engine/api/users/1234/sshpublickeys" rel="sshpublickeys"/>
-//	<link href="/ovirt-engine/api/users/1234/roles" rel="roles"/>
-//	<link href="/ovirt-engine/api/users/1234/permissions" rel="permissions"/>
-//	<link href="/ovirt-engine/api/users/1234/tags" rel="tags"/>
-//	<department></department>
-//	<domain_entry_id>23456</domain_entry_id>
-//	<email>user1@domain.com</email>
-//	<last_name>Lastname</last_name>
-//	<namespace>*</namespace>
-//	<principal>user1</principal>
-//	<user_name>user1@domain-authz</user_name>
-//	<domain href="/ovirt-engine/api/domains/45678" id="45678">
-//	  <name>domain-authz</name>
-//	</domain>
-//
-// </user>
-// ----
-type UserServiceGetRequest struct {
-	UserService *UserService
-	header      map[string]string
-	query       map[string]string
-	follow      *string
-}
-
-func (p *UserServiceGetRequest) Header(key, value string) *UserServiceGetRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *UserServiceGetRequest) Query(key, value string) *UserServiceGetRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *UserServiceGetRequest) Follow(follow string) *UserServiceGetRequest {
-	p.follow = &follow
-	return p
-}
-
-func (p *UserServiceGetRequest) Send() (*UserServiceGetResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.UserService.connection.URL(), p.UserService.path)
-	values := make(url.Values)
-	if p.follow != nil {
-		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.UserService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.UserService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.UserService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.UserService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.UserService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLUserReadOne(reader, nil, "")
-	if err != nil {
-		return nil, err
-	}
-	return &UserServiceGetResponse{user: result}, nil
-}
-
-func (p *UserServiceGetRequest) MustSend() *UserServiceGetResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Gets the system user information.
-// Usage:
-// ....
-// GET /ovirt-engine/api/users/1234
-// ....
-// Will return the user information:
-// [source,xml]
-// ----
-// <user href="/ovirt-engine/api/users/1234" id="1234">
-//
-//	<name>admin</name>
-//	<link href="/ovirt-engine/api/users/1234/sshpublickeys" rel="sshpublickeys"/>
-//	<link href="/ovirt-engine/api/users/1234/roles" rel="roles"/>
-//	<link href="/ovirt-engine/api/users/1234/permissions" rel="permissions"/>
-//	<link href="/ovirt-engine/api/users/1234/tags" rel="tags"/>
-//	<department></department>
-//	<domain_entry_id>23456</domain_entry_id>
-//	<email>user1@domain.com</email>
-//	<last_name>Lastname</last_name>
-//	<namespace>*</namespace>
-//	<principal>user1</principal>
-//	<user_name>user1@domain-authz</user_name>
-//	<domain href="/ovirt-engine/api/domains/45678" id="45678">
-//	  <name>domain-authz</name>
-//	</domain>
-//
-// </user>
-// ----
-type UserServiceGetResponse struct {
-	user *User
-}
-
-func (p *UserServiceGetResponse) User() (*User, bool) {
-	if p.user != nil {
-		return p.user, true
-	}
-	return nil, false
-}
-
-func (p *UserServiceGetResponse) MustUser() *User {
-	if p.user == nil {
-		panic("user in response does not exist")
-	}
-	return p.user
-}
-
-// Gets the system user information.
-// Usage:
-// ....
-// GET /ovirt-engine/api/users/1234
-// ....
-// Will return the user information:
-// [source,xml]
-// ----
-// <user href="/ovirt-engine/api/users/1234" id="1234">
-//
-//	<name>admin</name>
-//	<link href="/ovirt-engine/api/users/1234/sshpublickeys" rel="sshpublickeys"/>
-//	<link href="/ovirt-engine/api/users/1234/roles" rel="roles"/>
-//	<link href="/ovirt-engine/api/users/1234/permissions" rel="permissions"/>
-//	<link href="/ovirt-engine/api/users/1234/tags" rel="tags"/>
-//	<department></department>
-//	<domain_entry_id>23456</domain_entry_id>
-//	<email>user1@domain.com</email>
-//	<last_name>Lastname</last_name>
-//	<namespace>*</namespace>
-//	<principal>user1</principal>
-//	<user_name>user1@domain-authz</user_name>
-//	<domain href="/ovirt-engine/api/domains/45678" id="45678">
-//	  <name>domain-authz</name>
-//	</domain>
-//
-// </user>
-// ----
-func (p *UserService) Get() *UserServiceGetRequest {
-	return &UserServiceGetRequest{UserService: p}
-}
-
-// Removes the system user.
-// Usage:
-// ....
-// DELETE /ovirt-engine/api/users/1234
-// ....
-type UserServiceRemoveRequest struct {
-	UserService *UserService
-	header      map[string]string
-	query       map[string]string
-	async       *bool
-}
-
-func (p *UserServiceRemoveRequest) Header(key, value string) *UserServiceRemoveRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *UserServiceRemoveRequest) Query(key, value string) *UserServiceRemoveRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *UserServiceRemoveRequest) Async(async bool) *UserServiceRemoveRequest {
-	p.async = &async
-	return p
-}
-
-func (p *UserServiceRemoveRequest) Send() (*UserServiceRemoveResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.UserService.connection.URL(), p.UserService.path)
-	values := make(url.Values)
-	if p.async != nil {
-		values["async"] = []string{fmt.Sprintf("%v", *p.async)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("DELETE", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.UserService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.UserService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.UserService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.UserService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.UserService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	return new(UserServiceRemoveResponse), nil
-}
-
-func (p *UserServiceRemoveRequest) MustSend() *UserServiceRemoveResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Removes the system user.
-// Usage:
-// ....
-// DELETE /ovirt-engine/api/users/1234
-// ....
-type UserServiceRemoveResponse struct {
-}
-
-// Removes the system user.
-// Usage:
-// ....
-// DELETE /ovirt-engine/api/users/1234
-// ....
-func (p *UserService) Remove() *UserServiceRemoveRequest {
-	return &UserServiceRemoveRequest{UserService: p}
-}
-
-// Updates information about the user.
-// Only the `user_options` field can be updated.
-// For example, to update user options:
-// [source]
-// ----
-// PUT /ovirt-engine/api/users/123
-// ----
-// With a request body like this:
-// [source,xml]
-// ----
-// <user>
-//
-//	<user_options>
-//	   <property>
-//	      <name>test</name>
-//	      <value>["any","JSON"]</value>
-//	   </property>
-//	</user_options>
-//
-// </user>
-// ----
-// IMPORTANT: Since version 4.4.5 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. Please use the xref:services-user_option[options]
-// endpoint instead.
-type UserServiceUpdateRequest struct {
-	UserService *UserService
-	header      map[string]string
-	query       map[string]string
-	user        *User
-}
-
-func (p *UserServiceUpdateRequest) Header(key, value string) *UserServiceUpdateRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *UserServiceUpdateRequest) Query(key, value string) *UserServiceUpdateRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *UserServiceUpdateRequest) User(user *User) *UserServiceUpdateRequest {
-	p.user = user
-	return p
-}
-
-func (p *UserServiceUpdateRequest) Send() (*UserServiceUpdateResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.UserService.connection.URL(), p.UserService.path)
-	values := make(url.Values)
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	var body bytes.Buffer
-	writer := NewXMLWriter(&body)
-	err := XMLUserWriteOne(writer, p.user, "")
-	if err != nil {
-		return nil, err
-	}
-	writer.Flush()
-	req, err := http.NewRequest("PUT", rawURL, &body)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.UserService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.UserService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.UserService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.UserService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.UserService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLUserReadOne(reader, nil, "")
-	if err != nil {
-		return nil, err
-	}
-	return &UserServiceUpdateResponse{user: result}, nil
-}
-
-func (p *UserServiceUpdateRequest) MustSend() *UserServiceUpdateResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Updates information about the user.
-// Only the `user_options` field can be updated.
-// For example, to update user options:
-// [source]
-// ----
-// PUT /ovirt-engine/api/users/123
-// ----
-// With a request body like this:
-// [source,xml]
-// ----
-// <user>
-//
-//	<user_options>
-//	   <property>
-//	      <name>test</name>
-//	      <value>["any","JSON"]</value>
-//	   </property>
-//	</user_options>
-//
-// </user>
-// ----
-// IMPORTANT: Since version 4.4.5 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. Please use the xref:services-user_option[options]
-// endpoint instead.
-type UserServiceUpdateResponse struct {
-	user *User
-}
-
-func (p *UserServiceUpdateResponse) User() (*User, bool) {
-	if p.user != nil {
-		return p.user, true
-	}
-	return nil, false
-}
-
-func (p *UserServiceUpdateResponse) MustUser() *User {
-	if p.user == nil {
-		panic("user in response does not exist")
-	}
-	return p.user
-}
-
-// Updates information about the user.
-// Only the `user_options` field can be updated.
-// For example, to update user options:
-// [source]
-// ----
-// PUT /ovirt-engine/api/users/123
-// ----
-// With a request body like this:
-// [source,xml]
-// ----
-// <user>
-//
-//	<user_options>
-//	   <property>
-//	      <name>test</name>
-//	      <value>["any","JSON"]</value>
-//	   </property>
-//	</user_options>
-//
-// </user>
-// ----
-// IMPORTANT: Since version 4.4.5 of the engine this operation is deprecated, and preserved only for backwards
-// compatibility. It will be removed in the future. Please use the xref:services-user_option[options]
-// endpoint instead.
-func (p *UserService) Update() *UserServiceUpdateRequest {
-	return &UserServiceUpdateRequest{UserService: p}
-}
-
-// List of event-subscriptions for this user.
-func (op *UserService) EventSubscriptionsService() *EventSubscriptionsService {
-	return NewEventSubscriptionsService(op.connection, fmt.Sprintf("%s/eventsubscriptions", op.path))
-}
-
-func (op *UserService) GroupsService() *DomainUserGroupsService {
-	return NewDomainUserGroupsService(op.connection, fmt.Sprintf("%s/groups", op.path))
-}
-
-func (op *UserService) OptionsService() *UserOptionsService {
-	return NewUserOptionsService(op.connection, fmt.Sprintf("%s/options", op.path))
-}
-
-func (op *UserService) PermissionsService() *AssignedPermissionsService {
-	return NewAssignedPermissionsService(op.connection, fmt.Sprintf("%s/permissions", op.path))
-}
-
-func (op *UserService) RolesService() *AssignedRolesService {
-	return NewAssignedRolesService(op.connection, fmt.Sprintf("%s/roles", op.path))
-}
-
-func (op *UserService) SshPublicKeysService() *SshPublicKeysService {
-	return NewSshPublicKeysService(op.connection, fmt.Sprintf("%s/sshpublickeys", op.path))
-}
-
-func (op *UserService) TagsService() *AssignedTagsService {
-	return NewAssignedTagsService(op.connection, fmt.Sprintf("%s/tags", op.path))
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *UserService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	if path == "eventsubscriptions" {
-		return op.EventSubscriptionsService(), nil
-	}
-	if strings.HasPrefix(path, "eventsubscriptions/") {
-		return op.EventSubscriptionsService().Service(path[19:])
-	}
-	if path == "groups" {
-		return op.GroupsService(), nil
-	}
-	if strings.HasPrefix(path, "groups/") {
-		return op.GroupsService().Service(path[7:])
-	}
-	if path == "options" {
-		return op.OptionsService(), nil
-	}
-	if strings.HasPrefix(path, "options/") {
-		return op.OptionsService().Service(path[8:])
-	}
-	if path == "permissions" {
-		return op.PermissionsService(), nil
-	}
-	if strings.HasPrefix(path, "permissions/") {
-		return op.PermissionsService().Service(path[12:])
-	}
-	if path == "roles" {
-		return op.RolesService(), nil
-	}
-	if strings.HasPrefix(path, "roles/") {
-		return op.RolesService().Service(path[6:])
-	}
-	if path == "sshpublickeys" {
-		return op.SshPublicKeysService(), nil
-	}
-	if strings.HasPrefix(path, "sshpublickeys/") {
-		return op.SshPublicKeysService().Service(path[14:])
-	}
-	if path == "tags" {
-		return op.TagsService(), nil
-	}
-	if strings.HasPrefix(path, "tags/") {
-		return op.TagsService().Service(path[5:])
-	}
-	return nil, fmt.Errorf("The path <%s> doesn't correspond to any service", path)
-}
-
-func (op *UserService) String() string {
-	return fmt.Sprintf("UserService:%s", op.path)
-}
-
-// A service to manage the users in the system.
-type UsersService struct {
-	BaseService
-}
-
-func NewUsersService(connection *Connection, path string) *UsersService {
-	var result UsersService
-	result.connection = connection
-	result.path = path
-	return &result
-}
-
-// Add user from a directory service.
-// For example, to add the `myuser` user from the `myextension-authz` authorization provider send a request
-// like this:
-// [source]
-// ----
-// POST /ovirt-engine/api/users
-// ----
-// With a request body like this:
-// [source,xml]
-// ----
-// <user>
-//
-//	<user_name>myuser@myextension-authz</user_name>
-//	<domain>
-//	  <name>myextension-authz</name>
-//	</domain>
-//
-// </user>
-// ----
-// In case you are working with Active Directory you have to pass user principal name (UPN) as `username`, followed
-// by authorization provider name. Due to link:https://bugzilla.redhat.com/1147900[bug 1147900] you need to provide
-// also `principal` parameter set to UPN of the user.
-// For example, to add the user with UPN `myuser@mysubdomain.mydomain.com` from the `myextension-authz`
-// authorization provider send a request body like this:
-// [source,xml]
-// ----
-// <user>
-//
-//	<principal>myuser@mysubdomain.mydomain.com</principal>
-//	<user_name>myuser@mysubdomain.mydomain.com@myextension-authz</user_name>
-//	<domain>
-//	  <name>myextension-authz</name>
-//	</domain>
-//
-// </user>
-// ----
-type UsersServiceAddRequest struct {
-	UsersService *UsersService
-	header       map[string]string
-	query        map[string]string
-	user         *User
-}
-
-func (p *UsersServiceAddRequest) Header(key, value string) *UsersServiceAddRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *UsersServiceAddRequest) Query(key, value string) *UsersServiceAddRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *UsersServiceAddRequest) User(user *User) *UsersServiceAddRequest {
-	p.user = user
-	return p
-}
-
-func (p *UsersServiceAddRequest) Send() (*UsersServiceAddResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.UsersService.connection.URL(), p.UsersService.path)
-	values := make(url.Values)
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	var body bytes.Buffer
-	writer := NewXMLWriter(&body)
-	err := XMLUserWriteOne(writer, p.user, "")
-	if err != nil {
-		return nil, err
-	}
-	writer.Flush()
-	req, err := http.NewRequest("POST", rawURL, &body)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.UsersService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.UsersService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.UsersService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.UsersService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.UsersService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200, 201, 202}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLUserReadOne(reader, nil, "")
-	if err != nil {
-		return nil, err
-	}
-	return &UsersServiceAddResponse{user: result}, nil
-}
-
-func (p *UsersServiceAddRequest) MustSend() *UsersServiceAddResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// Add user from a directory service.
-// For example, to add the `myuser` user from the `myextension-authz` authorization provider send a request
-// like this:
-// [source]
-// ----
-// POST /ovirt-engine/api/users
-// ----
-// With a request body like this:
-// [source,xml]
-// ----
-// <user>
-//
-//	<user_name>myuser@myextension-authz</user_name>
-//	<domain>
-//	  <name>myextension-authz</name>
-//	</domain>
-//
-// </user>
-// ----
-// In case you are working with Active Directory you have to pass user principal name (UPN) as `username`, followed
-// by authorization provider name. Due to link:https://bugzilla.redhat.com/1147900[bug 1147900] you need to provide
-// also `principal` parameter set to UPN of the user.
-// For example, to add the user with UPN `myuser@mysubdomain.mydomain.com` from the `myextension-authz`
-// authorization provider send a request body like this:
-// [source,xml]
-// ----
-// <user>
-//
-//	<principal>myuser@mysubdomain.mydomain.com</principal>
-//	<user_name>myuser@mysubdomain.mydomain.com@myextension-authz</user_name>
-//	<domain>
-//	  <name>myextension-authz</name>
-//	</domain>
-//
-// </user>
-// ----
-type UsersServiceAddResponse struct {
-	user *User
-}
-
-func (p *UsersServiceAddResponse) User() (*User, bool) {
-	if p.user != nil {
-		return p.user, true
-	}
-	return nil, false
-}
-
-func (p *UsersServiceAddResponse) MustUser() *User {
-	if p.user == nil {
-		panic("user in response does not exist")
-	}
-	return p.user
-}
-
-// Add user from a directory service.
-// For example, to add the `myuser` user from the `myextension-authz` authorization provider send a request
-// like this:
-// [source]
-// ----
-// POST /ovirt-engine/api/users
-// ----
-// With a request body like this:
-// [source,xml]
-// ----
-// <user>
-//
-//	<user_name>myuser@myextension-authz</user_name>
-//	<domain>
-//	  <name>myextension-authz</name>
-//	</domain>
-//
-// </user>
-// ----
-// In case you are working with Active Directory you have to pass user principal name (UPN) as `username`, followed
-// by authorization provider name. Due to link:https://bugzilla.redhat.com/1147900[bug 1147900] you need to provide
-// also `principal` parameter set to UPN of the user.
-// For example, to add the user with UPN `myuser@mysubdomain.mydomain.com` from the `myextension-authz`
-// authorization provider send a request body like this:
-// [source,xml]
-// ----
-// <user>
-//
-//	<principal>myuser@mysubdomain.mydomain.com</principal>
-//	<user_name>myuser@mysubdomain.mydomain.com@myextension-authz</user_name>
-//	<domain>
-//	  <name>myextension-authz</name>
-//	</domain>
-//
-// </user>
-// ----
-func (p *UsersService) Add() *UsersServiceAddRequest {
-	return &UsersServiceAddRequest{UsersService: p}
-}
-
-// List all the users in the system.
-// Usage:
-// ....
-// GET /ovirt-engine/api/users
-// ....
-// Will return the list of users:
-// [source,xml]
-// ----
-// <users>
-//
-//	<user href="/ovirt-engine/api/users/1234" id="1234">
-//	  <name>admin</name>
-//	  <link href="/ovirt-engine/api/users/1234/sshpublickeys" rel="sshpublickeys"/>
-//	  <link href="/ovirt-engine/api/users/1234/roles" rel="roles"/>
-//	  <link href="/ovirt-engine/api/users/1234/permissions" rel="permissions"/>
-//	  <link href="/ovirt-engine/api/users/1234/tags" rel="tags"/>
-//	  <domain_entry_id>23456</domain_entry_id>
-//	  <namespace>*</namespace>
-//	  <principal>user1</principal>
-//	  <user_name>user1@domain-authz</user_name>
-//	  <domain href="/ovirt-engine/api/domains/45678" id="45678">
-//	    <name>domain-authz</name>
-//	  </domain>
-//	</user>
-//
-// </users>
-// ----
-// The order of the returned list of users isn't guaranteed.
-type UsersServiceListRequest struct {
-	UsersService  *UsersService
-	header        map[string]string
-	query         map[string]string
-	caseSensitive *bool
-	follow        *string
-	max           *int64
-	search        *string
-}
-
-func (p *UsersServiceListRequest) Header(key, value string) *UsersServiceListRequest {
-	if p.header == nil {
-		p.header = make(map[string]string)
-	}
-	p.header[key] = value
-	return p
-}
-
-func (p *UsersServiceListRequest) Query(key, value string) *UsersServiceListRequest {
-	if p.query == nil {
-		p.query = make(map[string]string)
-	}
-	p.query[key] = value
-	return p
-}
-
-func (p *UsersServiceListRequest) CaseSensitive(caseSensitive bool) *UsersServiceListRequest {
-	p.caseSensitive = &caseSensitive
-	return p
-}
-
-func (p *UsersServiceListRequest) Follow(follow string) *UsersServiceListRequest {
-	p.follow = &follow
-	return p
-}
-
-func (p *UsersServiceListRequest) Max(max int64) *UsersServiceListRequest {
-	p.max = &max
-	return p
-}
-
-func (p *UsersServiceListRequest) Search(search string) *UsersServiceListRequest {
-	p.search = &search
-	return p
-}
-
-func (p *UsersServiceListRequest) Send() (*UsersServiceListResponse, error) {
-	rawURL := fmt.Sprintf("%s%s", p.UsersService.connection.URL(), p.UsersService.path)
-	values := make(url.Values)
-	if p.caseSensitive != nil {
-		values["case_sensitive"] = []string{fmt.Sprintf("%v", *p.caseSensitive)}
-	}
-
-	if p.follow != nil {
-		values["follow"] = []string{fmt.Sprintf("%v", *p.follow)}
-	}
-
-	if p.max != nil {
-		values["max"] = []string{fmt.Sprintf("%v", *p.max)}
-	}
-
-	if p.search != nil {
-		values["search"] = []string{fmt.Sprintf("%v", *p.search)}
-	}
-
-	if p.query != nil {
-		for k, v := range p.query {
-			values[k] = []string{v}
-		}
-	}
-	if len(values) > 0 {
-		rawURL = fmt.Sprintf("%s?%s", rawURL, values.Encode())
-	}
-	req, err := http.NewRequest("GET", rawURL, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	for hk, hv := range p.UsersService.connection.headers {
-		req.Header.Add(hk, hv)
-	}
-
-	if p.header != nil {
-		for hk, hv := range p.header {
-			req.Header.Add(hk, hv)
-		}
-	}
-
-	req.Header.Add("User-Agent", fmt.Sprintf("GoSDK/%s", SDK_VERSION))
-	req.Header.Add("Version", "4")
-	req.Header.Add("Content-Type", "application/xml")
-	req.Header.Add("Accept", "application/xml")
-	// get OAuth access token
-	token, err := p.UsersService.connection.authenticate()
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", token))
-	// Send the request and wait for the response
-	resp, err := p.UsersService.connection.client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if p.UsersService.connection.logFunc != nil {
-		dumpReq, err := httputil.DumpRequestOut(req, true)
-		if err != nil {
-			return nil, err
-		}
-		dumpResp, err := httputil.DumpResponse(resp, true)
-		if err != nil {
-			return nil, err
-		}
-		p.UsersService.connection.logFunc("<<<<<<Request:\n%sResponse:\n%s>>>>>>\n", string(dumpReq), string(dumpResp))
-	}
-	respBodyBytes, errReadBody := ioutil.ReadAll(resp.Body)
-	if errReadBody != nil {
-		return nil, errReadBody
-	}
-	if !Contains(resp.StatusCode, []int{200}) {
-		return nil, CheckFault(respBodyBytes, resp)
-	}
-	reader := NewXMLReader(respBodyBytes)
-	result, err := XMLUserReadMany(reader, nil)
-	if err != nil {
-		return nil, err
-	}
-	return &UsersServiceListResponse{users: result}, nil
-}
-
-func (p *UsersServiceListRequest) MustSend() *UsersServiceListResponse {
-	if v, err := p.Send(); err != nil {
-		panic(err)
-	} else {
-		return v
-	}
-}
-
-// List all the users in the system.
-// Usage:
-// ....
-// GET /ovirt-engine/api/users
-// ....
-// Will return the list of users:
-// [source,xml]
-// ----
-// <users>
-//
-//	<user href="/ovirt-engine/api/users/1234" id="1234">
-//	  <name>admin</name>
-//	  <link href="/ovirt-engine/api/users/1234/sshpublickeys" rel="sshpublickeys"/>
-//	  <link href="/ovirt-engine/api/users/1234/roles" rel="roles"/>
-//	  <link href="/ovirt-engine/api/users/1234/permissions" rel="permissions"/>
-//	  <link href="/ovirt-engine/api/users/1234/tags" rel="tags"/>
-//	  <domain_entry_id>23456</domain_entry_id>
-//	  <namespace>*</namespace>
-//	  <principal>user1</principal>
-//	  <user_name>user1@domain-authz</user_name>
-//	  <domain href="/ovirt-engine/api/domains/45678" id="45678">
-//	    <name>domain-authz</name>
-//	  </domain>
-//	</user>
-//
-// </users>
-// ----
-// The order of the returned list of users isn't guaranteed.
-type UsersServiceListResponse struct {
-	users *UserSlice
-}
-
-func (p *UsersServiceListResponse) Users() (*UserSlice, bool) {
-	if p.users != nil {
-		return p.users, true
-	}
-	return nil, false
-}
-
-func (p *UsersServiceListResponse) MustUsers() *UserSlice {
-	if p.users == nil {
-		panic("users in response does not exist")
-	}
-	return p.users
-}
-
-// List all the users in the system.
-// Usage:
-// ....
-// GET /ovirt-engine/api/users
-// ....
-// Will return the list of users:
-// [source,xml]
-// ----
-// <users>
-//
-//	<user href="/ovirt-engine/api/users/1234" id="1234">
-//	  <name>admin</name>
-//	  <link href="/ovirt-engine/api/users/1234/sshpublickeys" rel="sshpublickeys"/>
-//	  <link href="/ovirt-engine/api/users/1234/roles" rel="roles"/>
-//	  <link href="/ovirt-engine/api/users/1234/permissions" rel="permissions"/>
-//	  <link href="/ovirt-engine/api/users/1234/tags" rel="tags"/>
-//	  <domain_entry_id>23456</domain_entry_id>
-//	  <namespace>*</namespace>
-//	  <principal>user1</principal>
-//	  <user_name>user1@domain-authz</user_name>
-//	  <domain href="/ovirt-engine/api/domains/45678" id="45678">
-//	    <name>domain-authz</name>
-//	  </domain>
-//	</user>
-//
-// </users>
-// ----
-// The order of the returned list of users isn't guaranteed.
-func (p *UsersService) List() *UsersServiceListRequest {
-	return &UsersServiceListRequest{UsersService: p}
-}
-
-func (op *UsersService) UserService(id string) *UserService {
-	return NewUserService(op.connection, fmt.Sprintf("%s/%s", op.path, id))
-}
-
-// Service locator method, returns individual service on which the URI is dispatched.
-func (op *UsersService) Service(path string) (Service, error) {
-	if path == "" {
-		return op, nil
-	}
-	index := strings.Index(path, "/")
-	if index == -1 {
-		return op.UserService(path), nil
-	}
-	return op.UserService(path[:index]).Service(path[index+1:])
-}
-
-func (op *UsersService) String() string {
-	return fmt.Sprintf("UsersService:%s", op.path)
 }
 
 // A service to manage Katello errata assigned to the engine.
@@ -112119,8 +112144,8 @@ func (op *ExternalHostGroupsService) String() string {
 }
 
 // Represents an external host provider, such as Foreman or Satellite.
-// See link:https://www.theforeman.org/[Foreman documentation] for details.
-// See link:https://access.redhat.com/products/red-hat-satellite[Satellite documentation] for details.
+// See https://www.theforeman.org/ for more details on Foreman.
+// See https://access.redhat.com/products/red-hat-satellite for more details on Red Hat Satellite.
 type ExternalHostProviderService struct {
 	BaseService
 }
@@ -114333,7 +114358,7 @@ func (p *GlusterBrickService) Get() *GlusterBrickServiceGetRequest {
 // Removes a brick.
 // Removes a brick from the underlying gluster volume and deletes entries from database. This can be used only when
 // removing a single brick without data migration. To remove multiple bricks and with data migration, use
-// xref:services-gluster_bricks-methods-migrate[migrate] instead.
+// <<services/gluster_bricks/methods/migrate, migrate>> instead.
 // For example, to delete brick `234` from gluster volume `123`, send a request like this:
 // [source]
 // ----
@@ -114445,7 +114470,7 @@ func (p *GlusterBrickServiceRemoveRequest) MustSend() *GlusterBrickServiceRemove
 // Removes a brick.
 // Removes a brick from the underlying gluster volume and deletes entries from database. This can be used only when
 // removing a single brick without data migration. To remove multiple bricks and with data migration, use
-// xref:services-gluster_bricks-methods-migrate[migrate] instead.
+// <<services/gluster_bricks/methods/migrate, migrate>> instead.
 // For example, to delete brick `234` from gluster volume `123`, send a request like this:
 // [source]
 // ----
@@ -114457,7 +114482,7 @@ type GlusterBrickServiceRemoveResponse struct {
 // Removes a brick.
 // Removes a brick from the underlying gluster volume and deletes entries from database. This can be used only when
 // removing a single brick without data migration. To remove multiple bricks and with data migration, use
-// xref:services-gluster_bricks-methods-migrate[migrate] instead.
+// <<services/gluster_bricks/methods/migrate, migrate>> instead.
 // For example, to delete brick `234` from gluster volume `123`, send a request like this:
 // [source]
 // ----
@@ -114469,8 +114494,8 @@ func (p *GlusterBrickService) Remove() *GlusterBrickServiceRemoveRequest {
 
 // Replaces this brick with a new one.
 // IMPORTANT: This operation has been deprecated since version 3.5 of the engine and will be removed in the future.
-// Use xref:services-gluster_bricks-methods-add[add brick(s)] and
-// xref:services-gluster_bricks-methods-migrate[migrate brick(s)] instead.
+// Use <<services/gluster_bricks/methods/add, add brick(s)>> and
+// <<services/gluster_bricks/methods/migrate, migrate brick(s)>> instead.
 type GlusterBrickServiceReplaceRequest struct {
 	GlusterBrickService *GlusterBrickService
 	header              map[string]string
@@ -114594,15 +114619,15 @@ func (p *GlusterBrickServiceReplaceRequest) MustSend() *GlusterBrickServiceRepla
 
 // Replaces this brick with a new one.
 // IMPORTANT: This operation has been deprecated since version 3.5 of the engine and will be removed in the future.
-// Use xref:services-gluster_bricks-methods-add[add brick(s)] and
-// xref:services-gluster_bricks-methods-migrate[migrate brick(s)] instead.
+// Use <<services/gluster_bricks/methods/add, add brick(s)>> and
+// <<services/gluster_bricks/methods/migrate, migrate brick(s)>> instead.
 type GlusterBrickServiceReplaceResponse struct {
 }
 
 // Replaces this brick with a new one.
 // IMPORTANT: This operation has been deprecated since version 3.5 of the engine and will be removed in the future.
-// Use xref:services-gluster_bricks-methods-add[add brick(s)] and
-// xref:services-gluster_bricks-methods-migrate[migrate brick(s)] instead.
+// Use <<services/gluster_bricks/methods/add, add brick(s)>> and
+// <<services/gluster_bricks/methods/migrate, migrate brick(s)>> instead.
 func (p *GlusterBrickService) Replace() *GlusterBrickServiceReplaceRequest {
 	return &GlusterBrickServiceReplaceRequest{GlusterBrickService: p}
 }
@@ -115289,8 +115314,8 @@ func (p *GlusterBricksService) List() *GlusterBricksServiceListRequest {
 // Start migration of data prior to removing bricks.
 // Removing bricks is a two-step process, where the data on bricks to be removed, is first migrated to remaining
 // bricks. Once migration is completed the removal of bricks is confirmed via the API
-// xref:services-gluster_bricks-methods-remove[remove]. If at any point, the action needs to be cancelled
-// xref:services-gluster_bricks-methods-stop_migrate[stopmigrate] has to be called.
+// <<services/gluster_bricks/methods/remove, remove>>. If at any point, the action needs to be cancelled
+// <<services/gluster_bricks/methods/stop_migrate, stopmigrate>> has to be called.
 // For instance, to delete a brick from a gluster volume with id `123`, send a request:
 // [source]
 // ----
@@ -115310,7 +115335,7 @@ func (p *GlusterBricksService) List() *GlusterBricksServiceListRequest {
 // </action>
 // ----
 // The migration process can be tracked from the job id returned from the API using
-// xref:services-job-methods-get[job] and steps in job using xref:services-step-methods-get[step]
+// <<services/job/methods/get, job>> and steps in job using <<services/step/methods/get, step>>
 type GlusterBricksServiceMigrateRequest struct {
 	GlusterBricksService *GlusterBricksService
 	header               map[string]string
@@ -115441,8 +115466,8 @@ func (p *GlusterBricksServiceMigrateRequest) MustSend() *GlusterBricksServiceMig
 // Start migration of data prior to removing bricks.
 // Removing bricks is a two-step process, where the data on bricks to be removed, is first migrated to remaining
 // bricks. Once migration is completed the removal of bricks is confirmed via the API
-// xref:services-gluster_bricks-methods-remove[remove]. If at any point, the action needs to be cancelled
-// xref:services-gluster_bricks-methods-stop_migrate[stopmigrate] has to be called.
+// <<services/gluster_bricks/methods/remove, remove>>. If at any point, the action needs to be cancelled
+// <<services/gluster_bricks/methods/stop_migrate, stopmigrate>> has to be called.
 // For instance, to delete a brick from a gluster volume with id `123`, send a request:
 // [source]
 // ----
@@ -115462,15 +115487,15 @@ func (p *GlusterBricksServiceMigrateRequest) MustSend() *GlusterBricksServiceMig
 // </action>
 // ----
 // The migration process can be tracked from the job id returned from the API using
-// xref:services-job-methods-get[job] and steps in job using xref:services-step-methods-get[step]
+// <<services/job/methods/get, job>> and steps in job using <<services/step/methods/get, step>>
 type GlusterBricksServiceMigrateResponse struct {
 }
 
 // Start migration of data prior to removing bricks.
 // Removing bricks is a two-step process, where the data on bricks to be removed, is first migrated to remaining
 // bricks. Once migration is completed the removal of bricks is confirmed via the API
-// xref:services-gluster_bricks-methods-remove[remove]. If at any point, the action needs to be cancelled
-// xref:services-gluster_bricks-methods-stop_migrate[stopmigrate] has to be called.
+// <<services/gluster_bricks/methods/remove, remove>>. If at any point, the action needs to be cancelled
+// <<services/gluster_bricks/methods/stop_migrate, stopmigrate>> has to be called.
 // For instance, to delete a brick from a gluster volume with id `123`, send a request:
 // [source]
 // ----
@@ -115490,14 +115515,14 @@ type GlusterBricksServiceMigrateResponse struct {
 // </action>
 // ----
 // The migration process can be tracked from the job id returned from the API using
-// xref:services-job-methods-get[job] and steps in job using xref:services-step-methods-get[step]
+// <<services/job/methods/get, job>> and steps in job using <<services/step/methods/get, step>>
 func (p *GlusterBricksService) Migrate() *GlusterBricksServiceMigrateRequest {
 	return &GlusterBricksServiceMigrateRequest{GlusterBricksService: p}
 }
 
 // Removes bricks from gluster volume.
 // The recommended way to remove bricks without data loss is to first migrate the data using
-// xref:services-gluster_bricks-methods-stop_migrate[stopmigrate] and then removing them. If migrate was not called on
+// <<services/gluster_bricks/methods/stop_migrate, stopmigrate>> and then removing them. If migrate was not called on
 // bricks prior to remove, the bricks are removed without data migration which may lead to data loss.
 // For example, to delete the bricks from gluster volume `123`, send a request like this:
 // [source]
@@ -115644,7 +115669,7 @@ func (p *GlusterBricksServiceRemoveRequest) MustSend() *GlusterBricksServiceRemo
 
 // Removes bricks from gluster volume.
 // The recommended way to remove bricks without data loss is to first migrate the data using
-// xref:services-gluster_bricks-methods-stop_migrate[stopmigrate] and then removing them. If migrate was not called on
+// <<services/gluster_bricks/methods/stop_migrate, stopmigrate>> and then removing them. If migrate was not called on
 // bricks prior to remove, the bricks are removed without data migration which may lead to data loss.
 // For example, to delete the bricks from gluster volume `123`, send a request like this:
 // [source]
@@ -115667,7 +115692,7 @@ type GlusterBricksServiceRemoveResponse struct {
 
 // Removes bricks from gluster volume.
 // The recommended way to remove bricks without data loss is to first migrate the data using
-// xref:services-gluster_bricks-methods-stop_migrate[stopmigrate] and then removing them. If migrate was not called on
+// <<services/gluster_bricks/methods/stop_migrate, stopmigrate>> and then removing them. If migrate was not called on
 // bricks prior to remove, the bricks are removed without data migration which may lead to data loss.
 // For example, to delete the bricks from gluster volume `123`, send a request like this:
 // [source]
