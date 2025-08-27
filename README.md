@@ -1,4 +1,5 @@
 # oVirt Go SDK
+
 [![Build Status](https://travis-ci.org/oVirt/ovirt-engine-sdk-go.svg?branch=master)](https://travis-ci.org/oVirt/ovirt-engine-sdk-go)
 [![Go Report Card](https://goreportcard.com/badge/github.com/oVirt/go-ovirt)](https://goreportcard.com/report/github.com/oVirt/go-ovirt)
 
@@ -7,7 +8,7 @@
 The oVirt Go SDK is a Go package that simplifies access to the
 oVirt Engine API.
 
-> __IMPORTANT__: The code in this project is generated automatically by the [oVirt/ovirt-engine-sdk-go](https://github.com/oVirt/ovirt-engine-sdk-go). So if you want to know how to generate the code, please read the `README.md` in the  [oVirt/ovirt-engine-sdk-go](https://github.com/oVirt/ovirt-engine-sdk-go) repository instead.
+> **IMPORTANT**: The code in this project is generated automatically by the [oVirt/ovirt-engine-sdk-go](https://github.com/oVirt/ovirt-engine-sdk-go). So if you want to know how to generate the code, please read the `README.md` in the [oVirt/ovirt-engine-sdk-go](https://github.com/oVirt/ovirt-engine-sdk-go) repository instead.
 
 ## Usage
 
@@ -15,12 +16,11 @@ To use the SDK you should import ovirtsdk package as follows:
 
 ```go
 import (
-    ovirtsdk4 "github.com/ovirt/go-ovirt/v4"
+    ovirtsdk4 "github.com/ovirt/go-ovirt"
 )
 ```
 
-> __IMPORTANT__: To make it easy to manage dependencies on stable go-ovirt releases, starting with go-ovirt `4.2.2`, we will move to semantic versioning. If you are still using `v4.0.x` via importing `gopkg.in/ovirt/go-ovirt.v4` or `4.2.1`, we highly recommend you to update to `4.2.2` or above. In product environment, please __NEVER__ adopt the master branch which will always be under heavy development.
->
+> **IMPORTANT**: To make it easy to manage dependencies on stable go-ovirt releases, starting with go-ovirt `4.2.2`, we will move to semantic versioning. If you are still using `v4.0.x` via importing `gopkg.in/ovirt/go-ovirt.v4` or `4.2.1`, we highly recommend you to update to `4.2.2` or above. In product environment, please **NEVER** adopt the master branch which will always be under heavy development.
 
 That will give you access to all the classes of the SDK, and in particular
 to the `Connection` class. This is the entry point of the SDK,
@@ -30,7 +30,7 @@ and gives you access to the root of the tree of services of the API:
 import (
     "fmt"
     "time"
-    ovirtsdk4 "github.com/ovirt/go-ovirt/v4"
+    ovirtsdk4 "github.com/ovirt/go-ovirt"
 )
 
 // Create the connection to the api server
@@ -54,10 +54,9 @@ defer conn.Close()
 
 There are two ways of using the SDK, one is calling regular functions, which should check if error returned, the other is calling functions prefixed with `Must`, which is short and chain-function calling supported.
 
-Calling the regular functions is recommended, because it is  more accurate for catching errors.
+Calling the regular functions is recommended, because it is more accurate for catching errors.
 
-> __IMPORTANT__: you should catch the panic errors by defining the recover-defer function.
-
+> **IMPORTANT**: you should catch the panic errors by defining the recover-defer function.
 
 ### Regular _Recommended_
 
@@ -65,7 +64,7 @@ Calling the regular functions is recommended, because it is  more accurate for c
 import (
     "fmt"
     "time"
-    ovirtsdk4 "github.com/ovirt/go-ovirt/v4"
+    ovirtsdk4 "github.com/ovirt/go-ovirt"
 )
 
 // Create the connection to the api server
@@ -116,7 +115,7 @@ if clusters, ok := clustersResponse.Clusters(); ok {
 import (
     "fmt"
     "time"
-    ovirtsdk4 "github.com/ovirt/go-ovirt/v4"
+    ovirtsdk4 "github.com/ovirt/go-ovirt"
 )
 
 // Create the connection to the api server

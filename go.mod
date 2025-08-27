@@ -1,4 +1,4 @@
-module github.com/ovirt/go-ovirt/v4
+module github.com/ovirt/go-ovirt
 
 go 1.24
 

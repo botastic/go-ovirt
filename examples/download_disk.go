@@ -28,7 +28,7 @@ import (
 	"os"
 	"time"
 
-	ovirtsdk4 "github.com/ovirt/go-ovirt/v4"
+	ovirtsdk4 "github.com/ovirt/go-ovirt"
 )
 
 func downloadDisk() {

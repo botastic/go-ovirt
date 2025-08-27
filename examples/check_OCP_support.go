@@ -26,7 +26,7 @@ import (
 	"os"
 	"strings"
 
-	ovirtsdk4 "github.com/ovirt/go-ovirt/v4"
+	ovirtsdk4 "github.com/ovirt/go-ovirt"
 	"github.com/pkg/errors"
 )
 
